@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+//SETUP
+
+@import url('./styles/setup/_topography.scss');
+@import url('./styles/setup/_variables.scss');
+
+//BASICS
+
+@import url('./styles/basics/_base.scss');
+
+$custom-typography: mat.define-typography-config($font-family:'BalsamiqSans-Regular, sans-serif');
+$custom-theme: mat.define-light-theme((typography: $custom-typography));
+
+@include mat.core($custom-typography);
+@include mat.all-component-themes($custom-theme);

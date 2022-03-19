@@ -1,0 +1,52 @@
+@import url('../setup/_variables.scss');
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html{
+  font-family: BalsamiqSans-Regular, sans-serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  padding: 0;
+  margin: 0%;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6,
+p{
+  margin: 0;
+}
+
+img{
+  width: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.main-layout{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+

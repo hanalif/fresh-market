@@ -1,0 +1,59 @@
+[
+    {
+        "_id": "nW8Cuy1N",
+        "mainCategoryName": "Fruits",
+        "subCategiries": [
+            {
+                "_id": "L08R@VtW",
+                "name": "Fresh-fruits"
+            },
+            {
+                "_id": "sSt?Y0V2",
+                "name": "Dried-fruits"
+            },
+            {
+                "_id": "gO4M9Wmc",
+                "name": "Cut-fruits"
+            }
+        ]
+
+    },
+
+    {
+        "_id": "krRrPYCL",
+        "mainCategoryName": "Vegtables",
+        "subCategiries": [
+            {
+                "_id": "ddpcuBQX",
+                "name": "Garden-vegrables"
+            },
+            {
+                "_id": "ouSXZbaN",
+                "name": "Sprouts"
+            },
+            {
+                "_id": "2?G4mvyN",
+                "name": "Mushrooms"
+            }
+        ]
+
+    },
+
+    {
+        "_id": "cfkelkOq",
+        "mainCategoryName": "Leaves",
+        "subCategiries": [
+            {
+                "_id": "81VWRKkN",
+                "name": "Lattuces"
+            },
+            {
+                "_id": "pTstlHyH",
+                "name": "Spice-leaves"
+            }
+
+        ]
+
+    }
+]
+
