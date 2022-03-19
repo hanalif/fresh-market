@@ -12,6 +12,6 @@ export class ItemQuery extends Query<ItemState>{
 
 
   getItemsToShow(): Observable<Item[]>{
-    return this.select(state => state.itemsToShow);
+    return this.select<Item[]>(state => state.itemsToShow);
   }
 }

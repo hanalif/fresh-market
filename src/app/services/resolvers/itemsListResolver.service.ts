@@ -11,7 +11,7 @@ export class ItemsListResolver implements Resolve<Item[]>{
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Item[] | Observable<Item[]> | Promise<Item[]> {
     const mainCtegoryId = route.params['mainCategoryId']
-    const subcategoryId = route.params['subcategoryId']? route.params['subcategoryId'] : '';
+    const subcategoryId = route.params['subcategoryId'] ? route.params['subcategoryId'] : null;
     return this.itemService.getItems(mainCtegoryId, subcategoryId);
   }
 }

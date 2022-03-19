@@ -4,5 +4,4 @@ export enum ItemPropertyType {
   vitaminCrich = 3,
   fiberRich = 4,
   withoutPreservatives= 5,
-
 }

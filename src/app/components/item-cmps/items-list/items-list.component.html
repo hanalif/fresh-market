@@ -1,1 +1,5 @@
-
+<div class="item-list">
+  <div class="item" *ngFor="let item of (items$ | async)">
+    <p>{{ item.name }}</p>
+  </div>
+</div>
