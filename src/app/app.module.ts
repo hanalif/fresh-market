@@ -9,11 +9,15 @@ import { ItemsModule } from './modules/items.module';
 import { HeaderComponent } from './components/header/header.component';
 import { AngularMaterialModule } from './modules/angular-material.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchBoxComponent } from './components/header/search-box/search-box.component';
+import { CartMenuComponent } from './components/header/cart-menu/cart-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    SearchBoxComponent,
+    CartMenuComponent,
   ],
   imports: [
     BrowserModule,

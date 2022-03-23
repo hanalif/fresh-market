@@ -28,16 +28,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    cursor: pointer;
   }
 
   &_actions {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
   }
 
   &_cart {
     position: relative;
+    cursor: pointer;
 
     .cart-img {
       background-image: url("../../../assets/icons/carts.png");
@@ -77,6 +79,7 @@
   }
 
   &_user-info {
+    cursor: pointer;
     .user-img {
       background-image: url("../../../assets/icons/user-edited.png");
       height: 40px;
@@ -95,4 +98,52 @@
       }
     }
   }
+
+  &_nav{
+    display: flex;
+    gap: 45px;
+    font-size: 14px;
+    align-items: center;
+
+    &,a:hover{
+      color: #b27836;
+    }
+
+
+  }
+  &_cart-menu{
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+    .search-icon{
+      background-image: url('../../../assets/icons/search.png');
+      height: 30px;
+      width: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+
+
+    }
+
+    app-search-box{
+      position: absolute;
+      opacity: 0;
+      top: 42px;
+      right: -4px;
+      transition: opacity 150ms ease-in-out;
+
+      &.open{
+        opacity: 100%;
+
+      }
+    }
+
+  }
 }
+

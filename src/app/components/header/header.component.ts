@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBasketShopping, faCoffee, faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-header',
@@ -7,13 +7,20 @@ import { faBasketShopping, faCoffee, faSearch } from '@fortawesome/free-solid-sv
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  faBasketShopping = faBasketShopping;
-  faSearch = faSearch;
+   isSearchBoxOpen: boolean = false
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onToggleSearch(){
+    this.isSearchBoxOpen = !this.isSearchBoxOpen
+  }
+
+  onCloseSearch(val: boolean){
+    this.isSearchBoxOpen = val
   }
 
 }

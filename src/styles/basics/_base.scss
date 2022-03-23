@@ -42,11 +42,22 @@ a{
   text-decoration: none;
   color: black;
   cursor: pointer;
+
+  &:active{
+    color: unset;
+  }
+}
+
+button{
+  background: transparent;
+  border: none;
 }
 
 .main-layout{
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
 }
+
+
 
 
