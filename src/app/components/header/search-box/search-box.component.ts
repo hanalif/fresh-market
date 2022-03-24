@@ -6,14 +6,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./search-box.component.scss']
 })
 export class SearchBoxComponent implements OnInit {
-  @Output() closeSearchBox = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onCloseSearch(val: boolean){
-    this.closeSearchBox.emit(val);
   }
 
 }

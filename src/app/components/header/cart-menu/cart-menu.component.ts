@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-cart-menu',
@@ -12,5 +12,7 @@ export class CartMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
 
 }

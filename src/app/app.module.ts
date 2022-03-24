@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchBoxComponent } from './components/header/search-box/search-box.component';
 import { CartMenuComponent } from './components/header/cart-menu/cart-menu.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -109,15 +109,14 @@
       color: #b27836;
     }
 
-
   }
+
   &_cart-menu{
     display: flex;
-    gap: 55px;
+    gap: 30px;
     align-items: center;
     justify-content: center;
     position: relative;
-
 
     .search-icon{
       background-image: url('../../../assets/icons/search.png');
@@ -127,21 +126,12 @@
       background-repeat: no-repeat;
       background-size: contain;
       cursor: pointer;
-
-
     }
 
     app-search-box{
       position: absolute;
-      opacity: 0;
-      top: 42px;
-      right: -4px;
-      transition: opacity 150ms ease-in-out;
-
-      &.open{
-        opacity: 100%;
-
-      }
+      top: 45px;
+      left: 0;
     }
 
   }

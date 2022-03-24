@@ -20,12 +20,10 @@
     </div>
     <div class="main-header_cart-menu">
       <app-cart-menu></app-cart-menu>
-      <button (click)="onToggleSearch()" class="search-icon">
-      </button>
-      <app-search-box
-        (closeSearchBox)="onCloseSearch($event)"
-        [ngClass]="{open: isSearchBoxOpen}"
-        ></app-search-box>
+      <div #searchBoxContainerEl class="search-box-container">
+        <button (click)="onToggleSearch()" class="search-icon"></button>
+        <app-search-box [@searchBoxAnimation]="stateName" *ngIf="isSearchBoxOpen"></app-search-box>
+      </div>
     </div>
   </div>
 </div>

@@ -1,19 +1,41 @@
 <div class="menu-links-wrapper">
+
   <div class="dropdown">
-    <button class="cart-menu-link">
+    <button routerLink="/items-category/krRrPYCL"  class="cart-menu-link">
       <div class="link-img" [ngStyle]="{'background-image': 'url( ../../../assets/icons/' + cartMenuLinksImges[0] + ')'}"></div>
-      <a>{{'vegetables' | uppercase}}</a>
+      {{'vegetables' | uppercase}}
     </button>
     <div class="dropdown_menu">
-      Dropdown Content
+      <a routerLink="/items-category/krRrPYCL" > {{'all vegetables' | uppercase}}</a>
+      <a routerLink="/items-category/krRrPYCL/ddpcuBQX" > {{'Garden vegrables' | uppercase}}</a>
+      <a routerLink="/items-category/krRrPYCL/ouSXZbaN"> {{'Sprouts' | uppercase}}</a>
+      <a routerLink="/items-category/krRrPYCL/2?G4mvyN"> {{'Mushrooms' | uppercase}}</a>
     </div>
   </div>
-  <button class="cart-menu-link">
-    <div class="link-img" [ngStyle]="{'background-image': 'url( ../../../assets/icons/' + cartMenuLinksImges[1] + ')'}"></div>
-    <a>{{'fruits' | uppercase}}</a>
-  </button>
-  <button class="cart-menu-link">
-    <div class="link-img" [ngStyle]="{'background-image': 'url( ../../../assets/icons/' + cartMenuLinksImges[2] + ')'}"></div>
-    <a>{{'leaves' | uppercase}}</a>
-  </button>
+
+    <div class="dropdown">
+      <button routerLink="/items-category/nW8Cuy1N" class="cart-menu-link">
+        <div class="link-img" [ngStyle]="{'background-image': 'url( ../../../assets/icons/' + cartMenuLinksImges[1] + ')'}"></div>
+        {{'fruits' | uppercase}}
+      </button>
+      <div  class="dropdown_menu">
+        <a routerLink="/items-category/nW8Cuy1N" > {{'all fruits' | uppercase}}</a>
+        <a routerLink="/items-category/nW8Cuy1N/L08R@VtW" > {{'Fresh fruits' | uppercase}}</a>
+        <a  routerLink="/items-category/nW8Cuy1N/sSt?Y0V2"> {{'Dried fruits' | uppercase}}</a>
+        <a routerLink="/items-category/nW8Cuy1N/gO4M9Wmc"> {{'Cut fruits' | uppercase}}</a>
+      </div>
+  </div>
+
+  <div class="dropdown">
+    <button routerLink="/items-category/cfkelkOq" class="cart-menu-link">
+      <div class="link-img" [ngStyle]="{'background-image': 'url( ../../../assets/icons/' + cartMenuLinksImges[2] + ')'}"></div>
+      {{'leaves' | uppercase}}
+    </button>
+    <div  class="dropdown_menu">
+      <a routerLink="/items-category/cfkelkOq" > {{'all leaves' | uppercase}}</a>
+      <a routerLink="/items-category/cfkelkOq/81VWRKkN" > {{'Lattuces' | uppercase}}</a>
+      <a  routerLink="/items-category/cfkelkOq/pTstlHyH"> {{'Spice-leaves' | uppercase}}</a>
+    </div>
+  </div>
+
 </div>
