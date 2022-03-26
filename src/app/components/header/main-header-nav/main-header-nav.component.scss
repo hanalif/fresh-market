@@ -1,0 +1,11 @@
+.main-header_nav{
+  display: flex;
+  gap: 45px;
+  font-size: 14px;
+  align-items: center;
+
+  &,a:hover{
+    color: #b27836;
+  }
+
+}

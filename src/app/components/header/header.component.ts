@@ -24,7 +24,9 @@ import {trigger, state, style, animate, transition} from '@angular/animations'
 })
 
 export class HeaderComponent implements OnInit {
-   isSearchBoxOpen: boolean = false
+   isSearchBoxOpen: boolean = false;
+   isHamburgerOpen: boolean = false;
+
    @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
 
 
@@ -49,6 +51,10 @@ export class HeaderComponent implements OnInit {
 
   onToggleSearch(){
     this.isSearchBoxOpen = !this.isSearchBoxOpen
+  }
+
+  onToggleHamburger(){
+    this.isHamburgerOpen = !this.isHamburgerOpen
   }
 
 

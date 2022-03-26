@@ -1,3 +1,6 @@
+@import "../../../../assets/styles/setup/mixins";
+@import "../../../../assets/styles/setup/variables";
+
 .search-box{
   &_container{
     position: relative;
@@ -17,6 +20,12 @@
     padding-inline-start: 35px;
     height: 28px;
     border-radius: 19px;
+
+
+    @include for-bpoint-tablet-landscape{
+      width: 95%;
+    }
+
 
     &:focus{
       outline: none;

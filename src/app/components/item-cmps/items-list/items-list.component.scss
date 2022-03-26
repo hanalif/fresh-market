@@ -1,2 +1,36 @@
+@import "../../../../assets/styles/setup/mixins";
+.hero-container{
 
+
+
+  .hero-txt{
+    font-family: LiuJianMaoCao-Regular;
+    display: flex;
+    justify-content: center;
+    font-size: 41px;
+    height: inherit;
+    letter-spacing: 38px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 900;
+    color: #6c5a7b;
+
+
+    @include for-bpoint-tablet-landscape{
+      letter-spacing: 30px;
+    }
+
+    @include for-bpoint-mobile {
+      letter-spacing: 20px;
+    }
+
+  }
+
+}
+
+.items-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
 

@@ -1,5 +1,13 @@
-<div class="item-list main-layout">
-  <div class="item" *ngFor="let item of (items$ | async)">
-    <p>{{ item.name }}</p>
+<div class="hero-container">
+  <div class="hero-txt main-layout">
+    <small>VEGETABLES</small>
   </div>
+</div>
+
+
+<div class="items-list main-layout">
+  <app-item-card
+  *ngFor="let item of items$ | async"
+  [item]="item"
+  ></app-item-card>
 </div>

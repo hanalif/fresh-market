@@ -1,0 +1,29 @@
+@import "./variables";
+
+/* Media queries breakpoint mixins */
+
+@mixin for-bpoint-min-tablet {
+  @media (max-width: $bpoint-min-tablet){
+    @content;
+  }
+}
+
+@mixin for-bpoint-tablet-landscape {
+  @media (max-width: $bpoint-tablet-landscape){
+    @content;
+  }
+}
+
+@mixin for-bpoint-tablet {
+  @media (max-width: $bpoint-tablet){
+    @content;
+  }
+}
+
+
+@mixin for-bpoint-mobile {
+  @media (max-width: $bpoint-mobile){
+    @content;
+  }
+}
+

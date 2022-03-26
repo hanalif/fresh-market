@@ -3,12 +3,13 @@
 
 //SETUP
 
-@import url('./styles/setup/_topography.scss');
-@import url('./styles/setup/_variables.scss');
+@import "assets/styles/setup/topography";
+@import "assets/styles/setup/mixins";
+@import "assets/styles/setup/variables";
 
 //BASICS
 
-@import url('./styles/basics/_base.scss');
+@import "assets/styles/basics/base";
 
 $custom-typography: mat.define-typography-config($font-family:'BalsamiqSans-Regular, sans-serif');
 $custom-theme: mat.define-light-theme((typography: $custom-typography));

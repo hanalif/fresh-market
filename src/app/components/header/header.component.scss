@@ -1,6 +1,13 @@
+@import "../../../assets/styles/setup/mixins";
+@import "../../../assets/styles/setup/variables";
+
 .main-header {
   position: relative;
   height: 170px;
+
+   @include for-bpoint-tablet-landscape{
+    height: 250px;
+  }
 
   &::after {
     content: "";
@@ -10,6 +17,10 @@
     height: 2px;
     background-color: #388904;
     top: 109px;
+
+    @include for-bpoint-tablet-landscape{
+      top: 146px;
+    }
   }
 
   &_container {
@@ -29,12 +40,31 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     cursor: pointer;
+
+    @include for-bpoint-tablet-landscape{
+      top: 33%;
+      left: 53%;
+    }
+
+
   }
 
   &_actions {
     display: flex;
     gap: 40px;
     align-items: center;
+
+    @include for-bpoint-tablet-landscape{
+      gap: 30px;
+    }
+
+    app-main-header-nav{
+      display: block;
+
+      @include for-bpoint-tablet-landscape{
+        display: none;
+      }
+    }
   }
 
   &_cart {
@@ -118,6 +148,30 @@
     justify-content: center;
     position: relative;
 
+    .hamburger-icon-container{
+      display: none;
+
+      @include for-bpoint-tablet-landscape{
+        display: block;
+        background-image: url('../../../assets/icons/menu-of-three-lines.png');
+        height: 30px;
+        width: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+      }
+    }
+
+    app-cart-menu{
+      display: block;
+
+      @include for-bpoint-tablet-landscape{
+        display: none;
+      }
+
+    }
+
     .search-icon{
       background-image: url('../../../assets/icons/search.png');
       height: 30px;
@@ -132,6 +186,13 @@
       position: absolute;
       top: 45px;
       left: 0;
+
+      @include for-bpoint-tablet-landscape{
+        top: 68px;
+        right: 49px;
+        left: auto;
+      }
+
     }
 
   }
