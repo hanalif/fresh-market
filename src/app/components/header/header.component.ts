@@ -1,33 +1,19 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import {trigger, state, style, animate, transition} from '@angular/animations'
+import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
+import { Animations } from '../../../app/animations'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations:[
-    trigger('searchBoxAnimation',[
-      transition('* => show', [
-        style({
-          opacity: 1,
-          transform: 'translateY(0)'
-        })
-      ]),
-      transition('* => void',[
-        style({
-          opacity: 0,
-          transform: 'translateY(-10px)'
-        })
-      ])
-    ])
-  ]
+  animations:[ Animations.searchBoxAnimation]
 })
 
 export class HeaderComponent implements OnInit {
    isSearchBoxOpen: boolean = false;
-   isHamburgerOpen: boolean = false;
+   isHamburgerOpen!: boolean | undefined;
 
    @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
+   @Output() isMobileMenuShow = new EventEmitter<boolean>();
 
 
   constructor() { }
@@ -50,13 +36,14 @@ export class HeaderComponent implements OnInit {
   }
 
   onToggleSearch(){
-    this.isSearchBoxOpen = !this.isSearchBoxOpen
+    this.isSearchBoxOpen = !this.isSearchBoxOpen;
   }
 
   onToggleHamburger(){
-    this.isHamburgerOpen = !this.isHamburgerOpen
+    this.isHamburgerOpen = !this.isHamburgerOpen;
+    this.isMobileMenuShow.emit(this.isHamburgerOpen);
+    this.isHamburgerOpen = undefined;
   }
-
 
 }
 

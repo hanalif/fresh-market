@@ -1,0 +1,29 @@
+@import "../assets/styles/setup/mixins";
+@import "../assets/styles/setup/variables";
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 900;
+  overflow: hidden;
+}
+
+app-mobile-menu{
+  position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 300px;
+    width: 50%;
+    background: #FFFFFF;
+    height: 100%;
+    z-index: 1000;
+
+    @include for-bpoint-mobile{
+      max-width: 400px;
+    }
+}

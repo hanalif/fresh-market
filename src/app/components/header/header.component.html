@@ -3,30 +3,29 @@
     <img src="../../../assets/icons/logo-5-png.png" alt="">
   </div>
   <div class="main-header_container main-layout">
-      <div class="main-header_actions">
-        <div class="main-header_user-info">
-          <div class="user-img"></div>
-        </div>
-        <div class="main-header_cart">
-          <div class="cart-img"></div>
-          <div class="cart-counter">
-            <small class="counter-txt">0</small>
-          </div>
-        </div>
-        <app-main-header-nav></app-main-header-nav>
-    </div>
     <div class="main-header_cart-menu">
-      <app-cart-menu></app-cart-menu>
+      <button (click)="onToggleHamburger()" class="hamburger-icon-container">
+        <i class="hamburger-icon"></i>
+      </button>
       <div #searchBoxContainerEl class="search-box-container">
         <button (click)="onToggleSearch()" class="search-icon"></button>
-        <app-search-box [@searchBoxAnimation]="stateName" *ngIf="isSearchBoxOpen"></app-search-box>
+        <app-search-box *ngIf="isSearchBoxOpen" [@searchBoxAnimation]="stateName" ></app-search-box>
       </div>
-      <div (click)="onToggleHamburger()" class="hamburger-icon-container">
-          <button class="hamburger-icon"></button>
+      <app-cart-menu></app-cart-menu>
+    </div>
+    <div class="main-header_actions">
+      <app-main-header-nav></app-main-header-nav>
+      <app-user-menu-btn></app-user-menu-btn>
+      <div class="main-header_cart">
+        <div class="cart-img"></div>
+        <div class="cart-counter">
+          <small class="counter-txt">0</small>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 
