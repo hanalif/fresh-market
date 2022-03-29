@@ -8,7 +8,7 @@ import { ItemQuery } from 'src/app/state/items/itemQuery';
   templateUrl: './items-list.component.html',
   styleUrls: ['./items-list.component.scss']
 })
-export class ItemsListComponent implements OnInit,OnDestroy {
+export class ItemsListComponent implements OnInit {
   public itemsToShow!:Item[];
   items$!: Observable<Item[]>;
 
@@ -18,7 +18,5 @@ export class ItemsListComponent implements OnInit,OnDestroy {
    this.items$ = this.itemQuery.getItemsToShow();
   }
 
-  ngOnDestroy(): void {
-  }
 
 }

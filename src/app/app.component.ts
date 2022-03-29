@@ -1,5 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Animations } from './animations'
+import { UIService } from './services/UI.service';
+import { UIQuery } from './state/UI/UIQuery';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +10,21 @@ import { Animations } from './animations'
   styleUrls: ['./app.component.scss'],
   animations: [Animations.mobileMenuAnimation]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
  public showWithBackdrop!: boolean;
  public showMobileMenu!: boolean;
+ isMobileMenuOpen$!: Observable<boolean>
 
- isMobileMenuShow(val:boolean){
-   this.showMobileMenu = val;
-   this.showWithBackdrop = val;
+ constructor( private uIQuery: UIQuery, private uIService:UIService) { }
+  ngOnInit(): void {
+    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen()
+  }
 
- }
 
   onBackdropClicked(val:boolean){
-    this.showWithBackdrop = !this.showWithBackdrop;
+    this.uIService.setIsMobileMenuOpen(val);
   }
+
 }
 
 

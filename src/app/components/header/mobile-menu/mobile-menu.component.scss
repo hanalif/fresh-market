@@ -2,8 +2,10 @@
   &_top{
 
     height: 67px;
-    padding: 15px;
+    padding: 20px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .clear-icon{
       background-image: url('../../../../assets/icons/close.png');
@@ -13,8 +15,14 @@
       background-repeat: no-repeat;
       background-size: contain;
       cursor: pointer;
-}
+    }
+  }
 
+  &_bottom{
+    margin-top: 20px;
+
+    background: #A4D668;
+    font-size: 18px;
   }
 }
 

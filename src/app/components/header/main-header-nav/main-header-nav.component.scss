@@ -4,6 +4,10 @@
   font-size: 14px;
   align-items: center;
 
+  &.nav-mobile-open{
+    flex-direction: column;
+  }
+
   &,a:hover{
     color: #b27836;
   }

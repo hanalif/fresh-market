@@ -2,6 +2,7 @@
     {
         "_id": "nW8Cuy1N",
         "mainCategoryName": "Fruits",
+        "linkImage": "https://res.cloudinary.com/sprint4/image/upload/v1648558753/HolyVegiFruits/icons/fruit-yellow-png_u8p2lc.png",
         "subCategiries": [
             {
                 "_id": "L08R@VtW",
@@ -22,6 +23,7 @@
     {
         "_id": "krRrPYCL",
         "mainCategoryName": "Vegtables",
+        "linkImage": "https://res.cloudinary.com/sprint4/image/upload/v1648558753/HolyVegiFruits/icons/carrot-png-blue-flipped_zpo93g.png",
         "subCategiries": [
             {
                 "_id": "ddpcuBQX",
@@ -42,6 +44,7 @@
     {
         "_id": "cfkelkOq",
         "mainCategoryName": "Leaves",
+        "linkImage": "https://res.cloudinary.com/sprint4/image/upload/v1648558753/HolyVegiFruits/icons/leaves-green-png-flipped_ijuwrp.png",
         "subCategiries": [
             {
                 "_id": "81VWRKkN",

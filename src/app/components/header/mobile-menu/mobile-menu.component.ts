@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UIService } from 'src/app/services/UI.service';
+import { UIQuery } from 'src/app/state/UI/UIQuery';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-menu.component.scss']
 })
 export class MobileMenuComponent implements OnInit {
+  isMobileMenuOpen$!: Observable<boolean>
 
-  constructor() { }
+
+  constructor(private uIQuery: UIQuery, private uIService:UIService) { }
 
   ngOnInit(): void {
+    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
+  }
+
+  onCloseMenu(val: boolean){
+    this.uIService.setIsMobileMenuOpen(val);
   }
 
 }

@@ -1,4 +1,7 @@
-import { Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UIService } from 'src/app/services/UI.service';
+import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { Animations } from '../../../app/animations'
 
 @Component({
@@ -13,10 +16,9 @@ export class HeaderComponent implements OnInit {
    isHamburgerOpen!: boolean | undefined;
 
    @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
-   @Output() isMobileMenuShow = new EventEmitter<boolean>();
+   isMobileMenuOpen$!: Observable<boolean>
 
-
-  constructor() { }
+  constructor(private uIQuery: UIQuery, private uIService:UIService) { }
 
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
@@ -28,6 +30,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
+
   }
 
   get stateName(){
@@ -39,10 +43,8 @@ export class HeaderComponent implements OnInit {
     this.isSearchBoxOpen = !this.isSearchBoxOpen;
   }
 
-  onToggleHamburger(){
-    this.isHamburgerOpen = !this.isHamburgerOpen;
-    this.isMobileMenuShow.emit(this.isHamburgerOpen);
-    this.isHamburgerOpen = undefined;
+  onToggleHamburger(val:boolean){
+    this.uIService.setIsMobileMenuOpen(val);
   }
 
 }

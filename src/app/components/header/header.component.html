@@ -2,17 +2,19 @@
   <div routerLink="/" class="main-header_logo">
     <img src="../../../assets/icons/logo-5-png.png" alt="">
   </div>
+
   <div class="main-header_container main-layout">
     <div class="main-header_cart-menu">
-      <button (click)="onToggleHamburger()" class="hamburger-icon-container">
+      <button (click)="onToggleHamburger(true)" class="hamburger-icon-container">
         <i class="hamburger-icon"></i>
       </button>
       <div #searchBoxContainerEl class="search-box-container">
         <button (click)="onToggleSearch()" class="search-icon"></button>
         <app-search-box *ngIf="isSearchBoxOpen" [@searchBoxAnimation]="stateName" ></app-search-box>
       </div>
-      <app-cart-menu></app-cart-menu>
+      <app-cart-menu *ngIf="!(isMobileMenuOpen$ | async)"></app-cart-menu>
     </div>
+
     <div class="main-header_actions">
       <app-main-header-nav></app-main-header-nav>
       <app-user-menu-btn></app-user-menu-btn>

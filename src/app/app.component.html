@@ -1,6 +1,9 @@
-<app-header (isMobileMenuShow)="isMobileMenuShow($event)"></app-header>
-<app-mobile-menu *ngIf="showWithBackdrop && showMobileMenu" [@mobileMenuAnimation]></app-mobile-menu>
+<app-header></app-header>
+
+  <app-mobile-menu
+  *ngIf="isMobileMenuOpen$ | async"
+  [@mobileMenuAnimation] ></app-mobile-menu>
 <router-outlet></router-outlet>
 
-<div (click)="onBackdropClicked(false)" *ngIf="showWithBackdrop" class="backdrop"></div>
+<div (click)="onBackdropClicked(false)" *ngIf="isMobileMenuOpen$ | async" class="backdrop"></div>
 
