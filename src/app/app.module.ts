@@ -19,6 +19,7 @@ import { CartMenuDropdownComponent } from './components/cart-menu-dropdown/cart-
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +30,7 @@ import { CartMenuDropdownComponent } from './components/cart-menu-dropdown/cart-
     MobileMenuComponent,
     CartComponent,
     UserMenuBtnComponent,
-    CartMenuDropdownComponent
-
+    CartMenuDropdownComponent,
   ],
   imports: [
     BrowserModule,
