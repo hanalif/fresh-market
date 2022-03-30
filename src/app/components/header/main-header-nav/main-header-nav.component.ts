@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UIService } from 'src/app/services/UI.service';
+import { UIQuery } from 'src/app/state/UI/UIQuery';
 
 @Component({
   selector: 'app-main-header-nav',
@@ -6,10 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./main-header-nav.component.scss']
 })
 export class MainHeaderNavComponent implements OnInit {
-  @Input() isMobileMenuOpen: boolean = false;
-  constructor() { }
+  isMobileMenuOpen$!: Observable<boolean>
+  constructor(private uIQuery: UIQuery) { }
 
   ngOnInit(): void {
+    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
   }
 
 }

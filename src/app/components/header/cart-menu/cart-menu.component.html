@@ -1,7 +1,8 @@
 <div class="menu-links-wrapper" [ngClass]="{'mobile-open': isMobileMenuOpen$ | async}">
 
   <div class="dropdown"
-    *ngFor="let itemCategory of itemsCategories$ | async">
+    *ngFor="let itemCategory of itemsCategories$ | async "
+    (click)="onClickMobileMenuLink(itemCategory._id)">
 
     <button
       routerLinkActive="active"
@@ -21,7 +22,9 @@
 
     <div
       class="dropdown_menu"
-      [ngClass]="{'dropdown-menu-mobile':  isMobileMenuOpen$ | async }" >
+      [ngClass]="{'dropdown-menu-mobile': isMobileMenuOpen$ | async, 'open': openCategiresMaping[itemCategory._id]}"
+
+      #dropdownMenu>
         <a
           [routerLink]="'/items-category/'+ itemCategory._id">
             {{'all '+ itemCategory.mainCategoryName | uppercase}}</a>

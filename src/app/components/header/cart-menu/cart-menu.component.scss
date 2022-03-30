@@ -30,6 +30,8 @@
         transform: translateY(0);
       }
 
+
+
       .dropdown_icon{
         transform: translateY(0) rotate(-180deg);
         color: #b27836;
@@ -54,7 +56,20 @@
       transition: all 150ms ease-in-out;
 
       &.dropdown-menu-mobile{
+        display: none;
         position: static;
+        opacity: 1;
+        background-color: #f7f5ef;
+        font-size: 16px;
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px 20px 14px 42px;
+        transition: none;
+        transform: none;
+
+        &.open{
+          display: flex;
+        }
 
       }
 

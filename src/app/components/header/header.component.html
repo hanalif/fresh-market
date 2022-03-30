@@ -12,7 +12,7 @@
         <button (click)="onToggleSearch()" class="search-icon"></button>
         <app-search-box *ngIf="isSearchBoxOpen" [@searchBoxAnimation]="stateName" ></app-search-box>
       </div>
-      <app-cart-menu *ngIf="!(isMobileMenuOpen$ | async)"></app-cart-menu>
+      <app-cart-menu></app-cart-menu>
     </div>
 
     <div class="main-header_actions">

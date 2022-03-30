@@ -14,7 +14,7 @@ import { MainHeaderNavComponent } from './components/header/main-header-nav/main
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
 import { CartComponent } from './components/cart-cmps/cart/cart.component';
 import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.component';
-import { CartMenuDropdownComponent } from './components/cart-menu-dropdown/cart-menu-dropdown.component';
+
 
 
 
@@ -30,7 +30,6 @@ import { CartMenuDropdownComponent } from './components/cart-menu-dropdown/cart-
     MobileMenuComponent,
     CartComponent,
     UserMenuBtnComponent,
-    CartMenuDropdownComponent,
   ],
   imports: [
     BrowserModule,

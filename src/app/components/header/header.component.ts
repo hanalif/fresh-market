@@ -16,9 +16,9 @@ export class HeaderComponent implements OnInit {
    isHamburgerOpen!: boolean | undefined;
 
    @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
-   isMobileMenuOpen$!: Observable<boolean>
 
-  constructor(private uIQuery: UIQuery, private uIService:UIService) { }
+
+  constructor(private uIService:UIService) { }
 
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
@@ -30,7 +30,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
 
   }
 
