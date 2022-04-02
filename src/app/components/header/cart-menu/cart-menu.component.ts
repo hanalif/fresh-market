@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { ItemCategory } from 'src/app/models/item/itemCategory.model';
 import { UIService } from 'src/app/services/UI.service';
@@ -10,17 +11,14 @@ import { UIQuery } from 'src/app/state/UI/UIQuery';
   styleUrls: ['./cart-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CartMenuComponent implements OnInit, OnDestroy{
+export class CartMenuComponent implements OnInit{
 
   isMobileMenuOpen$!: Observable<boolean>
   itemsCategories$!: Observable<ItemCategory[]>
-  private isMobileOpenSubscription!: Subscription
   public openCategiresMaping: any = {};
 
-  constructor( private uIQuery: UIQuery, private uIService:UIService) { }
-  ngOnDestroy(): void {
-    this.isMobileOpenSubscription.unsubscribe()
-  }
+  constructor( private uIQuery: UIQuery, private uIService:UIService, private router: Router) { }
+
 
   ngOnInit(): void {
     this.uIService.getItemsCategories().subscribe();
@@ -30,15 +28,6 @@ export class CartMenuComponent implements OnInit, OnDestroy{
   }
 
   onClickMobileMenuLink(_id:string){
-    let isMobileOpen:boolean = false;
-    this.isMobileOpenSubscription = this.isMobileMenuOpen$.subscribe(res=>{
-      isMobileOpen = res
-    })
-
-    if(!isMobileOpen){
-      return
-    }
-
     if(this.openCategiresMaping[_id]){
       this.openCategiresMaping[_id] = !this.openCategiresMaping[_id];
     } else{

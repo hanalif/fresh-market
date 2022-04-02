@@ -6,6 +6,9 @@
 
   &.nav-mobile-open{
     flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    padding-inline-start: 35px;
   }
 
   &,a:hover{

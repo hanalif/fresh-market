@@ -6,13 +6,11 @@
 
     <button
       routerLinkActive="active"
-      [routerLink]="'/items-category/'+ itemCategory._id"
       class="cart-menu-link"
-      [ngClass]="{'link-mobile-open':  isMobileMenuOpen$ | async}">
+      [ngClass]="{'link-mobile-open':  isMobileMenuOpen$ | async , 'mobile-link-clicked':openCategiresMaping[itemCategory._id]}">
         <div
           class="link-img"
           [ngStyle]="{'background-image' : 'url('+ itemCategory.linkImage +')'}"></div>
-
           {{itemCategory.mainCategoryName | uppercase}}
     </button>
 
