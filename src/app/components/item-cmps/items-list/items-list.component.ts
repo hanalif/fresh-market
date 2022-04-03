@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
-import { filter, map, Observable, Subscription, switchMap } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import {  map, Observable, switchMap } from 'rxjs';
 import { Item } from 'src/app/models/item/item.model';
 import { ItemCategory } from 'src/app/models/item/itemCategory.model';
 import { ItemQuery } from 'src/app/state/items/itemQuery';
@@ -14,8 +14,6 @@ import { UIQuery } from 'src/app/state/UI/UIQuery';
 export class ItemsListComponent implements OnInit {
   public itemsToShow!: Item[];
   items$!: Observable<Item[]>;
-  mainCategoryName$!: Observable<string>;
-  subCategoryName$!: Observable<string>;
   mainCategory$!: Observable<ItemCategory | undefined>;
 
   constructor(private itemQuery: ItemQuery, private uiQuery: UIQuery, private route: ActivatedRoute) {}
