@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
     this.uIService.getItemsCategories().subscribe(); // todo add routing to app and move to resolver
+    this.uIService.updateWhenUrlChangesOccur().subscribe()
   }
 
 

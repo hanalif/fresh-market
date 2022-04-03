@@ -19,4 +19,6 @@ export class UIQuery extends Query<UIState>{
   getItemsCategories(): Observable<ItemCategory[]>{
     return this.select<ItemCategory[]>(state=> state.itemsCategories);
   }
+
+
 }

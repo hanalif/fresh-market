@@ -20,15 +20,16 @@
 
     <div
       class="dropdown_menu"
-      [ngClass]="{'dropdown-menu-mobile': isMobileMenuOpen$ | async, 'open': openCategiresMaping[itemCategory._id]}"
-      #dropdownMenu>
+      *ngIf="isDropdownMenuOpen"
+      [@slidesDownAnumation]
+      [ngClass]="{'dropdown-menu-mobile': isMobileMenuOpen$ | async, 'open': openCategiresMaping[itemCategory._id]}">
         <a
           [routerLink]="'/items-category/'+ itemCategory._id">
             {{'all '+ itemCategory.mainCategoryName | uppercase}}</a>
 
         <a
           *ngFor="let subCategory of itemCategory.subCategiries"
-          [routerLink]="'/items-category/'+ itemCategory._id + '/'+subCategory._id" >
+          [routerLink]="'/items-category/'+ itemCategory._id + '/'+subCategory._id">
           {{subCategory.name | uppercase}}</a>
     </div>
 

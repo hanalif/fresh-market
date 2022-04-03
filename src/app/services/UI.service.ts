@@ -1,14 +1,15 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { tap } from "rxjs/operators";
+import { NavigationStart, Router } from "@angular/router";
+import { Observable, of } from "rxjs";
+import { filter, tap } from "rxjs/operators";
 import { ItemCategory } from "../models/item/itemCategory.model";
 import { UIStore } from "../state/UI/UIStore";
 
 @Injectable({providedIn: 'root'})
 
 export class UIService{
-  constructor(private http: HttpClient, private uIStore: UIStore){}
+  constructor(private http: HttpClient, private uIStore: UIStore, private route: Router){}
 
   setIsMobileMenuOpen(val: boolean){
     this.uIStore.update(state=>{
@@ -32,7 +33,17 @@ export class UIService{
      );
   }
 
-
-
-
+  updateWhenUrlChangesOccur(){
+    return this.route.events.pipe(
+      filter(e => e instanceof NavigationStart),
+      tap(event=>{
+      this.uIStore.update(state=>{
+        return{
+          ...state,
+          isMobileMenuOpen: false
+          }
+        }
+      )
+    }))
+  }
 }

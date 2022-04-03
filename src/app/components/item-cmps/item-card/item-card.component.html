@@ -1,8 +1,6 @@
 
 <div class="item-card">
-    <div class="item-card_img">
-      <img [src]="item.images[0].thumbnailImgUrl" alt="">
-    </div>
+    <div class="item-card_img" [ngStyle]="{'background-image' : 'url('+ item.images[0].thumbnailImgUrl +')'}"></div>
     <div class="item-card_content">
       <div class="item-card_title">{{item.name}}</div>
     </div>

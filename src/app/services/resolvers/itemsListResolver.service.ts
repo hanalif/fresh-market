@@ -1,13 +1,14 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnDestroy } from "@angular/core";
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
-import { Observable } from "rxjs";
+import { filter, Observable, Subscription, switchMap, tap } from "rxjs";
 import { Item } from "src/app/models/item/item.model";
+import { UIQuery } from "src/app/state/UI/UIQuery";
 import { ItemService } from "../item.service";
 
 
 @Injectable({providedIn: 'root'})
 export class ItemsListResolver implements Resolve<Item[]>{
-  constructor(private itemService: ItemService){}
+  constructor(private itemService: ItemService, private uiQuery: UIQuery){}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Item[] | Observable<Item[]> | Promise<Item[]> {
     const mainCtegoryId = route.params['mainCategoryId']
