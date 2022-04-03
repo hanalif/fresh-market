@@ -1,7 +1,6 @@
 <div class="hero-container">
   <div class="hero-txt main-layout">
-    <small>{{(mainCategoryName$ | async) | uppercase}}</small>
-    <small *ngIf="(subCategoryName$ | async) === ''">{{(subCategoryName$ | async) | uppercase}}</small>
+    <small>{{((mainCategory$ | async)?.mainCategoryName) | uppercase }}</small>
   </div>
 </div>
 

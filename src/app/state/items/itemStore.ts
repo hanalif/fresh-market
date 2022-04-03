@@ -3,18 +3,12 @@ import { Store, StoreConfig } from '@datorama/akita';
 import { Item } from 'src/app/models/item/item.model';
 
 export interface ItemState {
-  itemsToShow: Item[],
-  mainCategoryName: string,
-  subCategoryName:string,
-  searchResultsTitle: string
+  itemsToShow: Item[]
 }
 
 export const getInitialState = () => {
   return {
-    itemsToShow: [],
-    mainCategoryName: undefined,
-    subCategoryName: undefined,
-    searchResultsTitle: 'Search Results'
+    itemsToShow: []
   };
 };
 
