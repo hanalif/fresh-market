@@ -23,20 +23,19 @@
       right: 30px;
       transform: translateY(0);
       transition: 0.4s;
-
-      // &.clicked{
-      //   transform: translateY(0) rotate(-180deg);
-      // }
     }
 
     &:hover {
       .dropdown_menu {
         opacity: 1;
         transform: translateY(0);
+        visibility: visible;
       }
+
     }
 
     .dropdown_menu{
+      visibility: hidden;
       display: flex;
       position: absolute;
       opacity: 0;

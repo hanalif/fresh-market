@@ -6,9 +6,9 @@ import { UIService } from 'src/app/services/UI.service';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
 
 @Component({
-  selector: 'app-cart-menu',
-  templateUrl: './cart-menu.component.html',
-  styleUrls: ['./cart-menu.component.scss'],
+  selector: 'app-categories-menu',
+  templateUrl: './categories-menu.component.html',
+  styleUrls: ['./categories-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartMenuComponent implements OnInit{
@@ -17,11 +17,10 @@ export class CartMenuComponent implements OnInit{
   itemsCategories$!: Observable<ItemCategory[]>
   public openCategiresMaping: any = {};
 
-  constructor( private uIQuery: UIQuery, private uIService:UIService, private router: Router) { }
+  constructor( private uIQuery: UIQuery, private router: Router) { }
 
 
   ngOnInit(): void {
-    this.uIService.getItemsCategories().subscribe();
     this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
     this.itemsCategories$ = this.uIQuery.getItemsCategories();
 

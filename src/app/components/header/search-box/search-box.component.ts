@@ -12,4 +12,5 @@ export class SearchBoxComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // create a search results route that will get the search key as url parameter
 }

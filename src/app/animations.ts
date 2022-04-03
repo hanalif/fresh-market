@@ -1,7 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 export const Animations = {
-  searchBoxAnimation: trigger('searchBoxAnimation',[
+  slidesDownAnumation: trigger('slidesDownAnumation',[
     transition(':enter', [
       style({
         opacity: 0,

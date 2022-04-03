@@ -9,16 +9,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { AngularMaterialModule } from './modules/angular-material.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchBoxComponent } from './components/header/search-box/search-box.component';
-import { CartMenuComponent } from './components/header/cart-menu/cart-menu.component';
-import { MainHeaderNavComponent } from './components/header/main-header-nav/main-header-nav.component';
+import { CartMenuComponent } from './components/header/categories-menu/categories-menu.component';
+import { MainHeaderNavComponent } from './components/header/information-menu/information-menu.component';
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
 import { CartComponent } from './components/cart-cmps/cart/cart.component';
 import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.component';
-
-
-
-
-
 
 @NgModule({
   declarations: [

@@ -1,14 +1,12 @@
-import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { UIService } from 'src/app/services/UI.service';
-import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { Animations } from '../../../app/animations'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations:[ Animations.searchBoxAnimation]
+  animations:[ Animations.slidesDownAnumation]
 })
 
 export class HeaderComponent implements OnInit {
@@ -35,7 +33,6 @@ export class HeaderComponent implements OnInit {
 
   get stateName(){
     return this.isSearchBoxOpen ? 'show' : 'hide';
-
   }
 
   onToggleSearch(){
