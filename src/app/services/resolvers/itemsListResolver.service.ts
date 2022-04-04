@@ -9,7 +9,7 @@ import { ItemService } from "../item.service";
 export class ItemsListResolver implements Resolve<Item[]>{
   constructor(private itemService: ItemService){}
 
-  resolve(route: ActivatedRouteSnapshot): Item[] | Observable<any> | Promise<any> {
+  resolve(route: ActivatedRouteSnapshot): Item[] | Observable<Item[]> | Promise<Item[]> {
     const mainCtegoryId = route.params['mainCategoryId']
     const subcategoryId = route.params['subcategoryId'] ? route.params['subcategoryId'] : null;
 

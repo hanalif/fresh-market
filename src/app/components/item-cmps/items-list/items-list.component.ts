@@ -21,7 +21,7 @@ export class ItemsListComponent implements OnInit {
   ngOnInit(): void {
     this.items$ = this.itemQuery.getItemsToShow();
     this.mainCategory$ = this.route.params.pipe(
-      switchMap(params => this.uiQuery.getItemsCategories().pipe(
+        switchMap(params => this.uiQuery.getItemsCategories().pipe(
         map(categories => categories.find(c => c._id === params['mainCategoryId']))
       ))
     );
