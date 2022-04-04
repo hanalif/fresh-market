@@ -1,8 +1,14 @@
 @import "../../../../assets/styles/setup/mixins";
+@import "../../../../assets/styles/setup/variables";
+
+.items-list-container{
+  margin-block-start: calc(100vh - 490px);
+
+  @include for-bpoint-tablet-landscape{
+    margin-block-start: calc(100vh - 400px);
+  }
+}
 .hero-container{
-
-
-
   .hero-txt{
     font-family: LiuJianMaoCao-Regular;
     display: flex;

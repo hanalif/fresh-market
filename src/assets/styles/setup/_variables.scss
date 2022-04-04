@@ -13,4 +13,5 @@ $bpoint-min-tablet: 770px;
 $bpoint-tablet: 768px;
 $bpoint-mobile: 680px;
 
-
+$nav-bar-height: 250px;
+$content-height: calc(100vh - #{$nav-bar-height});

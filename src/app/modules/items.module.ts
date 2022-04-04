@@ -9,12 +9,14 @@ import { ItemQuery } from "../state/items/itemQuery";
 import { ItemStore } from "../state/items/itemStore";
 import { ItemCardComponent } from "../components/item-cmps/item-card/item-card.component";
 import { ItemModalComponent } from "../components/item-cmps/item-modal/item-modal.component";
+import { ItemUnitsComponent } from "../components/item-cmps/item-units/item-units.component";
 
 @NgModule({
   declarations: [
     ItemsListComponent,
     ItemCardComponent,
-    ItemModalComponent
+    ItemModalComponent,
+    ItemUnitsComponent,
   ],
   imports: [
     CommonModule,

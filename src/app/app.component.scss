@@ -1,6 +1,14 @@
 @import "../assets/styles/setup/mixins";
 @import "../assets/styles/setup/variables";
 
+app-header{
+  background-color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
 .backdrop{
   position: fixed;
   top: 0;

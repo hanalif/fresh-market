@@ -1,34 +1,33 @@
-<div class="main-header">
-  <div routerLink="/" class="main-header_logo">
-    <img src="../../../assets/icons/logo-5-png.png" alt="">
-  </div>
 
-  <div class="main-header_container main-layout">
-    <div class="main-header_cart-menu">
-      <button (click)="onToggleHamburger(true)" class="hamburger-icon-container">
-        <i class="hamburger-icon"></i>
-      </button>
-      <div #searchBoxContainerEl class="search-box-container">
-        <button (click)="onToggleSearch()" class="search-icon"></button>
-        <app-search-box *ngIf="isSearchBoxOpen" [@slidesDownAnumation]="stateName" ></app-search-box>
-      </div>
-      <app-categories-menu></app-categories-menu>
+  <div class="main-header">
+    <div routerLink="/" class="main-header_logo">
+      <img src="../../../assets/icons/logo-5-png.png" alt="">
     </div>
 
-    <div class="main-header_actions">
-      <app-information-menu></app-information-menu>
-      <app-user-menu-btn></app-user-menu-btn>
-      <div class="main-header_cart">
-        <div class="cart-img"></div>
-        <div class="cart-counter">
-          <small class="counter-txt">0</small>
+    <div class="main-header_container main-layout">
+      <div class="main-header_cart-menu">
+        <button (click)="onToggleHamburger(true)" class="hamburger-icon-container">
+          <i class="hamburger-icon"></i>
+        </button>
+        <div #searchBoxContainerEl class="search-box-container">
+          <button (click)="onToggleSearch()" class="search-icon"></button>
+          <app-search-box *ngIf="isSearchBoxOpen" [@slidesDownAnumation]="stateName" ></app-search-box>
+        </div>
+        <app-categories-menu></app-categories-menu>
+      </div>
+
+      <div class="main-header_actions">
+        <app-information-menu></app-information-menu>
+        <app-user-menu-btn></app-user-menu-btn>
+        <div class="main-header_cart">
+          <div class="cart-img"></div>
+          <div class="cart-counter">
+            <small class="counter-txt">0</small>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
 
 
 
