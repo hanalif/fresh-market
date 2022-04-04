@@ -24,7 +24,7 @@ import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.c
     MainHeaderNavComponent,
     MobileMenuComponent,
     CartComponent,
-    UserMenuBtnComponent,
+    UserMenuBtnComponent
   ],
   imports: [
     BrowserModule,
