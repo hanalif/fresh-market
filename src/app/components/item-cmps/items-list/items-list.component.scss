@@ -13,6 +13,7 @@
     font-family: LiuJianMaoCao-Regular;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 41px;
     height: inherit;
     letter-spacing: 38px;
@@ -20,6 +21,8 @@
     padding-bottom: 10px;
     font-weight: 900;
     color: #6c5a7b;
+    flex-direction: column;
+    gap: 34px;
 
 
     @include for-bpoint-tablet-landscape{

@@ -1,7 +1,8 @@
 <div class="items-list-container">
   <div class="hero-container">
     <div class="hero-txt main-layout">
-      <small>{{((mainCategory$ | async)?.mainCategoryName) | uppercase }}</small>
+      <small>{{((categoriesTitles$ | async)?.mainCategory) | uppercase }}</small>
+      <small>{{((categoriesTitles$ | async)?.subCategory) | uppercase }}</small>
     </div>
   </div>
   <div class="items-list main-layout">

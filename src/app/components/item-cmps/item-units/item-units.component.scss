@@ -1,4 +1,12 @@
 .item-units{
+
+  &_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: inherit;
+  }
+
   &_quantity{
     position: relative;
 

@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Query } from "@datorama/akita";
-import { Observable } from "rxjs";
+import { map, Observable } from "rxjs";
+import { CategoriesTitles } from "src/app/models/item/categoriesTitles.model";
 import { ItemCategory } from "src/app/models/item/itemCategory.model";
 
 import { UIState, UIStore } from "./UIStore";
@@ -19,6 +20,21 @@ export class UIQuery extends Query<UIState>{
   getItemsCategories(): Observable<ItemCategory[]>{
     return this.select<ItemCategory[]>(state=> state.itemsCategories);
   }
+
+  getItemsCategoriesTitles(mainCategoryId:string|undefined, subCategoryId:string|undefined): Observable<CategoriesTitles>{
+    return this.getItemsCategories().pipe(
+      map(categories=>{
+        const itemCategory = categories.find(c => c._id === mainCategoryId)
+        const itemSubCategory = itemCategory?.subCategiries.find(sc => sc._id === subCategoryId);
+        return{
+          mainCategory: itemCategory?.mainCategoryName,
+          subCategory: itemSubCategory?.name
+          }
+      })
+    )
+
+  }
+
 
 
 }

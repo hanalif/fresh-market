@@ -3,8 +3,16 @@
   <div class="item-card_img-container">
     <div class="item-card_img" [ngStyle]="{'background-image' : 'url('+ item.images[0].thumbnailImgUrl +')'}"></div>
   </div>
-    <app-item-units></app-item-units>
+
     <div class="item-card_content">
+      <app-item-units></app-item-units>
+    </div>
+
+    <div class="item-card_content with-border">
       <div class="item-card_title">{{item.name}}</div>
+      <div *ngFor="let unit of item.units" class="item-card_price">
+      <h3>{{ getUnitName(unit.unitType) }}</h3>
+      <h3>{{unit.price}}$</h3>
+      </div>
     </div>
 </div>
