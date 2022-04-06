@@ -25,10 +25,11 @@
 }
 
 &_content{
-  width: 100%;
+  width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 
    &.with-border{
     border-block-start: 1px solid #F0F0F0;
