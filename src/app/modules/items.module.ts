@@ -10,6 +10,8 @@ import { ItemStore } from "../state/items/itemStore";
 import { ItemCardComponent } from "../components/item-cmps/item-card/item-card.component";
 import { ItemModalComponent } from "../components/item-cmps/item-modal/item-modal.component";
 import { ItemUnitsComponent } from "../components/item-cmps/item-units/item-units.component";
+import { ItemUnitNamePipe } from '../pipes/itemUnitName/item-unit-name.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { ItemUnitsComponent } from "../components/item-cmps/item-units/item-unit
     ItemCardComponent,
     ItemModalComponent,
     ItemUnitsComponent,
+    ItemUnitNamePipe
   ],
   imports: [
     CommonModule,

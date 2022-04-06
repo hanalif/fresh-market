@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class ItemUnitsComponent implements OnInit {
   public quantityInput: number = 0;
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onPlus(){
-
     this.quantityInput++;
   }
 
@@ -25,5 +25,4 @@ export class ItemUnitsComponent implements OnInit {
     }
     this.quantityInput--;
   }
-
 }

@@ -16,6 +16,7 @@ import { CartComponent } from './components/cart-cmps/cart/cart.component';
 import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,8 @@ import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.c
     MobileMenuComponent,
     CartComponent,
     UserMenuBtnComponent
+
+
   ],
   imports: [
     BrowserModule,
