@@ -1,0 +1,7 @@
+.selection-btn{
+  cursor: pointer;
+
+  &.active{
+    background-color: aqua;
+  }
+}

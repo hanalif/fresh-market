@@ -20,7 +20,8 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
   constructor(private unitPipe: ItemUnitNamePipe) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-   if(changes['item'].currentValue !== changes['item'].previousValue){
+
+    if(changes['item'].currentValue !== changes['item'].previousValue){
      this.options = this.item.units.map(unit=>{
         let option: SelectOptions = {
          name: this.unitPipe.transform(unit.unitType),
@@ -43,14 +44,5 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
       'amount': new FormControl(0)
     })
   }
-  onPlus(){
-    this.quantityInput++;
-  }
 
-  onMinus(){
-    if(this.quantityInput <= 0){
-      return
-    }
-    this.quantityInput--;
-  }
 }

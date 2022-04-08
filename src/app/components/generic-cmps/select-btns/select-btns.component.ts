@@ -14,16 +14,19 @@ import { SelectOptions } from './models/select-options.model';
     multi: true
   }]
 })
-export class SelectBtnsComponent implements OnInit, ControlValueAccessor, OnDestroy {
+export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
   onChange: any;
   onTouched: any;
   selectionForm!: FormGroup;
-  valSubscription!: Subscription | undefined;
 
   constructor() { }
 
   @Input() selectOptions!: SelectOptions[];
   value!: string;
+
+  ngOnInit(): void {
+    this.initForm();
+  }
 
 
   writeValue(value: string): void {
@@ -37,12 +40,6 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor, OnDest
     this.onTouched = fn
   }
 
-  ngOnInit(): void {
-    this.initForm();
-    this.valSubscription = this.selectionForm.get('value')?.valueChanges.subscribe(val=>{
-        this.onChange(val);
-    })
-  }
 
   private initForm(){
     this.selectionForm = new FormGroup({
@@ -50,8 +47,10 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor, OnDest
     })
   }
 
-  ngOnDestroy(): void {
-   this.valSubscription?.unsubscribe();
+  onSelectOption(value: string){
+    this.value = value;
+    this.onChange(this.value)
   }
+
 
 }
