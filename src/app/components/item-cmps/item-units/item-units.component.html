@@ -1,11 +1,6 @@
 <form [formGroup]="itemAmountForm">
   <div class="item-units_container">
-    <div class="item-units_quantity">
-      <a (click)="onPlus()" class="quantity-btn plus"><div class="quantity-img plus"></div></a>
-      <div class="quantity-input">{{quantityInput}}</div>
-      <a (click)="onMinus()" class="quantity-btn minus"><div class="quantity-img minus"></div></a>
-    </div>
-
+    <app-minus-plus-input formControlName="amount"></app-minus-plus-input>
     <div class="item-units_type">
       <app-select-btns formControlName="unitType" [selectOptions]="options"></app-select-btns>
     </div>

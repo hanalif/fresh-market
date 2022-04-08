@@ -1,0 +1,61 @@
+
+.cmp{
+  position: relative;
+
+  &-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EBEBEB;
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    transition: all 0.3s ease-in-out;;
+
+    &:hover{
+      background: #fbdd83;
+    }
+
+    &.plus{
+      left: 80px;
+    }
+
+    &.minus{
+      right: 80px;
+    }
+  }
+  &-img{
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+
+    &.plus{
+      background-image: url('https://res.cloudinary.com/sprint4/image/upload/v1649416533/HolyVegiFruits/icons/plus_y25pfv.png');
+    }
+
+    &.minus{
+      background-image: url('https://res.cloudinary.com/sprint4/image/upload/v1649416533/HolyVegiFruits/icons/minus-sign_ggevvd.png');
+    }
+  }
+
+  &-input{
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    width: 100%;
+    width: 121px;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:focus-visible{
+      outline: none;
+    }
+  }
+}

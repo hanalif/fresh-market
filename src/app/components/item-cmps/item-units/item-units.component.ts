@@ -18,6 +18,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
 
 
   constructor(private unitPipe: ItemUnitNamePipe) { }
+
   ngOnChanges(changes: SimpleChanges): void {
    if(changes['item'].currentValue !== changes['item'].previousValue){
      this.options = this.item.units.map(unit=>{
@@ -38,7 +39,8 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
 
   private initForm(){
     this.itemAmountForm = new FormGroup({
-      'unitType': new FormControl('')
+      'unitType': new FormControl(''),
+      'amount': new FormControl(0)
     })
   }
   onPlus(){

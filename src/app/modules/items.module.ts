@@ -13,6 +13,7 @@ import { ItemUnitsComponent } from "../components/item-cmps/item-units/item-unit
 import { ItemUnitNamePipe } from '../pipes/itemUnitName/item-unit-name.pipe';
 import { SelectBtnsComponent } from '../components/generic-cmps/select-btns/select-btns.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { MinusPlusInputComponent } from '../components/generic-cmps/minus-plus-input/minus-plus-input.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     ItemModalComponent,
     ItemUnitsComponent,
     ItemUnitNamePipe,
-    SelectBtnsComponent
+    SelectBtnsComponent,
+    MinusPlusInputComponent,
   ],
   imports: [
     CommonModule,
