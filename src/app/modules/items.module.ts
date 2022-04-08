@@ -11,6 +11,8 @@ import { ItemCardComponent } from "../components/item-cmps/item-card/item-card.c
 import { ItemModalComponent } from "../components/item-cmps/item-modal/item-modal.component";
 import { ItemUnitsComponent } from "../components/item-cmps/item-units/item-units.component";
 import { ItemUnitNamePipe } from '../pipes/itemUnitName/item-unit-name.pipe';
+import { SelectBtnsComponent } from '../components/generic-cmps/select-btns/select-btns.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -19,15 +21,17 @@ import { ItemUnitNamePipe } from '../pipes/itemUnitName/item-unit-name.pipe';
     ItemCardComponent,
     ItemModalComponent,
     ItemUnitsComponent,
-    ItemUnitNamePipe
+    ItemUnitNamePipe,
+    SelectBtnsComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ItemsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [ItemsListResolver, ItemQuery, ItemStore],
+  providers: [ItemsListResolver, ItemQuery, ItemStore, ItemUnitNamePipe],
 })
 export class ItemsModule{
 

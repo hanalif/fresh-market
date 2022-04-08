@@ -1,0 +1,8 @@
+<form [formGroup]="selectionForm">
+  <div class="radio-group" >
+    <div class="selection-container" *ngFor="let selection of selectOptions">
+      <input formControlName="value" type="radio" [id]="selection.name" [value]="selection.value">
+      <label [for]="selection.name">{{selection.name}} / ${{selection.subName}}</label>
+    </div>
+  </div>
+</form>

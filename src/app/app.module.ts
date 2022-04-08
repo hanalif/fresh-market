@@ -14,6 +14,7 @@ import { MainHeaderNavComponent } from './components/header/information-menu/inf
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
 import { CartComponent } from './components/cart-cmps/cart/cart.component';
 import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,7 +27,8 @@ import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.c
     MainHeaderNavComponent,
     MobileMenuComponent,
     CartComponent,
-    UserMenuBtnComponent
+    UserMenuBtnComponent,
+
 
 
   ],
@@ -37,7 +39,8 @@ import { UserMenuBtnComponent } from './components/user-menu-btn/user-menu-btn.c
     HttpClientModule,
     ItemsModule,
     AngularMaterialModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

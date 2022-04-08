@@ -5,17 +5,10 @@
   </div>
 
     <div class="item-card_content">
-      <app-item-units></app-item-units>
+      <app-item-units [item]="item"></app-item-units>
     </div>
 
     <div class="item-card_content with-border">
       <div class="item-card_content_title">{{item.name}}</div>
-      <div class="item-card_content_price-container">
-        <div *ngFor="let unit of item.units" class="item-card_content_price">
-        <h3>{{ unit.unitType | itemUnitName }}</h3>
-        <h3>/</h3>
-        <h3>${{unit.price}}</h3>
-        </div>
-      </div>
     </div>
 </div>
