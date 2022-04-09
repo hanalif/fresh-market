@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {  map, Observable, switchMap } from 'rxjs';
-import { CategoriesTitles } from 'src/app/models/item/categoriesTitles.model';
-import { Item } from 'src/app/models/item/item.model';
-import { ItemCategory } from 'src/app/models/item/itemCategory.model';
-import { ItemQuery } from 'src/app/state/items/itemQuery';
+import { CategoriesTitles } from 'src/app/modules/items/models/categoriesTitles.model';
+import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
+import { Item } from '../../models/item.model';
 
 @Component({
   selector: 'app-items-list',

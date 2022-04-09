@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { NavigationStart, Router } from "@angular/router";
 import { Observable, of } from "rxjs";
 import { filter, tap } from "rxjs/operators";
-import { ItemCategory } from "../models/item/itemCategory.model";
+import { ItemCategory } from "../modules/items/models/itemCategory.model";
 import { UIStore } from "../state/UI/UIStore";
 
 @Injectable({providedIn: 'root'})

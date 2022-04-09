@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Item } from 'src/app/models/item/item.model';
-import { ItemUnit } from 'src/app/models/item/itemUnit.model';
-import { ItemUnitType } from 'src/app/models/item/itemUnitType.model';
+import { Item } from '../../models/item.model';
 
 @Component({
   selector: 'app-item-card',

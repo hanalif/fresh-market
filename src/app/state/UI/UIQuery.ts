@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Query } from "@datorama/akita";
 import { map, Observable } from "rxjs";
-import { CategoriesTitles } from "src/app/models/item/categoriesTitles.model";
-import { ItemCategory } from "src/app/models/item/itemCategory.model";
+import { CategoriesTitles } from "src/app/modules/items/models/categoriesTitles.model";
+import { ItemCategory } from "src/app/modules/items/models/itemCategory.model";
 
 import { UIState, UIStore } from "./UIStore";
 

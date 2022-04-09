@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable} from 'rxjs';
-import { ItemCategory } from 'src/app/models/item/itemCategory.model';
+import { ItemCategory } from 'src/app/modules/items/models/itemCategory.model';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { Animations } from '../../../animations'
 @Component({

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
-import { Item } from 'src/app/models/item/item.model';
+import { Item } from '../models/item.model';
 
 export interface ItemState {
   itemsToShow: Item[]

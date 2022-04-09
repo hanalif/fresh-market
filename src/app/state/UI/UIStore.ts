@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
-import { ItemCategory } from 'src/app/models/item/itemCategory.model';
+import { ItemCategory } from 'src/app/modules/items/models/itemCategory.model';
 
 
 export interface UIState {
