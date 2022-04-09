@@ -20,7 +20,6 @@
 
     <div
       class="dropdown_menu"
-      *ngIf="isDropdownMenuOpen"
       [@slidesDownAnumation]
       [ngClass]="{'dropdown-menu-mobile': isMobileMenuOpen$ | async, 'open': openCategiresMaping[itemCategory._id]}">
         <a

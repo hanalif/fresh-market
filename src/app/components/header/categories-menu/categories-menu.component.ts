@@ -12,7 +12,6 @@ import { Animations } from '../../../animations'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartMenuComponent implements OnInit{
-  isDropdownMenuOpen: boolean = false;
   isMobileMenuOpen$!: Observable<boolean>
   itemsCategories$!: Observable<ItemCategory[]>
   public openCategiresMaping: any = {};
@@ -29,10 +28,8 @@ export class CartMenuComponent implements OnInit{
   onClickMobileMenuLink(_id:string){
     if(this.openCategiresMaping[_id]){
       this.openCategiresMaping[_id] = !this.openCategiresMaping[_id];
-      this.isDropdownMenuOpen = !this.isDropdownMenuOpen;
     } else{
       this.openCategiresMaping[_id] = true;
-      this.isDropdownMenuOpen = true;
     }
   }
 }
