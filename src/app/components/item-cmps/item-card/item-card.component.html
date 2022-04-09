@@ -4,11 +4,11 @@
     <div class="item-card_img" [ngStyle]="{'background-image' : 'url('+ item.images[0].thumbnailImgUrl +')'}"></div>
   </div>
 
-    <div class="item-card_content">
-      <app-item-units [item]="item"></app-item-units>
-    </div>
+  <div class="item-card_content">
+    <div class="item-card_content_title">{{item.name}}</div>
+  </div>
 
-    <div class="item-card_content with-border">
-      <div class="item-card_content_title">{{item.name}}</div>
-    </div>
+  <div class="item-card_content">
+      <app-item-units [item]="item"></app-item-units>
+  </div>
 </div>
