@@ -7,7 +7,7 @@ import { UIQuery } from 'src/app/state/UI/UIQuery';
   templateUrl: './information-menu.component.html',
   styleUrls: ['./information-menu.component.scss']
 })
-export class MainHeaderNavComponent implements OnInit {
+export class InformationMenuComponent implements OnInit {
   isMobileMenuOpen$!: Observable<boolean>
   constructor(private uIQuery: UIQuery) { }
 

@@ -2,8 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
-import { Item } from "../models/item/item.model";
-import { ItemStore } from "../state/items/itemStore";
+import { Item } from "../../../models/item/item.model";
+import { ItemStore } from "../../../state/items/itemStore";
 
 @Injectable({providedIn: 'root'})
 

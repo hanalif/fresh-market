@@ -1,8 +1,8 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Item } from 'src/app/models/item/item.model';
-import { ItemUnitNamePipe } from 'src/app/pipes/itemUnitName/item-unit-name.pipe';
-import { SelectOptions} from '../../generic-cmps/select-btns/models/select-options.model';
+import { SelectOptions } from 'src/app/shared/components/select-btns/models/select-options.model';
+import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
 
 
 @Component({
