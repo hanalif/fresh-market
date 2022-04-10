@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SelectOptions } from 'src/app/shared/components/select-btns/models/select-options.model';
 import { Item } from '../../models/item.model';
@@ -8,7 +8,8 @@ import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
 @Component({
   selector: 'app-item-units',
   templateUrl: './item-units.component.html',
-  styleUrls: ['./item-units.component.scss']
+  styleUrls: ['./item-units.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemUnitsComponent implements OnInit, OnChanges {
   public quantityInput: number = 0;

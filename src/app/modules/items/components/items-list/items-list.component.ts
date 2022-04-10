@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {  map, Observable, switchMap } from 'rxjs';
+import { Observable, switchMap } from 'rxjs';
 import { CategoriesTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
@@ -10,6 +10,7 @@ import { Item } from '../../models/item.model';
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
   styleUrls: ['./items-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemsListComponent implements OnInit {
   public itemsToShow!: Item[];

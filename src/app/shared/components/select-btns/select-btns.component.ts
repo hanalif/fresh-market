@@ -1,5 +1,5 @@
 
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {  Subscription } from 'rxjs';
 import { SelectOptions } from './models/select-options.model';
@@ -12,7 +12,8 @@ import { SelectOptions } from './models/select-options.model';
     provide: NG_VALUE_ACCESSOR,
     useExisting: SelectBtnsComponent,
     multi: true
-  }]
+  }],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
   onChange: any;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
@@ -10,7 +10,8 @@ import { Subscription } from 'rxjs';
     provide: NG_VALUE_ACCESSOR,
     useExisting: MinusPlusInputComponent,
     multi: true
-  }]
+  }],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MinusPlusInputComponent implements OnInit, ControlValueAccessor {
   counter: number = 0;

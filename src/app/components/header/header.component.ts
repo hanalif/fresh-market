@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { UIService } from 'src/app/services/UI.service';
 import { Animations } from '../../../app/animations'
 
@@ -6,7 +6,8 @@ import { Animations } from '../../../app/animations'
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations:[ Animations.slidesDownAnumation]
+  animations:[ Animations.slidesDownAnumation],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class HeaderComponent implements OnInit {

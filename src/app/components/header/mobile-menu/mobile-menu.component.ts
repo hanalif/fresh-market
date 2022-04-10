@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UIService } from 'src/app/services/UI.service';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
@@ -6,7 +6,8 @@ import { UIQuery } from 'src/app/state/UI/UIQuery';
 @Component({
   selector: 'app-mobile-menu',
   templateUrl: './mobile-menu.component.html',
-  styleUrls: ['./mobile-menu.component.scss']
+  styleUrls: ['./mobile-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MobileMenuComponent implements OnInit {
   isMobileMenuOpen$!: Observable<boolean>

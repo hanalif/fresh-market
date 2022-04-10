@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
 
 @Component({
   selector: 'app-information-menu',
   templateUrl: './information-menu.component.html',
-  styleUrls: ['./information-menu.component.scss']
+  styleUrls: ['./information-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InformationMenuComponent implements OnInit {
   isMobileMenuOpen$!: Observable<boolean>

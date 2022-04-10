@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Animations } from './animations'
 import { UIService } from './services/UI.service';
@@ -8,7 +8,8 @@ import { UIQuery } from './state/UI/UIQuery';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [Animations.mobileMenuAnimation]
+  animations: [Animations.mobileMenuAnimation],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
  public showWithBackdrop!: boolean;
