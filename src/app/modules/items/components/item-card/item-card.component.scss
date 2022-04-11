@@ -6,12 +6,13 @@
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 9%);
   height: 385px;
   width: 100%;
-  cursor: pointer;
+
 
 
 
   &_img-container{
     display: contents;
+    cursor: pointer;
   }
 
   &_img{

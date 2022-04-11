@@ -1,6 +1,6 @@
 
 <div class="item-card">
-  <div class="item-card_img-container">
+  <div (click)="openDialog()" class="item-card_img-container">
     <div class="item-card_img" [ngStyle]="{'background-image' : 'url('+ item.images[0].thumbnailImgUrl +')'}"></div>
   </div>
 

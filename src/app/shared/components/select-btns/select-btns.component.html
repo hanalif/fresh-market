@@ -3,7 +3,7 @@
       <button
         class="selection-btn"
         (click)="onSelectOption(selection.value)"
-        [ngClass]="{'active': selection.value === value}"
+        [ngClass]="{'active': selection.value === valueControl.value}"
         >{{selection.name}} / <br> ${{selection.subName}}
       </button>
   </div>

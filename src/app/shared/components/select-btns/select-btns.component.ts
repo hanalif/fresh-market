@@ -19,24 +19,25 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
   onChange: any;
   onTouched: any;
   selectionForm!: FormGroup;
+  valueControl!: FormControl;
 
   constructor() { }
 
   @Input() selectOptions!: SelectOptions[];
-  value!: string;
 
   ngOnInit(): void {
     this.initForm();
+    this.valueControl = this.selectionForm.get('value') as FormControl;
   }
 
-
   writeValue(value: string): void {
-    this.value = value;
+    this.valueControl?.setValue(value);
   }
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
+
   registerOnTouched(fn: any): void {
     this.onTouched = fn
   }
@@ -44,13 +45,13 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
 
   private initForm(){
     this.selectionForm = new FormGroup({
-      'value': new FormControl (''),
+      'value': new FormControl (),
     })
   }
 
   onSelectOption(value: string){
-    this.value = value;
-    this.onChange(this.value);
+    this.valueControl.setValue(value);
+    this.onChange(value);
   }
 
 

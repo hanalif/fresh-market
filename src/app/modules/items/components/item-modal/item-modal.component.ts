@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, OnInit } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Item } from '../../models/item.model';
 
 @Component({
   selector: 'app-item-modal',
@@ -8,7 +10,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class ItemModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Item) { }
 
   ngOnInit(): void {
   }

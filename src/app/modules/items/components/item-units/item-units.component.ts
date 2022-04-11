@@ -41,7 +41,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
 
   private initForm(){
     this.itemAmountForm = new FormGroup({
-      'unitType': new FormControl(''),
+      'unitType': new FormControl(this.item.units[0].unitType),
       'amount': new FormControl(0)
     })
   }

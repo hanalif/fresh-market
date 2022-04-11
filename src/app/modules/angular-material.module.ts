@@ -1,12 +1,13 @@
 import { NgModule } from "@angular/core";
 
 import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   exports:[
     MatIconModule,
-    MatSidenavModule
+    MatDialogModule
   ]
 })
 export class AngularMaterialModule{
