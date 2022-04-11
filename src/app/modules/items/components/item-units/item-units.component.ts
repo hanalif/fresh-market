@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { SelectOptions } from 'src/app/shared/components/select-btns/models/select-options.model';
 import { Item } from '../../models/item.model';
 import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
@@ -18,7 +18,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
   itemAmountForm!: FormGroup;
 
 
-  constructor(private unitPipe: ItemUnitNamePipe) { }
+  constructor(private unitPipe: ItemUnitNamePipe, private formBuilder: FormBuilder) { }
 
   ngOnChanges(changes: SimpleChanges): void {
 
@@ -31,8 +31,8 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
        }
        return option;
      })
-
    }
+
   }
 
   ngOnInit(): void {

@@ -1,11 +1,12 @@
-<form [formGroup]="selectionForm">
-  <div class="radio-group" >
+<form class="selection-form" [formGroup]="selectionForm">
     <div class="selection-container" *ngFor="let selection of selectOptions">
       <button
         class="selection-btn"
         (click)="onSelectOption(selection.value)"
         [ngClass]="{'active': selection.value === value}"
-        >{{selection.name}} / ${{selection.subName}}</button>
-    </div>
+        >{{selection.name}} / <br> ${{selection.subName}}
+      </button>
   </div>
 </form>
+
+

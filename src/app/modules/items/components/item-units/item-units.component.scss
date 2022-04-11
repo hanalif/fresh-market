@@ -11,9 +11,9 @@
 
   &_type{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

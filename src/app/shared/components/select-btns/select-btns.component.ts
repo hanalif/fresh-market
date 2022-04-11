@@ -50,7 +50,7 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
 
   onSelectOption(value: string){
     this.value = value;
-    this.onChange(this.value)
+    this.onChange(this.value);
   }
 
 

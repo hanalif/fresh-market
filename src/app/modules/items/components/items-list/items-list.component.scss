@@ -2,7 +2,7 @@
 @import "../../../../../assets/styles/setup/variables";
 
 .items-list-container{
-  margin-block-start: calc(100vh - 550px);
+  margin-block-start: calc(100vh - 510px);
 
   @include for-bpoint-tablet-landscape{
     margin-block-start: calc(100vh - 430px);
