@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { Item } from '../../models/item.model';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ItemModalComponent } from '../item-modal/item-modal.component';
+import { ItemModalData } from '../item-modal/models/data.model';
 
 @Component({
   selector: 'app-item-card',
@@ -19,10 +20,11 @@ export class ItemCardComponent implements OnInit {
   }
 
   openDialog() {
+    const data: ItemModalData = {
+      item: this.item,
+    };
     this.dialog.open(ItemModalComponent, {
-      data: {
-        item: this.item,
-      },
+      data: data,
     });
   }
 
