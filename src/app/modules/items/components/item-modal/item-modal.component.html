@@ -1,4 +1,5 @@
-<h1 mat-dialog-title>Item Details</h1>
+<h1 mat-dialog-title>{{data.item.name}}</h1>
 <div mat-dialog-content>
-  <h1>{{data.item.name}}</h1>
+  <p>{{data.item.description}}</p>
+  <button mat-button (click)="onNoClick()">close</button>
 </div>

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Inject, OnInit } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ItemModalData } from './models/data.model';
 
 @Component({
@@ -10,9 +10,14 @@ import { ItemModalData } from './models/data.model';
 })
 export class ItemModalComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ItemModalData) { }
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ItemModalData,  public dialogRef: MatDialogRef<ItemModalComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  onNoClick(): void{
+    this.dialogRef.close();
   }
 
 }
