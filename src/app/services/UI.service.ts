@@ -20,6 +20,26 @@ export class UIService{
     })
   }
 
+  setIsCartOpen(val: boolean){
+    this.uIStore.update(state=>{
+      return {
+        ...state,
+        isCartOpen: val
+      }
+    })
+  }
+
+
+  setUiStoreAfterBackdropClicked(val: boolean){
+    this.uIStore.update(state=>{
+      return{
+        ...state,
+        isCartOpen: val,
+        isMobileMenuOpen: val
+      }
+    })
+  }
+
   getItemsCategories():Observable<ItemCategory[]>{
       return this.http.get<ItemCategory[]>('assets/_json-files/items-categories.json').pipe(
        tap(itemsCategoriesFromJson=>{

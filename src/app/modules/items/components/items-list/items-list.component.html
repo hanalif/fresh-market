@@ -5,9 +5,9 @@
       <small>{{((categoriesTitles$ | async)?.subCategory) | uppercase }}</small>
     </div>
   </div>
-  <div class="items-list main-layout">
+  <div *ngIf="(items$ | async) != null" class="items-list main-layout">
     <app-item-card
-      *ngFor="let item of items$ | async"
+      *ngFor="let item of (items$ | async); trackBy: trackBy"
       [item]="item">
     </app-item-card>
   </div>

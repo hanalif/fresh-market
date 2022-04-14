@@ -19,7 +19,7 @@
       <div class="main-header_actions">
         <app-information-menu></app-information-menu>
         <app-user-menu-btn></app-user-menu-btn>
-        <div class="main-header_cart">
+        <div (click)="onToggleCart(true)" class="main-header_cart">
           <div class="cart-img"></div>
           <div class="cart-counter">
             <small class="counter-txt">0</small>

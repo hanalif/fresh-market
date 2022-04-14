@@ -3,7 +3,11 @@
   <app-mobile-menu
   *ngIf="isMobileMenuOpen$ | async"
   [@mobileMenuAnimation] ></app-mobile-menu>
+
+  <app-cart *ngIf="isCartOpen$ | async"
+  [@cartAnimation]></app-cart>
+
 <router-outlet></router-outlet>
 
-<div (click)="onBackdropClicked(false)" *ngIf="isMobileMenuOpen$ | async" class="backdrop"></div>
+<div (click)="onBackdropClicked(false)" *ngIf="(isMobileMenuOpen$ | async) || (isCartOpen$ | async)" class="backdrop"></div>
 

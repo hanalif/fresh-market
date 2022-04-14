@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UIService } from 'src/app/services/UI.service';
 import { Animations } from '../../../app/animations'
 
@@ -17,7 +18,7 @@ export class HeaderComponent implements OnInit {
    @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
 
 
-  constructor(private uIService:UIService) { }
+  constructor(private uIService:UIService, private router: Router) { }
 
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
@@ -44,6 +45,10 @@ export class HeaderComponent implements OnInit {
     this.uIService.setIsMobileMenuOpen(val);
   }
 
+  onToggleCart(val: boolean){
+    this.uIService.setIsCartOpen(val);
+    this.router.navigate(['cart']);
+  }
 }
 
 

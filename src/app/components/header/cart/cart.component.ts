@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UIService } from 'src/app/services/UI.service';
+import { UIQuery } from 'src/app/state/UI/UIQuery';
+
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private uIService:UIService) { }
 
   ngOnInit(): void {
+
+  }
+
+  onCloseCart(val: boolean){
+    this.uIService.setIsCartOpen(val);
   }
 
 }

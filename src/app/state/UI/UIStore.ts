@@ -5,13 +5,15 @@ import { ItemCategory } from 'src/app/modules/items/models/itemCategory.model';
 
 export interface UIState {
   isMobileMenuOpen: boolean,
-  itemsCategories: ItemCategory[]
+  itemsCategories: ItemCategory[],
+  isCartOpen: boolean
 }
 
 export const getInitialState = () => {
   return {
     isMobileMenuOpen: false,
-    itemsCategories: []
+    itemsCategories: [],
+    isCartOpen: false
   };
 };
 

@@ -8,24 +8,26 @@ import { UIQuery } from './state/UI/UIQuery';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [Animations.mobileMenuAnimation],
+  animations: [Animations.mobileMenuAnimation, Animations.cartAnimation],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
  public showWithBackdrop!: boolean;
  public showMobileMenu!: boolean;
- isMobileMenuOpen$!: Observable<boolean>
+ isMobileMenuOpen$!: Observable<boolean>;
+ isCartOpen$!: Observable<boolean>;
 
  constructor( private uIQuery: UIQuery, private uIService:UIService) { }
   ngOnInit(): void {
     this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
+    this.isCartOpen$ = this.uIQuery.setIsCartOpen();
     this.uIService.getItemsCategories().subscribe(); // todo add routing to app and move to resolver
     this.uIService.updateWhenUrlChangesOccur().subscribe()
   }
 
 
   onBackdropClicked(val:boolean){
-    this.uIService.setIsMobileMenuOpen(val);
+    this.uIService.setUiStoreAfterBackdropClicked(val);
   }
 
 }

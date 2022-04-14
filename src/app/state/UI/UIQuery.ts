@@ -17,6 +17,10 @@ export class UIQuery extends Query<UIState>{
     return this.select<boolean>(state => state.isMobileMenuOpen);
   }
 
+  setIsCartOpen(): Observable<boolean>{
+    return this.select<boolean>(state=> state.isCartOpen);
+  }
+
   getItemsCategories(): Observable<ItemCategory[]>{
     return this.select<ItemCategory[]>(state=> state.itemsCategories);
   }

@@ -11,13 +11,16 @@ const itemsRoutes: Routes = [
         path: ':mainCategoryId',
         component: ItemsListComponent,
         resolve: [ItemsListResolver],
+        runGuardsAndResolvers: 'always'
       },
       {
         path: ':mainCategoryId/:subcategoryId',
         component: ItemsListComponent,
         resolve: [ItemsListResolver],
+        runGuardsAndResolvers: 'always'
       },
     ],
+    runGuardsAndResolvers: 'always'
   },
 ];
 
