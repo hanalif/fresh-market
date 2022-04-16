@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { UIService } from 'src/app/services/UI.service';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
 
@@ -6,7 +6,8 @@ import { UIQuery } from 'src/app/state/UI/UIQuery';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartComponent implements OnInit {
 

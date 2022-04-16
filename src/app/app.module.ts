@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ItemsModule } from './modules/items/items.module';
 import { SharedModule } from './shared/shared.module';
 import { CartComponent } from './components/header/cart/cart.component';
+import { CartBtnComponent } from './components/cart-btn/cart-btn.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CartComponent } from './components/header/cart/cart.component';
     InformationMenuComponent,
     MobileMenuComponent,
     UserMenuBtnComponent,
-    CartComponent
+    CartComponent,
+    CartBtnComponent
   ],
   imports: [
     BrowserModule,

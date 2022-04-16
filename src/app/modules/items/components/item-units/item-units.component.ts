@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { SelectOptions } from 'src/app/shared/components/select-btns/models/select-options.model';
 import { Item } from '../../models/item.model';
+import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
 
 
@@ -11,14 +13,17 @@ import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
   styleUrls: ['./item-units.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemUnitsComponent implements OnInit, OnChanges {
+export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   public quantityInput: number = 0;
   @Input() item!: Item;
+  @Output() itemUnitsValueChanged = new EventEmitter<ItemUnitsValue>()
   options!: SelectOptions[];
   itemAmountForm!: FormGroup;
+  itemUnitsValueSubscription: Subscription | undefined;
 
 
-  constructor(private unitPipe: ItemUnitNamePipe, private formBuilder: FormBuilder) { }
+  constructor(private unitPipe: ItemUnitNamePipe) { }
+
 
   ngOnChanges(changes: SimpleChanges): void {
 
@@ -37,6 +42,14 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.initForm();
+    this.itemUnitsValueSubscription = this.itemAmountForm.get('amount')?.valueChanges.subscribe(amount=>{
+
+      let itemUnitsValue: ItemUnitsValue = {
+        ...this.itemAmountForm.value,
+        amount: amount,
+      }
+      this.itemUnitsValueChanged.emit(itemUnitsValue);
+    })
   }
 
   private initForm(){
@@ -44,6 +57,10 @@ export class ItemUnitsComponent implements OnInit, OnChanges {
       'unitType': new FormControl(this.item.units[0].unitType),
       'amount': new FormControl(0)
     })
+  }
+
+  ngOnDestroy(): void {
+   this.itemUnitsValueSubscription!.unsubscribe()
   }
 
 }
