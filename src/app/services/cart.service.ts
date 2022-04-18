@@ -11,10 +11,10 @@ import { StorageService } from "./async-storag.service";
 export class CartService{
   private readonly entityType: string = 'items';
 
-  constructor(private storageService: StorageService, private itemQuery:ItemQuery, private itemService: ItemService, private cartQuery: CartQuery, private cartStore: CartStore ){}
+  constructor(private storageService: StorageService, private itemService: ItemService, private cartQuery: CartQuery, private cartStore: CartStore ){}
 
   saveItemOrderInfo(itemOrderInfo: ItemOrderInfo){
-    return this.cartQuery.getItemsOrderInfo().pipe(
+    return this.storageService.get(this.entityType).pipe(
       first(),
       switchMap(itemsOrderInfo=>{
         const setItemOrderInfoToItemsStore$ = this.itemService.saveToItemsToShowInCart(itemOrderInfo);
@@ -30,6 +30,17 @@ export class CartService{
         return forkJoin([setItemOrderInfoToStorage$, setItemOrderInfoToItemsStore$ ])
       })
     )
+  }
+
+  loadItemsOrderInfoFromStorage(){
+    return this.storageService.get(this.entityType).pipe(
+      switchMap(itemsFromStorage=>{
+        const itemsOrderInfo = itemsFromStorage as ItemOrderInfo[]
+        const ids = itemsOrderInfo.map(ioi=> ioi._id);
+        this.cartStore.add(itemsOrderInfo);
+        return this.itemService.saveToItemsToShowInCartFromStorage(ids);
+      })
+    );
   }
 
 

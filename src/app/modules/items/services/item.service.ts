@@ -54,6 +54,20 @@ export class ItemService{
       )
   }
 
+  saveToItemsToShowInCartFromStorage(ItemsIds: string[]){
+    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+      tap(items=>{
+        const itemsToShowInCartFromStorage = items.filter(item=> ItemsIds.includes(item._id));
+        this.itemStore.update(state=>{
+          return {
+            ...state,
+            itemsToShowInCart: itemsToShowInCartFromStorage
+          }
+        })
+      })
+    )
+  }
+
 
 
 

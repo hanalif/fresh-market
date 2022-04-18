@@ -8,7 +8,8 @@
   <div *ngIf="(items$ | async) != null" class="items-list main-layout">
     <app-item-card
       *ngFor="let item of (items$ | async); trackBy: trackBy"
-      [item]="item">
+      [item]="item"
+    >
     </app-item-card>
   </div>
 </div>

@@ -6,7 +6,7 @@ import { ItemModalData } from '../item-modal/models/data.model';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
 import { CartService } from 'src/app/services/cart.service';
-import { forkJoin, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-item-card',
@@ -45,7 +45,7 @@ export class ItemCardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.itemOrderInfoSubscription.unsubscribe()
+    this.itemOrderInfoSubscription?.unsubscribe()
   }
 
 
