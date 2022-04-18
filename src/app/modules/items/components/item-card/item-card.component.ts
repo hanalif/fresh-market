@@ -16,7 +16,8 @@ import { Subscription } from 'rxjs';
 })
 export class ItemCardComponent implements OnInit, OnDestroy {
   @Input() item!: Item;
-  itemOrderInfoSubscription!: Subscription
+  @Input() itemUnitsValue!: ItemUnitsValue;
+  itemOrderInfoSubscription!: Subscription;
 
 
   constructor(public dialog: MatDialog, private cartService: CartService) { }

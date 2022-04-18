@@ -19,12 +19,11 @@ export class CartComponent implements OnInit {
   cartItemsToShow$! :Observable<Item[]>
 
   ngOnInit(): void {
-
+    this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart();
   }
 
   onCloseCart(val: boolean){
     this.uIService.setIsCartOpen(val);
-    this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart()
   }
 
 }

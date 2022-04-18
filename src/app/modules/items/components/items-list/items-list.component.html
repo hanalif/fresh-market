@@ -9,6 +9,7 @@
     <app-item-card
       *ngFor="let item of (items$ | async); trackBy: trackBy"
       [item]="item"
+      [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
     >
     </app-item-card>
   </div>

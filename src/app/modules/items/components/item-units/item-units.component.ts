@@ -16,10 +16,14 @@ import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
 export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   public quantityInput: number = 0;
   @Input() item!: Item;
+  @Input() itemUnitsValue!: ItemUnitsValue;
+
   @Output() itemUnitsValueChanged = new EventEmitter<ItemUnitsValue>()
   options!: SelectOptions[];
   itemAmountForm!: FormGroup;
   itemUnitsValueSubscription: Subscription | undefined;
+  unitTypeControl!: FormControl;
+  amountControl!: FormControl;
 
 
   constructor(private unitPipe: ItemUnitNamePipe) { }
@@ -36,12 +40,25 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
        }
        return option;
      })
-   }
+    }
+
+    if(changes['itemUnitsValue'].currentValue !== changes['itemUnitsValue'].previousValue && this.itemAmountForm != null){
+      if(this.itemUnitsValue != null) {
+        this.amountControl.setValue(this.itemUnitsValue.amount, { emitEvent: false });
+        this.unitTypeControl.setValue(this.itemUnitsValue.unitType, { emitEvent: false });
+      }
+      else {
+        this.amountControl.setValue(0, { emitEvent: false });
+        this.unitTypeControl.setValue(this.item.units[0].unitType, { emitEvent: false });
+      }
+    }
 
   }
 
   ngOnInit(): void {
     this.initForm();
+    this.unitTypeControl = this.itemAmountForm.get('unitType') as FormControl;
+    this.amountControl = this.itemAmountForm.get('amount') as FormControl;
     this.itemUnitsValueSubscription = this.itemAmountForm.get('amount')?.valueChanges.subscribe(amount=>{
 
       let itemUnitsValue: ItemUnitsValue = {
@@ -54,8 +71,8 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
 
   private initForm(){
     this.itemAmountForm = new FormGroup({
-      'unitType': new FormControl(this.item.units[0].unitType),
-      'amount': new FormControl(0)
+      'unitType': new FormControl(this.itemUnitsValue != null ? this.itemUnitsValue.unitType : this.item.units[0].unitType),
+      'amount': new FormControl(this.itemUnitsValue != null ? this.itemUnitsValue.amount : 0)
     })
   }
 

@@ -9,6 +9,6 @@
   </div>
 
   <div class="item-card_content">
-      <app-item-units [item]="item" (itemUnitsValueChanged)="saveItemUnitsValue($event)"></app-item-units>
+      <app-item-units [itemUnitsValue]="itemUnitsValue" [item]="item" (itemUnitsValueChanged)="saveItemUnitsValue($event)"></app-item-units>
   </div>
 </div>

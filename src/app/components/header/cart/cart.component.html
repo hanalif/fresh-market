@@ -7,7 +7,7 @@
     <app-cart-btn></app-cart-btn>
   </div>
   <div class="cart-body">
-    <div *ngFor="let item of cartItemsToShow$ | async" class="cart-items-list">
+    <div *ngFor="let item of (cartItemsToShow$ | async)" class="cart-items-list">
       <h1>{{item.name}}</h1>
     </div>
   </div>
