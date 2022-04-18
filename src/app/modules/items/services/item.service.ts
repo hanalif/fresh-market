@@ -30,19 +30,19 @@ export class ItemService{
     );
   }
 
-  saveCartItemToStore(itemOrderInfo: ItemOrderInfo){
-      return this.itemQuery.getCartItems().pipe(
-        switchMap(cartItems => {
-          const isItemInList = cartItems.find(item=> item._id === itemOrderInfo._id);
+  saveToItemsToShowInCart(itemOrderInfo: ItemOrderInfo){
+      return this.itemQuery.getItemsToShowInCart().pipe(
+        switchMap(itemsToShowInCart => {
+          const isItemInList = itemsToShowInCart.find(item=> item._id === itemOrderInfo._id);
           if(!isItemInList){
              return this.itemQuery.getItemsToShow().pipe(
               tap(itemsToShow=>{
                 const itemToSave = itemsToShow.find(item=> item._id === itemOrderInfo._id);
-                const updatedCartItems = [...cartItems, itemToSave as Item ];
+                const updatedCartItems = [...itemsToShowInCart, itemToSave as Item ];
                 this.itemStore.update(state=>{
                   return {
                     ...state,
-                    cartItems: updatedCartItems
+                    itemsToShowInCart: updatedCartItems
                   }
                 })
               })
@@ -53,6 +53,8 @@ export class ItemService{
         })
       )
   }
+
+
 
 
 

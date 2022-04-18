@@ -4,13 +4,13 @@ import { Item } from '../models/item.model';
 
 export interface ItemState {
   itemsToShow: Item[],
-  cartItems: Item[]
+  itemsToShowInCart: Item[]
 }
 
 export const getInitialState = () => {
   return {
     itemsToShow: [],
-    cartItems: []
+    itemsToShowInCart: []
   };
 };
 

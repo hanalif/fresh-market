@@ -42,7 +42,7 @@ export class StorageService {
         this._save(entityType, entities);
       }),
       map(()=>{
-        return updatedEntity;
+        return;
       })
     )
   }

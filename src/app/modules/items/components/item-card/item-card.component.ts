@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Item } from '../../models/item.model';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ItemModalComponent } from '../item-modal/item-modal.component';
@@ -6,6 +6,7 @@ import { ItemModalData } from '../item-modal/models/data.model';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
 import { CartService } from 'src/app/services/cart.service';
+import { forkJoin, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-item-card',
@@ -13,11 +14,13 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./item-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemCardComponent implements OnInit {
+export class ItemCardComponent implements OnInit, OnDestroy {
   @Input() item!: Item;
+  itemOrderInfoSubscription!: Subscription
 
 
   constructor(public dialog: MatDialog, private cartService: CartService) { }
+
 
   ngOnInit(): void {
   }
@@ -38,8 +41,11 @@ export class ItemCardComponent implements OnInit {
       amount: value.amount,
     }
 
-     this.cartService.saveCartItemToStorage(itemOrderInfo)
+    this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
+  }
 
+  ngOnDestroy(): void {
+    this.itemOrderInfoSubscription.unsubscribe()
   }
 
 

@@ -10,7 +10,7 @@ export class CartQuery extends QueryEntity<CartState, ItemOrderInfo> {
     super(cartStore);
   }
 
-  getCartItems() {
+  getItemsOrderInfo() {
     return this.selectAll();
   }
 
