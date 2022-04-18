@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
 import { HeaderComponent } from './components/header/header.component';
 import { AngularMaterialModule } from './modules/angular-material.module';
@@ -17,6 +18,7 @@ import { ItemsModule } from './modules/items/items.module';
 import { SharedModule } from './shared/shared.module';
 import { CartComponent } from './components/header/cart/cart.component';
 import { CartBtnComponent } from './components/cart-btn/cart-btn.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { CartBtnComponent } from './components/cart-btn/cart-btn.component';
     ItemsModule,
     AngularMaterialModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    environment.production ? [] : AkitaNgDevtools.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

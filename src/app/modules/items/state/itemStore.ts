@@ -3,12 +3,14 @@ import { Store, StoreConfig } from '@datorama/akita';
 import { Item } from '../models/item.model';
 
 export interface ItemState {
-  itemsToShow: Item[]
+  itemsToShow: Item[],
+  cartItems: Item[]
 }
 
 export const getInitialState = () => {
   return {
-    itemsToShow: []
+    itemsToShow: [],
+    cartItems: []
   };
 };
 

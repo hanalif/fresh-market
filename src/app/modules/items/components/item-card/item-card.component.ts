@@ -37,7 +37,8 @@ export class ItemCardComponent implements OnInit {
       unitType: value.unitType,
       amount: value.amount,
     }
-     this.cartService.saveToStorage(itemOrderInfo);
+
+     this.cartService.saveCartItemToStorage(itemOrderInfo)
 
   }
 

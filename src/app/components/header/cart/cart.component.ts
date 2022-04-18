@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { UIService } from 'src/app/services/UI.service';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
 
