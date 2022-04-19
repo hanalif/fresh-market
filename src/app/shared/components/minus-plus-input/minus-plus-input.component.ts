@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
@@ -20,7 +20,7 @@ export class MinusPlusInputComponent implements OnInit, ControlValueAccessor {
   minusPlusForm!: FormGroup;
   counterSubscription!: Subscription | undefined;
 
-  constructor() { }
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -29,10 +29,13 @@ export class MinusPlusInputComponent implements OnInit, ControlValueAccessor {
 
   writeValue(counter: number): void {
     this.counter = counter;
+    this.cd.detectChanges();
   }
+
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
+
   registerOnTouched(fn: any): void {
    this.onTouched = fn;
   }

@@ -30,11 +30,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
 
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(!changes['items']){
-      return;
-    }
-
-    if(changes['item'].currentValue !== changes['item'].previousValue){
+    if(changes['item'] && changes['item'].currentValue !== changes['item'].previousValue){
      this.options = this.item.units.map(unit=>{
         let option: SelectOptions = {
          name: this.unitPipe.transform(unit.unitType),
@@ -45,7 +41,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
      })
     }
 
-    if(changes['itemUnitsValue'].currentValue !== changes['itemUnitsValue'].previousValue && this.itemAmountForm != null){
+    if(changes['itemUnitsValue'] && changes['itemUnitsValue'].currentValue !== changes['itemUnitsValue'].previousValue && this.itemAmountForm != null){
       if(this.itemUnitsValue != null) {
         this.amountControl.setValue(this.itemUnitsValue.amount, { emitEvent: false });
         this.unitTypeControl.setValue(this.itemUnitsValue.unitType, { emitEvent: false });

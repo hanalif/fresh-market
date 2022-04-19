@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Item } from '../../models/item.model';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ItemModalComponent } from '../item-modal/item-modal.component';
@@ -14,13 +14,16 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./item-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemCardComponent implements OnInit, OnDestroy {
+export class ItemCardComponent implements OnInit, OnDestroy, OnChanges {
   @Input() item!: Item;
   @Input() itemUnitsValue!: ItemUnitsValue;
   itemOrderInfoSubscription!: Subscription;
 
 
   constructor(public dialog: MatDialog, private cartService: CartService) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+  }
 
 
   ngOnInit(): void {
