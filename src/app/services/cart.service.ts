@@ -14,15 +14,21 @@ export class CartService{
   saveItemOrderInfo(itemOrderInfo: ItemOrderInfo){
     return this.storageService.get(this.entityType).pipe(
       switchMap(itemsOrderInfo=>{
-        this.itemService.saveToItemsToShowInCart(itemOrderInfo);
         let setItemOrderInfoToStorage$: Observable<void>;
         const isItemInList = itemsOrderInfo.find(ioi=> ioi._id === itemOrderInfo._id);
         if(!isItemInList){
+          this.itemService.saveToItemsToShowInCart(itemOrderInfo);
           this.cartStore.add(itemOrderInfo);
           setItemOrderInfoToStorage$ = this.storageService.post(this.entityType, itemOrderInfo);
         } else{
-          this.cartStore.update(itemOrderInfo._id, {...itemOrderInfo});
-          setItemOrderInfoToStorage$ = this.storageService.put(this.entityType, itemOrderInfo);
+          if(itemOrderInfo.amount === 0){
+            this.itemService.removeItemFromItemsToShowInCart(itemOrderInfo._id);
+            this.cartStore.remove(itemOrderInfo._id);
+            setItemOrderInfoToStorage$ = this.storageService.remove(this.entityType, itemOrderInfo._id);
+          } else{
+            this.cartStore.update(itemOrderInfo._id, {...itemOrderInfo});
+            setItemOrderInfoToStorage$ = this.storageService.put(this.entityType, itemOrderInfo);
+          }
         }
         return setItemOrderInfoToStorage$;
       })
