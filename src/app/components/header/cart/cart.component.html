@@ -9,8 +9,8 @@
   <div class="cart-body">
     <div *ngFor="let item of (cartItemsToShow$ | async)" class="cart-items-list">
       <h1>{{item.name}}</h1>
+      <input type="text">
       <button (click)="onRemoveItem(item._id)" class="clear-icon"></button>
     </div>
   </div>
-
 </div>
