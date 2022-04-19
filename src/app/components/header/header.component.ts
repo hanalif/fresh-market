@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
    @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
 
 
-  constructor(private uIService:UIService, private router: Router) { }
+  constructor(private uIService:UIService) { }
 
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
@@ -47,7 +47,6 @@ export class HeaderComponent implements OnInit {
 
   onToggleCart(val: boolean){
     this.uIService.setIsCartOpen(val);
-    this.router.navigate(['cart']);
   }
 }
 

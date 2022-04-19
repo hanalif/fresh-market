@@ -4,7 +4,6 @@ import { Item } from 'src/app/modules/items/models/item.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
 import { UIService } from 'src/app/services/UI.service';
-import { UIQuery } from 'src/app/state/UI/UIQuery';
 
 
 @Component({
@@ -15,7 +14,7 @@ import { UIQuery } from 'src/app/state/UI/UIQuery';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private uIService:UIService, private itemQuery: ItemQuery) { }
+  constructor(private uIService:UIService, private itemQuery: ItemQuery, private cartService: CartService) { }
   cartItemsToShow$! :Observable<Item[]>
 
   ngOnInit(): void {
@@ -24,6 +23,10 @@ export class CartComponent implements OnInit {
 
   onCloseCart(val: boolean){
     this.uIService.setIsCartOpen(val);
+  }
+
+  onRemoveItem(itemId: string){
+    console.log(itemId)
   }
 
 }

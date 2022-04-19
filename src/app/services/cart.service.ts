@@ -15,7 +15,6 @@ export class CartService{
 
   saveItemOrderInfo(itemOrderInfo: ItemOrderInfo){
     return this.storageService.get(this.entityType).pipe(
-      first(),
       switchMap(itemsOrderInfo=>{
         const setItemOrderInfoToItemsStore$ = this.itemService.saveToItemsToShowInCart(itemOrderInfo);
         let setItemOrderInfoToStorage$: Observable<void>;
@@ -42,6 +41,8 @@ export class CartService{
       })
     );
   }
+
+
 
 
 
