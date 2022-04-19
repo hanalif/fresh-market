@@ -30,6 +30,9 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
 
 
   ngOnChanges(changes: SimpleChanges): void {
+    if(!changes['items']){
+      return;
+    }
 
     if(changes['item'].currentValue !== changes['item'].previousValue){
      this.options = this.item.units.map(unit=>{

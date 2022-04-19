@@ -34,6 +34,18 @@ export class StorageService {
     )
   }
 
+  postMany<T extends Entity>(entityType: string, newEntities: T[]){
+    return this.get<T>(entityType).pipe(
+      tap(entities=>{
+        entities.push(...newEntities);
+        this._save(entityType, entities);
+      }),
+      map(()=>{
+        return;
+      })
+    )
+  }
+
   put<T extends Entity>(entityType: string, updatedEntity: T){
     return this.get<T>(entityType).pipe(
       tap(entities=>{
@@ -53,6 +65,9 @@ export class StorageService {
         const index = entities.findIndex(entity => entity._id === entityId);
         entities.splice(index, 1);
         this._save(entityType, entities);
+      }),
+      map(()=>{
+        return;
       })
     )
   }

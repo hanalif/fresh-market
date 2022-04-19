@@ -14,7 +14,9 @@ export class CartBtnComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItemsLength$ = this.itemQuery.getItemsToShowInCart().pipe(
-      map(itemsToShowInCart=> itemsToShowInCart.length)
+      map(itemsToShowInCart=> {
+        return itemsToShowInCart.length
+      })
     )
   }
 

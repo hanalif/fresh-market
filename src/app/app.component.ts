@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Animations } from './animations'
 import { CartService } from './services/cart.service';
 import { UIService } from './services/UI.service';

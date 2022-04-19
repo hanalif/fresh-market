@@ -1,9 +1,7 @@
 import { Injectable } from "@angular/core";
-import { first, forkJoin, merge, mergeWith, Observable, switchMap, tap } from "rxjs";
+import { first, forkJoin, merge, mergeWith, Observable, switchMap } from "rxjs";
 import { ItemService } from "../modules/items/services/item.service";
-import { ItemQuery } from "../modules/items/state/itemQuery";
 import { ItemOrderInfo } from "../shared/models/itemOrderInfo.model";
-import { CartQuery } from "../state/cart/cartQuery";
 import { CartStore } from "../state/cart/cartStore";
 import { StorageService } from "./async-storag.service";
 
@@ -11,12 +9,12 @@ import { StorageService } from "./async-storag.service";
 export class CartService{
   private readonly entityType: string = 'items';
 
-  constructor(private storageService: StorageService, private itemService: ItemService, private cartQuery: CartQuery, private cartStore: CartStore ){}
+  constructor(private storageService: StorageService, private itemService: ItemService, private cartStore: CartStore ){}
 
   saveItemOrderInfo(itemOrderInfo: ItemOrderInfo){
     return this.storageService.get(this.entityType).pipe(
       switchMap(itemsOrderInfo=>{
-        const setItemOrderInfoToItemsStore$ = this.itemService.saveToItemsToShowInCart(itemOrderInfo);
+        this.itemService.saveToItemsToShowInCart(itemOrderInfo);
         let setItemOrderInfoToStorage$: Observable<void>;
         const isItemInList = itemsOrderInfo.find(ioi=> ioi._id === itemOrderInfo._id);
         if(!isItemInList){
@@ -26,7 +24,21 @@ export class CartService{
           this.cartStore.update(itemOrderInfo._id, {...itemOrderInfo});
           setItemOrderInfoToStorage$ = this.storageService.put(this.entityType, itemOrderInfo);
         }
-        return forkJoin([setItemOrderInfoToStorage$, setItemOrderInfoToItemsStore$ ])
+        return setItemOrderInfoToStorage$;
+      })
+    )
+  }
+
+  removeItemOrderInfo(itemId: string){
+    return this.storageService.get(this.entityType).pipe(
+      switchMap(itemsOrderInfo=>{
+        this.itemService.removeItemFromItemsToShowInCart(itemId);
+        let removeItemOrderInfoFromStorage$: Observable<void>;
+        const index = itemsOrderInfo.findIndex(ioi=> ioi._id === itemId);
+        itemsOrderInfo.splice(index,1);
+        removeItemOrderInfoFromStorage$ = this.storageService.remove(this.entityType, itemId);
+        this.cartStore.remove(itemId);
+        return removeItemOrderInfoFromStorage$;
       })
     )
   }
@@ -41,6 +53,7 @@ export class CartService{
       })
     );
   }
+
 
 
 
