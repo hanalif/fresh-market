@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Inject, OnDestroy, OnInit, Output } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Observable, Subscription } from 'rxjs';
+import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
 import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
 import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
@@ -17,6 +18,7 @@ export class ItemModalComponent implements OnInit, OnDestroy {
   @Output() itemUnitsValueChanged = new EventEmitter<ItemUnitsValue>()
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
   itemOrderInfoSubscription!: Subscription;
+  ItemCardMode = ItemCardMode;
 
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: ItemModalData,  public dialogRef: MatDialogRef<ItemModalComponent>,  private cartQuery:CartQuery, private cartService:CartService) { }

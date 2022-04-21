@@ -8,7 +8,12 @@
   </div>
   <div class="cart-body">
     <div *ngFor="let item of (cartItemsToShow$ | async)" class="cart-items-list">
-      <app-item-card [item]="item" [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]" (onSaveItemOrderInfo)="saveItemUnitsValue($event)"></app-item-card>
+      <app-item-card
+        [item]="item"
+        [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
+        [displayMode]="ItemCardMode.small"
+        (onSaveItemOrderInfo)="saveItemUnitsValue($event)">
+      </app-item-card>
       <button (click)="onRemoveItem(item._id)" class="clear-icon"></button>
     </div>
   </div>

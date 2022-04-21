@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
 import { Item } from 'src/app/modules/items-shared.module.ts/models/item.model';
 import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
@@ -23,6 +24,7 @@ export class CartComponent implements OnInit, OnDestroy {
   removeItemSubscription$!: Subscription;
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
   itemOrderInfoSubscription!: Subscription;
+  ItemCardMode = ItemCardMode;
 
   ngOnInit(): void {
     this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart();

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable, Subscription, switchMap } from 'rxjs';
+import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
 import { CategoriesTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
@@ -22,6 +23,8 @@ export class ItemsListComponent implements OnInit, OnDestroy{
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
   categoriesTitles$!: Observable<CategoriesTitles>;
   itemOrderInfoSubscription!: Subscription;
+  ItemCardMode = ItemCardMode;
+
 
   constructor(private itemQuery: ItemQuery, private cartService: CartService, private cartQuery: CartQuery, private uiQuery: UIQuery, private route: ActivatedRoute) {}
 

@@ -5,6 +5,7 @@ import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
 import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/data.model';
 import { ItemModalComponent } from 'src/app/modules/items/components/item-modal/item-modal.component';
+import { ItemCardMode } from './item-card-mode.enum';
 
 @Component({
   selector: 'app-item-card',
@@ -15,6 +16,7 @@ import { ItemModalComponent } from 'src/app/modules/items/components/item-modal/
 export class ItemCardComponent implements OnInit, OnChanges {
   @Input() item!: Item;
   @Input() itemUnitsValue!: ItemUnitsValue;
+  @Input() displayMode!: ItemCardMode;
   @Output() onSaveItemOrderInfo = new  EventEmitter<ItemOrderInfo>();
 
 

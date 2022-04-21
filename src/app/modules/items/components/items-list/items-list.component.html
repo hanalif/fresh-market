@@ -9,6 +9,7 @@
     <app-item-card
       *ngFor="let item of (items$ | async); trackBy: trackBy"
       [item]="item"
+      [displayMode]="ItemCardMode.medium"
       [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
       (onSaveItemOrderInfo)="saveItemUnitsValue($event)"
     >
