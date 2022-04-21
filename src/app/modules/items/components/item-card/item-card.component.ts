@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Item } from '../../models/item.model';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialog } from '@angular/material/dialog';
 import { ItemModalComponent } from '../item-modal/item-modal.component';
 import { ItemModalData } from '../item-modal/models/data.model';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
@@ -14,13 +14,14 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./item-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemCardComponent implements OnInit, OnDestroy, OnChanges {
+export class ItemCardComponent implements OnInit, OnChanges {
   @Input() item!: Item;
   @Input() itemUnitsValue!: ItemUnitsValue;
-  itemOrderInfoSubscription!: Subscription;
+  @Output() onSaveItemOrderInfo = new  EventEmitter<ItemOrderInfo>();
 
 
-  constructor(public dialog: MatDialog, private cartService: CartService) { }
+
+  constructor(public dialog: MatDialog) { }
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes)
   }
@@ -44,13 +45,12 @@ export class ItemCardComponent implements OnInit, OnDestroy, OnChanges {
       unitType: value.unitType,
       amount: value.amount,
     }
+    this.onSaveItemOrderInfo.emit(itemOrderInfo);
 
-    this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
+
   }
 
-  ngOnDestroy(): void {
-    this.itemOrderInfoSubscription?.unsubscribe()
-  }
+
 
 
 }

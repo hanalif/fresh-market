@@ -10,6 +10,7 @@
       *ngFor="let item of (items$ | async); trackBy: trackBy"
       [item]="item"
       [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
+      (onSaveItemOrderInfo)="saveItemUnitsValue($event)"
     >
     </app-item-card>
   </div>

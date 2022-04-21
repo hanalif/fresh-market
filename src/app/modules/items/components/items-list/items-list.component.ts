@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable, pipe, switchMap } from 'rxjs';
+import { map, Observable, pipe, Subscription, switchMap } from 'rxjs';
 import { CategoriesTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
+import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
@@ -15,13 +16,14 @@ import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
   styleUrls: ['./items-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemsListComponent implements OnInit{
+export class ItemsListComponent implements OnInit, OnDestroy{
   public itemsToShow!: Item[];
   items$!: Observable<Item[]>;
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
   categoriesTitles$!: Observable<CategoriesTitles>;
+  itemOrderInfoSubscription!: Subscription;
 
-  constructor(private itemQuery: ItemQuery, private cartQuery: CartQuery, private uiQuery: UIQuery, private route: ActivatedRoute) {}
+  constructor(private itemQuery: ItemQuery, private cartService: CartService, private cartQuery: CartQuery, private uiQuery: UIQuery, private route: ActivatedRoute) {}
 
 
   ngOnInit(): void {
@@ -42,6 +44,14 @@ export class ItemsListComponent implements OnInit{
 
   trackBy(index: number, item: Item) {
     return item._id;
+  }
+
+  saveItemUnitsValue(itemOrderInfo: ItemOrderInfo){
+    this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
+  }
+
+  ngOnDestroy(): void {
+    this.itemOrderInfoSubscription?.unsubscribe()
   }
 
 }

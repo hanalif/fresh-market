@@ -1,13 +1,19 @@
-.cart-head{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 10px;
-  margin-block-start: 20px;
-  border-bottom: 1px solid #F0F0F0;
-  padding-block-end: 16px;
+.cart{
+  position: relative;
 
-  small{
-    font-size: 25px;
+  &-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin-block-start: 20px;
+    border-bottom: 1px solid #F0F0F0;
+    padding-block-end: 16px;
+
+    small{
+      font-size: 25px;
+    }
   }
+
 }
+
