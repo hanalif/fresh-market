@@ -5,22 +5,18 @@ import { ItemsRoutingModule } from "./items-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { ItemQuery } from "src/app/modules/items/state/itemQuery";
-import { ItemCardComponent } from "./components/item-card/item-card.component";
 import { ItemModalComponent } from "./components/item-modal/item-modal.component";
-import { ItemUnitsComponent } from "./components/item-units/item-units.component";
 import { ItemsListComponent } from "./components/items-list/items-list.component";
-import { ItemUnitNamePipe } from "./pipes/itemUnitName/item-unit-name.pipe";
 import { ItemsListResolver } from "./resolvers/itemsListResolver.service";
 import { SharedModule } from "src/app/shared/shared.module";
 import { ItemStore } from "./state/itemStore";
+import { ItemsSharedModule } from "../items-shared.module.ts/items-shared.module";
 
 @NgModule({
   declarations: [
     ItemsListComponent,
-    ItemCardComponent,
-    ItemModalComponent,
-    ItemUnitsComponent,
-    ItemUnitNamePipe,
+    ItemModalComponent
+
   ],
   imports: [
     CommonModule,
@@ -28,9 +24,10 @@ import { ItemStore } from "./state/itemStore";
     ItemsRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    ItemsSharedModule
   ],
-  providers: [ItemsListResolver, ItemQuery, ItemStore, ItemUnitNamePipe],
+  providers: [ItemsListResolver, ItemQuery, ItemStore],
 })
 export class ItemsModule{
 

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Query } from "@datorama/akita";
 import { Observable } from "rxjs";
-import { Item } from "../models/item.model";
+import { Item } from "../../items-shared.module.ts/models/item.model";
 import { ItemState, ItemStore } from "./itemStore";
 
 

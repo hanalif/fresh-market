@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ItemUnitType } from '../../models/itemUnitType.model';
+import { ItemUnitType } from 'src/app/modules/items/models/itemUnitType.model';
+
+
 
 @Pipe({
   name: 'itemUnitName'

@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable, pipe, Subscription, switchMap } from 'rxjs';
+import { map, Observable, Subscription, switchMap } from 'rxjs';
 import { CategoriesTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
-import { Item } from '../../models/item.model';
-import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
+import { Item } from '../../../items-shared.module.ts/models/item.model';
+import { ItemUnitsValue } from '../../../items-shared.module.ts/models/itemUnitsValue.model';
 
 @Component({
   selector: 'app-items-list',
@@ -28,16 +28,8 @@ export class ItemsListComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.items$ = this.itemQuery.getItemsToShow();
-    this.itemUnitsMap$ = this.cartQuery.getItemsOrderInfo().pipe(
-      map(cartItems => {
-        const hashMap: { [id: string] : ItemUnitsValue } = {};
-        for(let i = 0; i < cartItems.length; i++) {
-          let itemOrderInfo = cartItems[i];
-          hashMap[itemOrderInfo._id] = { amount: itemOrderInfo.amount, unitType: itemOrderInfo.unitType };
-        }
-        return hashMap;
-      })
-    );
+    this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
+
     this.categoriesTitles$ = this.route.params.pipe(
       switchMap(params=> this.uiQuery.getItemsCategoriesTitles(params['mainCategoryId'], params['subcategoryId'])));
   }

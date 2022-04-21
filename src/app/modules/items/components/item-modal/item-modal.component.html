@@ -1,5 +1,6 @@
 <h1 mat-dialog-title>{{data.item.name}}</h1>
 <div mat-dialog-content>
+  <app-item-card [item]="data.item" [itemUnitsValue]="(itemUnitsMap$ | async)![data.item._id]" (onSaveItemOrderInfo)="saveItemUnitsValue($event)"></app-item-card>
   <p>{{data.item.description}}</p>
   <button mat-button (click)="onNoClick()">close</button>
 </div>

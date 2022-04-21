@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { tap } from "rxjs/operators";
 import { ItemOrderInfo } from "src/app/shared/models/itemOrderInfo.model";
-import { Item } from "../models/item.model";
+import { Item } from "../../items-shared.module.ts/models/item.model";
 import { ItemStore } from "../state/itemStore";
 
 @Injectable({providedIn: 'root'})

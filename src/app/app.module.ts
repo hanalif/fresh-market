@@ -19,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
 import { CartComponent } from './components/header/cart/cart.component';
 import { CartBtnComponent } from './components/cart-btn/cart-btn.component';
 import { environment } from 'src/environments/environment';
+import { ItemsSharedModule } from './modules/items-shared.module.ts/items-shared.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { environment } from 'src/environments/environment';
     AngularMaterialModule,
     ReactiveFormsModule,
     SharedModule,
+    ItemsSharedModule,
     environment.production ? [] : AkitaNgDevtools.forRoot({})
   ],
   providers: [],

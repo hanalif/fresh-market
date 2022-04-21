@@ -1,6 +1,6 @@
-import { ItemImg } from "./itemImg.model";
-import { ItemPropertyType } from "./itemProperties.model";
-import { ItemUnit } from "./itemUnit.model";
+import { ItemImg } from "../../items/models/itemImg.model";
+import { ItemPropertyType } from "../../items/models/itemProperties.model";
+import { ItemUnit } from "../../items/models/itemUnit.model";
 
 
 export interface Item{

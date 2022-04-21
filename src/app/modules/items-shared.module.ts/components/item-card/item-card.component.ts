@@ -1,12 +1,10 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Item } from '../../models/item.model';
 import {MatDialog } from '@angular/material/dialog';
-import { ItemModalComponent } from '../item-modal/item-modal.component';
-import { ItemModalData } from '../item-modal/models/data.model';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
-import { CartService } from 'src/app/services/cart.service';
-import { Subscription } from 'rxjs';
+import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/data.model';
+import { ItemModalComponent } from 'src/app/modules/items/components/item-modal/item-modal.component';
 
 @Component({
   selector: 'app-item-card',
@@ -33,6 +31,8 @@ export class ItemCardComponent implements OnInit, OnChanges {
   openDialog() {
     const data: ItemModalData = {
       item: this.item,
+      itemUnitsValue: this.itemUnitsValue
+
     };
     this.dialog.open(ItemModalComponent, {
       data: data,
