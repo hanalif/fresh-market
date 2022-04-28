@@ -1,4 +1,18 @@
 <div class="search-box_container">
-  <input class="search-box_input" type="text" placeholder="search...">
-  <div class="search-box-img"></div>
+  <form [formGroup]="searchForm">
+    <input
+      class="search-box_input"
+      type="text" placeholder="search..."
+      formControlName="searchKey">
+    <div class="search-box-img"></div>
+  </form>
+
+  <div *ngFor="let item of (searchItemsResults$ | async)" class="search-items-list">
+    <app-item-card
+      [item]="item"
+      [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
+      [displayMode]="ItemCardMode.xs"
+      (onSaveItemOrderInfo)="saveItemUnitsValue($event)">
+    </app-item-card>
+  </div>
 </div>

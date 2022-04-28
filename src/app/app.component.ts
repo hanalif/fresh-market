@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, ReplaySubject, Subject, takeUntil } from 'rxjs';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Observable, ReplaySubject, Subject, takeUntil, tap } from 'rxjs';
 import { Animations } from './animations'
 import { CartService } from './services/cart.service';
 import { UIService } from './services/UI.service';
@@ -17,13 +17,28 @@ export class AppComponent implements OnInit, OnDestroy {
  public showMobileMenu!: boolean;
  isMobileMenuOpen$!: Observable<boolean>;
  isCartOpen$!: Observable<boolean>;
+ isSearchBoxOpen$!: Observable<boolean>;
  private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
- constructor( private uIQuery: UIQuery, private uIService:UIService, private cartService: CartService) { }
+
+
+ constructor(
+    private uIQuery: UIQuery,
+    private uIService:UIService,
+     private cartService: CartService,
+     private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen();
-    this.isCartOpen$ = this.uIQuery.setIsCartOpen();
+    this.isMobileMenuOpen$ = this.uIQuery.setIsMenuMobileOpen().pipe(
+      tap(isMobileMenuOpen=>{
+        this._checksIfSideNavOpen(isMobileMenuOpen);
+      })
+    );
+    this.isCartOpen$ = this.uIQuery.setIsCartOpen().pipe(
+      tap(isCartOpen=>{
+       this._checksIfSideNavOpen(isCartOpen);
+      })
+    );
     this.uIService.getItemsCategories().pipe(takeUntil(this.destroyed$)).subscribe(); // todo add routing to app and move to resolver
     this.uIService.updateWhenUrlChangesOccur().pipe(takeUntil(this.destroyed$)).subscribe();
     this.cartService.loadItemsOrderInfoFromStorage().pipe(takeUntil(this.destroyed$)).subscribe();
@@ -37,6 +52,14 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroyed$.next(true);
     this.destroyed$.unsubscribe();
+  }
+
+  _checksIfSideNavOpen(val:boolean){
+    if(val){
+      this.renderer.addClass(document.body, 'side-nav-open');
+    }else{
+      this.renderer.removeClass(document.body, 'side-nav-open');
+    }
   }
 
 }

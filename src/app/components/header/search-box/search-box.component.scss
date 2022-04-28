@@ -16,7 +16,7 @@
   &_input{
     border: none;
     background: white;
-    width: 95%;
+    width: 370px;
     padding-inline-start: 35px;
     height: 28px;
     border-radius: 19px;
@@ -39,4 +39,9 @@
   top: 13px;
   left: 20px;
 
+}
+
+.search-items-list{
+  position: absolute;
+  top: 54px;
 }

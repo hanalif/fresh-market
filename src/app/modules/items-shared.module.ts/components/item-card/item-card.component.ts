@@ -23,7 +23,6 @@ export class ItemCardComponent implements OnInit, OnChanges {
 
   constructor(public dialog: MatDialog) { }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
   }
 
 

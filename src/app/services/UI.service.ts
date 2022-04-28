@@ -29,6 +29,15 @@ export class UIService{
     })
   }
 
+  setIsSearchBoxOpen(val: boolean){
+    this.uIStore.update(state=>{
+      return {
+        ...state,
+        isSearchBoxOpen: val
+      }
+    })
+  }
+
 
   setUiStoreAfterBackdropClicked(val: boolean){
     this.uIStore.update(state=>{
@@ -39,6 +48,8 @@ export class UIService{
       }
     })
   }
+
+
 
   getItemsCategories():Observable<ItemCategory[]>{
       return this.http.get<ItemCategory[]>('assets/_json-files/items-categories.json').pipe(

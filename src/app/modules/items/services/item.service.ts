@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { tap } from "rxjs/operators";
+import { Observable, of } from "rxjs";
+import { map, tap } from "rxjs/operators";
 import { ItemOrderInfo } from "src/app/shared/models/itemOrderInfo.model";
 import { Item } from "../../items-shared.module.ts/models/item.model";
 import { ItemStore } from "../state/itemStore";
@@ -27,6 +27,18 @@ export class ItemService{
         })
       }),
     );
+  }
+
+  getSearchResultItems(searchKey: string){
+    if(searchKey === ''){
+      return of([])
+    }
+    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+      map(fetchedItems =>{
+        const serchKeyToLowerCase = searchKey.toLocaleLowerCase()
+         return [...fetchedItems.filter(item=> item.name.toLocaleLowerCase().includes(serchKeyToLowerCase))]
+      })
+    )
   }
 
   saveToItemsToShowInCart(itemOrderInfo: ItemOrderInfo){

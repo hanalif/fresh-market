@@ -21,6 +21,10 @@ export class UIQuery extends Query<UIState>{
     return this.select<boolean>(state=> state.isCartOpen);
   }
 
+  setIsSearchBoxOpen(): Observable<boolean>{
+    return this.select<boolean>(state=> state.isSearchBoxOpen);
+  }
+
   getItemsCategories(): Observable<ItemCategory[]>{
     return this.select<ItemCategory[]>(state=> state.itemsCategories);
   }

@@ -1,25 +1,25 @@
 .item-card{
   display: flex;
   align-items: center;
-  border-radius: 10px;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 9%);
-  height: 385px;
   width: 100%;
 
-  &.large{
-    color:aqua;
-
-
+  &.xs{
+    height: 107px;
+    width: 426px;
+    background-color: white;
   }
+
 
   &.medium{
     flex-direction: column;
+    border-radius: 10px;
+    height: 385px;
 
   }
 
   &.small{
-    background-color: aqua;
-
+    height: fit-content;
   }
 
   &_img-container{
@@ -33,6 +33,10 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
+
+    &.xs{
+      height: 89px;
+    }
 }
 
 &_content{
@@ -40,6 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 
   &_title{
     width: 100%;
@@ -51,6 +56,12 @@
     border-block-start: 1px solid #F0F0F0;
     line-height: 1.3;
     height: 85px;
+
+    &.xs{
+      border: none;
+      font-size: 22px;
+    }
+
   }
 
   app-item-units{

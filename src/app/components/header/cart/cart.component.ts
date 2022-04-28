@@ -18,7 +18,11 @@ import { CartQuery } from 'src/app/state/cart/cartQuery';
 })
 export class CartComponent implements OnInit, OnDestroy {
 
-  constructor(private uIService:UIService, private itemQuery: ItemQuery, private cartQuery:CartQuery, private cartService: CartService) { }
+  constructor(
+      private uIService:UIService,
+      private itemQuery: ItemQuery,
+      private cartQuery:CartQuery,
+      private cartService: CartService) { }
 
   cartItemsToShow$! :Observable<Item[]>
   removeItemSubscription$!: Subscription;

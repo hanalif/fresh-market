@@ -6,14 +6,16 @@ import { ItemCategory } from 'src/app/modules/items/models/itemCategory.model';
 export interface UIState {
   isMobileMenuOpen: boolean,
   itemsCategories: ItemCategory[],
-  isCartOpen: boolean
+  isCartOpen: boolean,
+  isSearchBoxOpen: boolean
 }
 
 export const getInitialState = () => {
   return {
     isMobileMenuOpen: false,
     itemsCategories: [],
-    isCartOpen: false
+    isCartOpen: false,
+    isSearchBoxOpen: false
   };
 };
 

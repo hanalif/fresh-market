@@ -1,11 +1,11 @@
 
 <div [ngClass]="displayMode" class="item-card">
   <div (click)="openDialog()" class="item-card_img-container">
-    <div class="item-card_img" [ngStyle]="{'background-image' : 'url('+ item.images[0].thumbnailImgUrl +')'}"></div>
+    <div class="item-card_img" [ngClass]="displayMode" [ngStyle]="{'background-image' : 'url('+ item.images[0].thumbnailImgUrl +')'}"></div>
   </div>
 
-  <div class="item-card_content">
-    <div class="item-card_content_title">{{item.name}}</div>
+  <div class="item-card_content" >
+    <div class="item-card_content_title" [ngClass]="displayMode">{{item.name}}</div>
   </div>
 
   <div class="item-card_content">
