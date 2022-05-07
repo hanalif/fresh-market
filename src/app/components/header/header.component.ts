@@ -1,7 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { UIService } from 'src/app/services/UI.service';
-import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { Animations } from '../../../app/animations'
 
 @Component({
@@ -15,10 +13,11 @@ import { Animations } from '../../../app/animations'
 export class HeaderComponent implements OnInit {
    isSearchBoxOpen: boolean = false;
 
-   @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
+  constructor(private uIService:UIService ) { }
+  @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
 
-
-  constructor(private uIService:UIService, private uIQuery: UIQuery) { }
+  ngOnInit(): void {
+  }
 
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
@@ -29,13 +28,11 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-
-  }
 
   get stateName(){
     return this.isSearchBoxOpen ? 'show' : 'hide';
   }
+
 
   onToggleSearch(){
     this.isSearchBoxOpen = !this.isSearchBoxOpen

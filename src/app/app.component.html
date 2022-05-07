@@ -8,6 +8,10 @@
     <app-cart *ngIf="isCartOpen$ | async"
     [@cartAnimation]></app-cart>
 
+    <div class="search-results-container">
+    </div>
+
+
   <router-outlet></router-outlet>
 
   <div (click)="onBackdropClicked(false)" *ngIf="(isMobileMenuOpen$ | async) || (isCartOpen$ | async)" class="backdrop"></div>

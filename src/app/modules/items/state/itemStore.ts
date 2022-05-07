@@ -4,13 +4,15 @@ import { Item } from '../../items-shared.module.ts/models/item.model';
 
 export interface ItemState {
   itemsToShow: Item[],
-  itemsToShowInCart: Item[]
+  itemsToShowInCart: Item[],
+  itemsSearchResults: Item[]
 }
 
 export const getInitialState = () => {
   return {
     itemsToShow: [],
-    itemsToShowInCart: []
+    itemsToShowInCart: [],
+    itemsSearchResults: [],
   };
 };
 

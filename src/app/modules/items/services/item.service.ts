@@ -36,7 +36,8 @@ export class ItemService{
     return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
       map(fetchedItems =>{
         const serchKeyToLowerCase = searchKey.toLocaleLowerCase()
-         return [...fetchedItems.filter(item=> item.name.toLocaleLowerCase().includes(serchKeyToLowerCase))]
+        let updatedFetchedItems = [...fetchedItems.filter(item=> item.name.toLocaleLowerCase().startsWith(serchKeyToLowerCase))]
+        return updatedFetchedItems;
       })
     )
   }

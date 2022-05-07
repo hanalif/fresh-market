@@ -11,7 +11,7 @@
         </button>
         <div #searchBoxContainerEl class="search-box-container">
           <button (click)="onToggleSearch()" class="search-icon"></button>
-          <app-search-box *ngIf="isSearchBoxOpen" [@slidesDownAnumation]="stateName" ></app-search-box>
+          <app-search-box *ngIf="isSearchBoxOpen" [@slidesDownAnumation]="stateName"></app-search-box>
         </div>
         <app-categories-menu></app-categories-menu>
       </div>
