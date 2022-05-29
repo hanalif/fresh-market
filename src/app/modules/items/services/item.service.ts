@@ -31,13 +31,27 @@ export class ItemService{
 
   getSearchResultItems(searchKey: string){
     if(searchKey === ''){
+      this.itemStore.update(state=>{
+        return{
+          ...state,
+          itemsSearchResults: []
+        }
+      })
       return of([])
     }
     return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
       map(fetchedItems =>{
         const serchKeyToLowerCase = searchKey.toLocaleLowerCase()
-        let updatedFetchedItems = [...fetchedItems.filter(item=> item.name.toLocaleLowerCase().startsWith(serchKeyToLowerCase))]
+        let updatedFetchedItems = [...fetchedItems.filter(item=> item.name.toLocaleLowerCase().includes(serchKeyToLowerCase))]
         return updatedFetchedItems;
+      }),
+      tap(updatedFetchedItems=> {
+        this.itemStore.update(state=>{
+          return {
+            ...state,
+            itemsSearchResults: updatedFetchedItems
+          }
+        })
       })
     )
   }
@@ -47,7 +61,9 @@ export class ItemService{
     const isItemInList = updatedItemsToShowInCart.find(item=> item._id === itemOrderInfo._id);
     if(!isItemInList){
       let itemsToShow = this.itemStore._value().itemsToShow;
-      const itemToSave = itemsToShow.find(item=> item._id === itemOrderInfo._id);
+      let itemsSearchResults = this.itemStore._value().itemsSearchResults;
+      let items = [...itemsToShow, ...itemsSearchResults]
+      const itemToSave = items.find(item=> item._id === itemOrderInfo._id);
       updatedItemsToShowInCart.push(itemToSave as Item);
       this.itemStore.update(state=>{
         return {

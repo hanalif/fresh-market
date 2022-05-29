@@ -7,13 +7,9 @@
     <div class="search-box-img"></div>
   </form>
 
-  <div class="search-items-list">
-    <h2 *ngIf="((searchItemsResults$ | async)?.length) as searchResultsNumber">
-      Search results: {{searchResultsNumber}}
-    </h2>
-
+  <div *ngIf="searchItemsResults != null  && searchItemsResults?.length != 0" class="search-items-list">
     <app-item-card
-      *ngFor="let item of (searchItemsResults$ | async)"
+      *ngFor="let item of searchItemsResults"
       [item]="item"
       [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
       [displayMode]="ItemCardMode.xs"
@@ -21,3 +17,4 @@
     </app-item-card>
   </div>
 </div>
+

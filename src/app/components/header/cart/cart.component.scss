@@ -10,10 +10,16 @@
     border-bottom: 1px solid #F0F0F0;
     padding-block-end: 16px;
 
+
+
     small{
       font-size: 25px;
     }
   }
 
-}
+  &-body{
+    overflow: scroll;
+    height: 500px;
+  }
 
+}

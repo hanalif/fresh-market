@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ItemService } from 'src/app/modules/items/services/item.service';
 import { UIService } from 'src/app/services/UI.service';
 import { Animations } from '../../../app/animations'
 
@@ -10,11 +12,14 @@ import { Animations } from '../../../app/animations'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
    isSearchBoxOpen: boolean = false;
+   searchResultItemsSub?: Subscription;
 
-  constructor(private uIService:UIService ) { }
+  constructor(private uIService:UIService, private itemService: ItemService ) { }
+
   @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
+
 
   ngOnInit(): void {
   }
@@ -24,8 +29,13 @@ export class HeaderComponent implements OnInit {
     if (this.isSearchBoxOpen) {
       if(!this.searchBoxContainerEl.nativeElement.contains(event.target)) {
         this.isSearchBoxOpen = false;
+        this.searchResultItemsSub = this.itemService.getSearchResultItems('').subscribe();
       }
     }
+  }
+
+  ngOnDestroy(): void {
+    this.searchResultItemsSub?.unsubscribe();
   }
 
 

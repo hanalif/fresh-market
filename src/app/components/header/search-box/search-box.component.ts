@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Observable, Subscription, switchMap, tap } from 'rxjs';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
@@ -16,46 +16,41 @@ import { CartQuery } from 'src/app/state/cart/cartQuery';
   styleUrls: ['./search-box.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SearchBoxComponent implements OnInit, OnChanges ,OnDestroy {
+export class SearchBoxComponent implements OnInit ,OnDestroy {
 
   searchForm!: FormGroup;
-  searchItemsResults$?: Observable<Item[]>;
-  searchItemsResultsLength$? :Observable<number>;
+  searchItemsResults?: Item[];
+  searchItemsKeySub?: Subscription;
+
   ItemCardMode = ItemCardMode;
   itemOrderInfoSubscription!: Subscription;
+  searchItemsResultsSubscription!: Subscription | undefined;
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
+
+
 
 
   constructor(
       private itemService: ItemService,
       private cartService: CartService,
       private cartQuery: CartQuery,
-      private itemsQuery: ItemQuery) { }
-
-
-  ngOnChanges(): void {
-     this.searchForm.get('searchKey')?.valueChanges.pipe(
-       debounceTime(300),
-       distinctUntilChanged(),
-       switchMap((searchKey: string) => this.itemService.getSearchResultItems(searchKey))
-     )
-
-  }
+      private itemQuery: ItemQuery,
+      private cd: ChangeDetectorRef) { }
 
 
   ngOnInit(): void {
     this.initForm();
     this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
-    this.searchItemsResults$ = this.searchForm.get('searchKey')?.valueChanges.pipe(
+    this.searchItemsKeySub = this.searchForm.get('searchKey')?.valueChanges.pipe(
       debounceTime(300),
       distinctUntilChanged(),
       switchMap((searchKey: string) => this.itemService.getSearchResultItems(searchKey))
-    );
+    ).subscribe();
 
-    this.searchItemsResults$?.subscribe(searchResults => {
-      console.log(searchResults);
-    });
-
+    this.searchItemsResultsSubscription = this.itemQuery.getSearchresultsItems().subscribe(items=>{
+      this.searchItemsResults = items;
+      this.cd.detectChanges();
+    })
   }
 
 
@@ -72,5 +67,7 @@ export class SearchBoxComponent implements OnInit, OnChanges ,OnDestroy {
 
   ngOnDestroy(): void {
     this.itemOrderInfoSubscription?.unsubscribe();
+    this.searchItemsResultsSubscription?.unsubscribe();
+    this.searchItemsKeySub?.unsubscribe();
   }
 }
