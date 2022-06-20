@@ -3,9 +3,12 @@ import { Item } from '../../models/item.model';
 import {MatDialog } from '@angular/material/dialog';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
-import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/data.model';
+import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/item-data.model';
 import { ItemModalComponent } from 'src/app/modules/items/components/item-modal/item-modal.component';
 import { ItemCardMode } from './item-card-mode.enum';
+import { CartService } from 'src/app/services/cart.service';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-item-card',
@@ -13,15 +16,18 @@ import { ItemCardMode } from './item-card-mode.enum';
   styleUrls: ['./item-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ItemCardComponent implements OnInit, OnChanges {
+export class ItemCardComponent implements OnInit, OnChanges, OnDestroy {
   @Input() item!: Item;
   @Input() itemUnitsValue!: ItemUnitsValue;
   @Input() displayMode!: ItemCardMode;
   @Output() onSaveItemOrderInfo = new  EventEmitter<ItemOrderInfo>();
+  ItemCardMode = ItemCardMode;
+  removeItemSubscription$!: Subscription;
 
 
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private cartService: CartService) { }
+
   ngOnChanges(changes: SimpleChanges): void {
   }
 
@@ -47,9 +53,23 @@ export class ItemCardComponent implements OnInit, OnChanges {
       amount: value.amount,
     }
     this.onSaveItemOrderInfo.emit(itemOrderInfo);
-
-
   }
+
+  onRemoveItem(itemId: string){
+    this.removeItemSubscription$ = this.cartService.removeItemOrderInfo(itemId).subscribe();
+  }
+
+  ngOnDestroy(): void {
+    if(!this.removeItemSubscription$){
+      return;
+    }
+    this.removeItemSubscription$.unsubscribe();
+  }
+
+
+
+
+
 
 
 

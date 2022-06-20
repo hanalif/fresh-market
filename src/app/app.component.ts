@@ -64,9 +64,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   _checksIfSideNavOpen(val:boolean){
     if(val){
-      this.renderer.addClass(document.body, 'side-nav-open');
+      this.renderer.addClass(document.body, 'overflow-hidden');
     }else{
-      this.renderer.removeClass(document.body, 'side-nav-open');
+      this.renderer.removeClass(document.body, 'overflow-hidden');
     }
   }
 

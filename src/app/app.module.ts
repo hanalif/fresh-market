@@ -20,6 +20,7 @@ import { CartComponent } from './components/header/cart/cart.component';
 import { CartBtnComponent } from './components/cart-btn/cart-btn.component';
 import { environment } from 'src/environments/environment';
 import { ItemsSharedModule } from './modules/items-shared.module.ts/items-shared.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ItemsSharedModule } from './modules/items-shared.module.ts/items-shared
     ReactiveFormsModule,
     SharedModule,
     ItemsSharedModule,
+    AuthModule,
     environment.production ? [] : AkitaNgDevtools.forRoot({})
   ],
   providers: [],

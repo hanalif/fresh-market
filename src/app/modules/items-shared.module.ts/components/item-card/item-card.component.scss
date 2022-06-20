@@ -20,6 +20,14 @@
 
   &.small{
     height: fit-content;
+    box-shadow: none;
+    border-bottom: 1px solid #ebebeb;
+
+  }
+
+  mat-icon{
+    cursor: pointer;
+    font-size: 40px;
   }
 
   &_img-container{
@@ -60,6 +68,11 @@
     &.xs{
       border: none;
       font-size: 22px;
+    }
+
+    &.small{
+      border: none;
+      font-size: 20px;
     }
 
   }

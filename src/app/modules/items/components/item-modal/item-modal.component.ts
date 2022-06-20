@@ -6,7 +6,7 @@ import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/it
 import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
-import { ItemModalData } from './models/data.model';
+import { ItemModalData } from './models/item-data.model';
 
 @Component({
   selector: 'app-item-modal',

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { ItemService } from 'src/app/modules/items/services/item.service';
 import { UIService } from 'src/app/services/UI.service';
@@ -16,7 +17,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
    isSearchBoxOpen: boolean = false;
    searchResultItemsSub?: Subscription;
 
-  constructor(private uIService:UIService, private itemService: ItemService ) { }
+  constructor(
+      private uIService:UIService,
+      private itemService: ItemService,
+      public dialog: MatDialog ) { }
 
   @ViewChild('searchBoxContainerEl', { static: false }) searchBoxContainerEl!: ElementRef;
 
@@ -56,6 +60,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   onToggleCart(val: boolean){
     this.uIService.setIsCartOpen(val);
   }
+
+
 }
 
 

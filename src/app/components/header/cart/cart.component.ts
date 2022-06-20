@@ -25,7 +25,6 @@ export class CartComponent implements OnInit, OnDestroy {
       private cartService: CartService) { }
 
   cartItemsToShow$! :Observable<Item[]>
-  removeItemSubscription$!: Subscription;
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
   itemOrderInfoSubscription!: Subscription;
   ItemCardMode = ItemCardMode;
@@ -39,19 +38,12 @@ export class CartComponent implements OnInit, OnDestroy {
     this.uIService.setIsCartOpen(val);
   }
 
-  onRemoveItem(itemId: string){
-    this.removeItemSubscription$ = this.cartService.removeItemOrderInfo(itemId).subscribe();
-  }
 
   saveItemUnitsValue(itemOrderInfo: ItemOrderInfo){
     this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
   }
 
   ngOnDestroy(): void {
-    if(!this.removeItemSubscription$){
-      return;
-    }
-    this.removeItemSubscription$.unsubscribe();
     this.itemOrderInfoSubscription?.unsubscribe()
   }
 

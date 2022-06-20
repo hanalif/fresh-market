@@ -11,4 +11,11 @@
   <div class="item-card_content">
       <app-item-units [itemUnitsValue]="itemUnitsValue" [item]="item" (itemUnitsValueChanged)="saveItemUnitsValue($event)"></app-item-units>
   </div>
+
+  <div *ngIf="displayMode === ItemCardMode.small" class="item-card_content">
+    <button (click)="onRemoveItem(item._id)"><mat-icon>delete</mat-icon></button>
+
+
+</div>
+
 </div>

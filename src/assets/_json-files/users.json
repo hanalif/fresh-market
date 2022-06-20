@@ -1,0 +1,25 @@
+[
+  {
+      "_id": "11",
+      "fullname": "Hana Lipschutz",
+      "isAdmin": "true",
+      "username": "hanalif619",
+      "password": "1234",
+      "email": "hanalif619@gmail.com",
+      "phone": "0544345666",
+      "ordersId": []
+  },
+  {
+    "_id": "22",
+    "fullname": "Bina Lipschutz",
+    "isAdmin": "false",
+    "username": "bina1234",
+    "password": "1234",
+    "email": "bina@gmail.com",
+    "phone": "0543223334",
+    "ordersId": []
+}
+
+
+]
+

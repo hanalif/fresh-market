@@ -1,0 +1,6 @@
+<div *ngIf="loggedInUser;else registrationMenu" class="logged-in-user-menu">
+<h1>loggedInUser name</h1>
+</div>
+<ng-template #registrationMenu class="registration-menu">
+  <h1>registration-menu</h1>
+</ng-template>

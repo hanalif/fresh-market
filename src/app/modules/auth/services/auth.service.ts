@@ -5,6 +5,17 @@ export class AuthService{
 
   signup(){
 
+
   }
+
+  login(){
+
+  }
+
+  logout(){
+
+  }
+
+
 
 }
