@@ -21,7 +21,7 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
   selectionForm!: FormGroup;
   valueControl!: FormControl;
 
-  constructor() { }
+  constructor(private cd: ChangeDetectorRef) { }
 
   @Input() selectOptions!: SelectOptions[];
 
@@ -30,8 +30,9 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
     this.valueControl = this.selectionForm.get('value') as FormControl;
   }
 
-  writeValue(value: string): void {
+  writeValue(value: any): void {
     this.valueControl?.setValue(value);
+    this.cd.detectChanges();
   }
 
   registerOnChange(fn: any): void {
@@ -49,7 +50,7 @@ export class SelectBtnsComponent implements OnInit, ControlValueAccessor {
     })
   }
 
-  onSelectOption(value: string){
+  onSelectOption(value: any){
     this.valueControl.setValue(value);
     this.onChange(value);
   }

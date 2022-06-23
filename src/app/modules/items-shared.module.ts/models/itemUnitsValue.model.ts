@@ -1,4 +1,7 @@
+import { ItemUnitType } from "../../items/models/itemUnitType.model";
+
 export interface ItemUnitsValue {
-  unitType: string,
-  amount: number
+  unitType: ItemUnitType,
+  amount: number,
+  price?: number
 }

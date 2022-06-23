@@ -26,12 +26,15 @@ export class CartComponent implements OnInit, OnDestroy {
 
   cartItemsToShow$! :Observable<Item[]>
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
+  cartTotalPrice$! :Observable<any>
   itemOrderInfoSubscription!: Subscription;
   ItemCardMode = ItemCardMode;
+
 
   ngOnInit(): void {
     this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart();
     this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
+    this.cartTotalPrice$ = this.cartQuery.getTotalPrice();
   }
 
   onCloseCart(val: boolean){
@@ -44,8 +47,9 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.itemOrderInfoSubscription?.unsubscribe()
+    this.itemOrderInfoSubscription?.unsubscribe();
   }
+
 
 
 }

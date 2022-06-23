@@ -3,11 +3,12 @@ import { Item } from '../../models/item.model';
 import {MatDialog } from '@angular/material/dialog';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
-import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/item-data.model';
 import { ItemModalComponent } from 'src/app/modules/items/components/item-modal/item-modal.component';
 import { ItemCardMode } from './item-card-mode.enum';
 import { CartService } from 'src/app/services/cart.service';
 import { Subscription } from 'rxjs';
+import { ItemUnit } from 'src/app/modules/items/models/itemUnit.model';
+import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/data.model';
 
 
 @Component({
@@ -50,7 +51,7 @@ export class ItemCardComponent implements OnInit, OnChanges, OnDestroy {
     let itemOrderInfo: ItemOrderInfo = {
       _id: this.item._id,
       unitType: value.unitType,
-      amount: value.amount,
+      amount: value.amount
     }
     this.onSaveItemOrderInfo.emit(itemOrderInfo);
   }

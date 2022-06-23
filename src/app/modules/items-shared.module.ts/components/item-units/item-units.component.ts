@@ -21,9 +21,10 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   @Output() itemUnitsValueChanged = new EventEmitter<ItemUnitsValue>()
   options!: SelectOptions[];
   itemAmountForm!: FormGroup;
-  itemUnitsValueSubscription: Subscription | undefined;
   unitTypeControl!: FormControl;
   amountControl!: FormControl;
+  amountSubscription: Subscription | undefined;
+  unitTypeSubscription: Subscription | undefined;
 
 
   constructor(private unitPipe: ItemUnitNamePipe) { }
@@ -57,8 +58,19 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   ngOnInit(): void {
     this.initForm();
     this.unitTypeControl = this.itemAmountForm.get('unitType') as FormControl;
+
+    this.unitTypeSubscription = this.itemAmountForm.get('unitType')?.valueChanges.subscribe(unitType=>{
+
+      let itemUnitsValue: ItemUnitsValue = {
+        ...this.itemAmountForm.value,
+        unitType: unitType,
+      }
+      this.itemUnitsValueChanged.emit(itemUnitsValue);
+    })
+
     this.amountControl = this.itemAmountForm.get('amount') as FormControl;
-    this.itemUnitsValueSubscription = this.itemAmountForm.get('amount')?.valueChanges.subscribe(amount=>{
+
+    this.amountSubscription = this.itemAmountForm.get('amount')?.valueChanges.subscribe(amount=>{
 
       let itemUnitsValue: ItemUnitsValue = {
         ...this.itemAmountForm.value,
@@ -76,7 +88,8 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnDestroy(): void {
-   this.itemUnitsValueSubscription!.unsubscribe()
+   this.amountSubscription?.unsubscribe();
+   this.unitTypeSubscription?.unsubscribe();
   }
 
 }
