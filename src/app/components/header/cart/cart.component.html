@@ -4,7 +4,13 @@
     <div class="cart-head_title">
       <small>My Cart</small>
     </div>
-    <button (click)="onEmptyCart()"><mat-icon>delete_outline</mat-icon>Empty Cart</button>
+    <div class="cart-empty-btn-block">
+      <div class="cart-empty-btn-bg"></div>
+      <button (click)="onEmptyCart()" class="cart-empty-btn">
+        <div class="delete-icon-img"></div>
+        Empty Cart
+      </button>
+    </div>
     <app-cart-btn></app-cart-btn>
   </div>
   <div class="cart-body">
@@ -18,7 +24,7 @@
     </div>
   </div>
   <div class="cart-bottom">
-    <h1>Total price: {{(cartTotalPrice$ | async) | number: '.1-3'}}</h1>
-      <button>order</button>
+    <h1>Total: ${{(cartTotalPrice$ | async) | number: '.1-3'}}</h1>
+    <button class="check-out-btn">Check Out</button>
   </div>
 </div>

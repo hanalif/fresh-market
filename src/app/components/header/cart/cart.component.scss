@@ -13,10 +13,51 @@
     background-color: white;
 
 
-
     small{
       font-size: 25px;
     }
+  }
+
+  &-empty-btn-block{
+    position: relative;
+  }
+
+  &-empty-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+
+    &-bg{
+      position: absolute;
+      background-color: #F5F5F4;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      left: 15px;
+      bottom: 23px;
+    }
+
+    .delete-icon-img{
+      background-image: url("../../../../assets/icons/trash-can-white-stripes.png");
+      height: 30px;
+      width: 30px;
+      background-position: initial;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    mat-icon{
+      font-size: 30px;
+      position: relative;
+      color: #ffc107;
+
+    }
+
   }
 
   &-body{
@@ -33,6 +74,14 @@
     margin-top: 20px;
     background-color: white;
     padding: 18px 20px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    h1{
+      margin: 0;
+    }
+
 
     &::after{
       content: "";
@@ -43,6 +92,18 @@
       height: 10px;
       box-shadow: 0 -2px 10px 0 rgb(0 0 0 / 6%);
       z-index: 100;
+    }
+
+    .check-out-btn{
+      height: 57px;
+      line-height: 57px;
+      width: 210px;
+      text-align: center;
+      font-size: 22px;
+      background: #A4D668;
+      color: #1E3E20;
+      border-radius: 50rem;
+      cursor: pointer;
     }
   }
 
