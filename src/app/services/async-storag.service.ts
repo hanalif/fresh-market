@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { map, of, tap } from "rxjs";
+import { map, Observable, of, tap } from "rxjs";
 import { Entity } from "../shared/models/entity.model";
 
 @Injectable({providedIn: 'root'})
@@ -70,6 +70,15 @@ export class StorageService {
         return;
       })
     )
+  }
+
+  removeLocalStorageSessions(entityType:string): Observable<{ message: string;}> {
+    return of(localStorage.removeItem(entityType)).pipe(
+      map(()=>{
+        return {message: `${entityType} was remove from storage`}
+      })
+    );
+
   }
 
    _save<T>(entityType: string, entities: T[] ){

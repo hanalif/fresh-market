@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { first, forkJoin, merge, mergeWith, Observable, switchMap } from "rxjs";
+import { map, Observable, switchMap } from "rxjs";
 import { ItemService } from "../modules/items/services/item.service";
 import { ItemOrderInfo } from "../shared/models/itemOrderInfo.model";
 import { CartStore } from "../state/cart/cartStore";
@@ -58,6 +58,18 @@ export class CartService{
         return this.itemService.saveToItemsToShowInCartFromStorage(ids);
       })
     );
+  }
+
+  emptyCart(){
+    return this.storageService.removeLocalStorageSessions(this.entityType).pipe(
+      map(massage=>{
+        console.log(massage);
+        this.itemService.removeAllItemsFromItemsToShowInCart();
+        this.cartStore.set([]);
+      })
+    )
+
+
   }
 
 

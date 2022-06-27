@@ -1,3 +1,4 @@
+import { state } from "@angular/animations";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
@@ -83,6 +84,15 @@ export class ItemService{
       return {
         ...state,
         itemsToShowInCart: updatedItemsToShowInCart
+      }
+    })
+  }
+
+  removeAllItemsFromItemsToShowInCart(){
+    this.itemStore.update(state=>{
+      return{
+        ...state,
+        itemsToShowInCart: []
       }
     })
   }

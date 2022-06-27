@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { map, Observable, Subscription } from 'rxjs';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
 import { Item } from 'src/app/modules/items-shared.module.ts/models/item.model';
 import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
@@ -18,6 +18,7 @@ import { CartQuery } from 'src/app/state/cart/cartQuery';
 })
 export class CartComponent implements OnInit, OnDestroy {
 
+
   constructor(
       private uIService:UIService,
       private itemQuery: ItemQuery,
@@ -26,9 +27,10 @@ export class CartComponent implements OnInit, OnDestroy {
 
   cartItemsToShow$! :Observable<Item[]>
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
-  cartTotalPrice$! :Observable<any>
+  cartTotalPrice$! :Observable<number>
   itemOrderInfoSubscription!: Subscription;
   ItemCardMode = ItemCardMode;
+  emptyCartSubscription!: Subscription;
 
 
   ngOnInit(): void {
@@ -41,6 +43,9 @@ export class CartComponent implements OnInit, OnDestroy {
     this.uIService.setIsCartOpen(val);
   }
 
+  onEmptyCart(){
+    this.emptyCartSubscription = this.cartService.emptyCart().subscribe()
+  }
 
   saveItemUnitsValue(itemOrderInfo: ItemOrderInfo){
     this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
@@ -48,8 +53,7 @@ export class CartComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.itemOrderInfoSubscription?.unsubscribe();
+    this.emptyCartSubscription?.unsubscribe();
   }
-
-
 
 }
