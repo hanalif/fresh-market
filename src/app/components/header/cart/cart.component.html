@@ -13,16 +13,19 @@
     </div>
     <app-cart-btn></app-cart-btn>
   </div>
-  <div class="cart-body">
-    <div *ngFor="let item of (cartItemsToShow$ | async)" class="cart-items-list">
-      <app-item-card
-        [item]="item"
-        [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
-        [displayMode]="ItemCardMode.small"
-        (onSaveItemOrderInfo)="saveItemUnitsValue($event)">
-      </app-item-card>
+
+  <ng-scrollbar style="height: 500px">
+    <div class="cart-body">
+        <div *ngFor="let item of (cartItemsToShow$ | async)" class="cart-items-list">
+          <app-item-card
+            [item]="item"
+            [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
+            [displayMode]="ItemCardMode.small"
+            (onSaveItemOrderInfo)="saveItemUnitsValue($event)">
+          </app-item-card>
+        </div>
     </div>
-  </div>
+  </ng-scrollbar>
   <div class="cart-bottom">
     <h1>Total: ${{(cartTotalPrice$ | async) | number: '.1-3'}}</h1>
     <button class="check-out-btn">Check Out</button>

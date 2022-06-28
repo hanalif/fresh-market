@@ -1,5 +1,13 @@
 [
     {
+      "_id": "nffffssy1N",
+      "mainCategoryName": "Start Shoping",
+      "linkImage": "",
+      "subCategiries": []
+
+    },
+
+    {
         "_id": "nW8Cuy1N",
         "mainCategoryName": "Fruits",
         "linkImage": "https://res.cloudinary.com/sprint4/image/upload/v1648558753/HolyVegiFruits/icons/fruit-yellow-png_u8p2lc.png",

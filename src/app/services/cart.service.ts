@@ -6,6 +6,7 @@ import { CartStore } from "../state/cart/cartStore";
 import { StorageService } from "./async-storag.service";
 
 @Injectable({providedIn: 'root'})
+
 export class CartService{
   private readonly entityType: string = 'items';
 
