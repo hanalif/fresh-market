@@ -41,18 +41,23 @@
 
 }
 
-.search-items-list{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 54px;
-    flex-direction: column;
-    gap: 9px;
-    background-color: white;
-    overflow: auto;
-    max-height: 405px;
-    width: 465px;
-    border: 1px solid #cbcdd4;
+.search-items-list-container{
+  position: absolute;
+  max-height: 405px;
+  overflow: hidden;
+  border: 1px solid #cbcdd4;
+
+  top: 54px;
+  .search-items-list{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 9px;
+      background-color: white;
+      width: 465px;
+
+  }
 }
+
 
 

@@ -23,6 +23,7 @@ import { ItemsSharedModule } from './modules/items-shared.module.ts/items-shared
 import { AuthModule } from './modules/auth/auth.module';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
+
 @NgModule({
   declarations: [
     AppComponent,

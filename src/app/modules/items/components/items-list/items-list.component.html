@@ -1,8 +1,8 @@
 <div class="items-list-container">
   <div class="hero-container">
     <div class="hero-txt main-layout">
-      <small>{{((categoriesTitles$ | async)?.mainCategory) | uppercase }}</small>
-      <small>{{((categoriesTitles$ | async)?.subCategory) | uppercase }}</small>
+      <small>{{((pageTitles$ | async)?.mainTitle) | uppercase }}</small>
+      <small>{{((pageTitles$ | async)?.subTitle) | uppercase }}</small>
     </div>
   </div>
   <div *ngIf="(items$ | async) != null" class="items-list main-layout">

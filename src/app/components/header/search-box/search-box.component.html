@@ -7,14 +7,19 @@
     <div class="search-box-img"></div>
   </form>
 
-  <div *ngIf="searchItemsResults != null  && searchItemsResults?.length != 0" class="search-items-list">
-    <app-item-card
-      *ngFor="let item of searchItemsResults"
-      [item]="item"
-      [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
-      [displayMode]="ItemCardMode.xs"
-      (onSaveItemOrderInfo)="saveItemUnitsValue($event)">
-    </app-item-card>
-  </div>
+
+    <div *ngIf="searchItemsResults != null  && searchItemsResults?.length != 0" class="search-items-list-container">
+      <ng-scrollbar style="height: 405px; width: 465px;">
+        <div class="search-items-list">
+          <app-item-card
+            *ngFor="let item of searchItemsResults"
+            [item]="item"
+            [itemUnitsValue]="(itemUnitsMap$ | async)![item._id]"
+            [displayMode]="ItemCardMode.xs"
+            (onSaveItemOrderInfo)="saveItemUnitsValue($event)">
+          </app-item-card>
+        </div>
+      </ng-scrollbar>
+    </div>
 </div>
 

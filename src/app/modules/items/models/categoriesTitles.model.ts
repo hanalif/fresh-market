@@ -1,5 +1,5 @@
 
-export interface CategoriesTitles{
-  mainCategory: string | undefined,
-  subCategory: string | undefined
+export interface PageTitles{
+  mainTitle: string | undefined,
+  subTitle: string | undefined
 }

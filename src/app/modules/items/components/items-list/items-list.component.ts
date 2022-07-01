@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable, Subscription, switchMap } from 'rxjs';
+import { map, Observable, of, Subscription, switchMap } from 'rxjs';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
-import { CategoriesTitles } from 'src/app/modules/items/models/categoriesTitles.model';
+import { PageTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
@@ -21,7 +21,7 @@ export class ItemsListComponent implements OnInit, OnDestroy{
   public itemsToShow!: Item[];
   items$!: Observable<Item[]>;
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
-  categoriesTitles$!: Observable<CategoriesTitles>;
+  pageTitles$!: Observable<PageTitles>;
   itemOrderInfoSubscription!: Subscription;
   ItemCardMode = ItemCardMode;
 
@@ -33,8 +33,21 @@ export class ItemsListComponent implements OnInit, OnDestroy{
     this.items$ = this.itemQuery.getItemsToShow();
     this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
 
-    this.categoriesTitles$ = this.route.params.pipe(
-      switchMap(params=> this.uiQuery.getItemsCategoriesTitles(params['mainCategoryId'], params['subcategoryId'])));
+    this.pageTitles$ = this.route.params.pipe(
+      switchMap(params=>
+            {
+              const mainCategoryId = params['mainCategoryId'];
+              if(mainCategoryId == null){
+                const pageTitles: PageTitles = {
+                  mainTitle: 'Welcome To Fresh Market - An Online Store',
+                  subTitle: 'Start Shopping'
+                }
+                return of(pageTitles);
+              }
+              return this.uiQuery.getItemsCategoriesTitles(mainCategoryId, params['subcategoryId'])
+            }
+      )
+    );
   }
 
   trackBy(index: number, item: Item) {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, OnChanges, OnDestroy, OnInit, Output, Renderer2, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Observable, Subscription, switchMap, tap } from 'rxjs';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
@@ -35,7 +35,8 @@ export class SearchBoxComponent implements OnInit ,OnDestroy {
       private cartService: CartService,
       private cartQuery: CartQuery,
       private itemQuery: ItemQuery,
-      private cd: ChangeDetectorRef) { }
+      private cd: ChangeDetectorRef,
+      private renderer: Renderer2) { }
 
 
   ngOnInit(): void {
@@ -49,6 +50,11 @@ export class SearchBoxComponent implements OnInit ,OnDestroy {
 
     this.searchItemsResultsSubscription = this.itemQuery.getSearchresultsItems().subscribe(items=>{
       this.searchItemsResults = items;
+      if(items != null && items.length != 0){
+        this._checksIfSearchItemsResults(true);
+      }else{
+        this._checksIfSearchItemsResults(false);
+      }
       this.cd.detectChanges();
     })
   }
@@ -69,5 +75,14 @@ export class SearchBoxComponent implements OnInit ,OnDestroy {
     this.itemOrderInfoSubscription?.unsubscribe();
     this.searchItemsResultsSubscription?.unsubscribe();
     this.searchItemsKeySub?.unsubscribe();
+  }
+
+
+  _checksIfSearchItemsResults(val:boolean){
+    if(val){
+      this.renderer.addClass(document.body, 'overflow-hidden');
+    }else{
+      this.renderer.removeClass(document.body, 'overflow-hidden');
+    }
   }
 }

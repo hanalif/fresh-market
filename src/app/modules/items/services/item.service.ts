@@ -10,6 +10,7 @@ import { ItemStore } from "../state/itemStore";
 @Injectable({providedIn: 'root'})
 
 export class ItemService{
+  private readonly NUMBER_OF_RANDOM_ITEMS = 50;
   constructor(private http: HttpClient, private itemStore: ItemStore){}
 
   getItems(mainCtegoryId: string, subcategoryId: string): Observable<Item[]> {
@@ -28,6 +29,23 @@ export class ItemService{
         })
       }),
     );
+  }
+
+  gerRandItems(){
+    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+      tap(fetchedItems => {
+        const shuffled = fetchedItems.sort(() => 0.5 - Math.random());
+        let itemsToShow = shuffled.slice(0, this.NUMBER_OF_RANDOM_ITEMS);
+
+        this.itemStore.update(state => {
+          return {
+            ...state,
+            itemsToShow: itemsToShow
+          }
+        })
+      }),
+    );
+
   }
 
   getSearchResultItems(searchKey: string){
