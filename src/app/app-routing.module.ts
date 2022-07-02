@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ItemsListComponent,
     resolve: [ItemsListResolver],
     runGuardsAndResolvers: 'always'
-  },
+  }
 
 ];
 

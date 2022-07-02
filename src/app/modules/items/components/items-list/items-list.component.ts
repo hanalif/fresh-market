@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnChanges, OnDestroy, OnInit, Renderer2, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable, of, Subscription, switchMap } from 'rxjs';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
@@ -26,7 +26,14 @@ export class ItemsListComponent implements OnInit, OnDestroy{
   ItemCardMode = ItemCardMode;
 
 
-  constructor(private itemQuery: ItemQuery, private cartService: CartService, private cartQuery: CartQuery, private uiQuery: UIQuery, private route: ActivatedRoute) {}
+  constructor(
+        private itemQuery: ItemQuery,
+        private cartService: CartService,
+        private cartQuery: CartQuery,
+        private uiQuery: UIQuery,
+        private route: ActivatedRoute,
+        private render: Renderer2) {}
+
 
 
   ngOnInit(): void {
@@ -49,6 +56,8 @@ export class ItemsListComponent implements OnInit, OnDestroy{
       )
     );
   }
+
+
 
   trackBy(index: number, item: Item) {
     return item._id;

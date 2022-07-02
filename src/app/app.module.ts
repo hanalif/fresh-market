@@ -24,6 +24,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     MobileMenuComponent,
     UserMenuBtnComponent,
     CartComponent,
-    CartBtnComponent
+    CartBtnComponent,
   ],
   imports: [
     BrowserModule,

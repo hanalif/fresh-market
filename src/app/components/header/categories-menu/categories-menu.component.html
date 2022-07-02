@@ -1,5 +1,4 @@
 <div class="menu-links-wrapper" [ngClass]="{'mobile-open': isMobileMenuOpen$ | async}">
-
   <div class="dropdown"
     *ngFor="let itemCategory of itemsCategories$ | async "
     (click)="onClickMobileMenuLink(itemCategory._id)">
