@@ -1,9 +1,5 @@
 
   <div class="main-header">
-    <div routerLink="" class="main-header_logo">
-      <img src="../../../assets/icons/logo-5-png.png" alt="">
-    </div>
-
     <div class="main-header_container main-layout">
       <div class="main-header_cart-menu">
         <button (click)="onToggleHamburger(true)" class="hamburger-icon-container">
@@ -21,6 +17,9 @@
         <app-user-menu-btn></app-user-menu-btn>
         <app-cart-btn (click)="onToggleCart(true)"></app-cart-btn>
       </div>
+    </div>
+    <div routerLink="" class="main-header_logo main-layout">
+      <img src="../../../assets/icons/fixed-logo.png" alt="">
     </div>
   </div>
 
