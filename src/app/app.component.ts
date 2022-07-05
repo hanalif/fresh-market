@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Observable, ReplaySubject, Subject, Subscription, takeUntil, tap } from 'rxjs';
 import { Animations } from './animations'
+import { AuthService } from './modules/auth/services/auth.service';
 import { CartService } from './services/cart.service';
 import { UIService } from './services/UI.service';
 import { UIQuery } from './state/UI/UIQuery';
@@ -26,7 +27,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private uIQuery: UIQuery,
     private uIService:UIService,
      private cartService: CartService,
-     private renderer: Renderer2) { }
+     private renderer: Renderer2,
+     private authService: AuthService) { }
 
 
   ngOnInit(): void {
@@ -49,6 +51,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.uIService.getItemsCategories().pipe(takeUntil(this.destroyed$)).subscribe(); // todo add routing to app and move to resolver
     this.uIService.updateWhenUrlChangesOccur().pipe(takeUntil(this.destroyed$)).subscribe();
     this.cartService.loadItemsOrderInfoFromStorage().pipe(takeUntil(this.destroyed$)).subscribe();
+    this.authService.login({username: 'hanalif619', password: '1234'}).subscribe()
+
   }
 
 
@@ -69,6 +73,8 @@ export class AppComponent implements OnInit, OnDestroy {
       this.renderer.removeClass(document.body, 'overflow-hidden');
     }
   }
+
+
 
 }
 

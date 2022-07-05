@@ -4,6 +4,7 @@
 .items-list-container{
   margin-block-start: calc(100vh - 480px);
 
+
   @include for-bpoint-tablet-landscape{
     margin-block-start: calc(100vh - 430px);
   }

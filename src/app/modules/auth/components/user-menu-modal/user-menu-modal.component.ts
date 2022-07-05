@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -10,10 +11,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class UserMenuModalComponent implements OnInit {
   loggedInUser: boolean = false;
 
-  constructor( public dialogRef: MatDialogRef<UserMenuModalComponent>,
+  constructor( private authService: AuthService  ,public dialogRef: MatDialogRef<UserMenuModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {}) { }
 
   ngOnInit(): void {
+  }
+
+  logOut(){
+    this.authService.logout().subscribe()
   }
 
 }

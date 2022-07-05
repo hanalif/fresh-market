@@ -1,6 +1,6 @@
 
-export interface user{
-  id: string,
+export interface User {
+  _id: string,
   fullname: string,
   isAdmin: boolean,
   username: string,

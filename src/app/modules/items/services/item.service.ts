@@ -10,11 +10,12 @@ import { ItemStore } from "../state/itemStore";
 @Injectable({providedIn: 'root'})
 
 export class ItemService{
+
   private readonly NUMBER_OF_RANDOM_ITEMS = 50;
   constructor(private http: HttpClient, private itemStore: ItemStore){}
 
   getItems(mainCtegoryId: string, subcategoryId: string): Observable<Item[]> {
-    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+    return this._getItems().pipe(
       tap(fetchedItems => {
         let itemsToShow: Item[] = fetchedItems.filter(item =>
             item.mainCategoryId === mainCtegoryId &&
@@ -32,7 +33,7 @@ export class ItemService{
   }
 
   gerRandItems(){
-    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+    return this._getItems().pipe(
       tap(fetchedItems => {
         const shuffled = fetchedItems.sort(() => 0.5 - Math.random());
         let itemsToShow = shuffled.slice(0, this.NUMBER_OF_RANDOM_ITEMS);
@@ -58,7 +59,7 @@ export class ItemService{
       })
       return of([])
     }
-    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+    return this._getItems().pipe(
       map(fetchedItems =>{
         const serchKeyToLowerCase = searchKey.toLocaleLowerCase()
         let updatedFetchedItems = [...fetchedItems.filter(item=> item.name.toLocaleLowerCase().includes(serchKeyToLowerCase))]
@@ -116,7 +117,7 @@ export class ItemService{
   }
 
   saveToItemsToShowInCartFromStorage(ItemsIds: string[]){
-    return this.http.get<Item[]>('assets/_json-files/items-en.json').pipe(
+    return this._getItems().pipe(
       tap(items=>{
         const itemsToShowInCartFromStorage = items.filter(item=> ItemsIds.includes(item._id));
         this.itemStore.update(state=>{
@@ -127,6 +128,10 @@ export class ItemService{
         })
       })
     )
+  }
+
+  _getItems(){
+    return this.http.get<Item[]>('assets/_json-files/items-en.json');
   }
 
 }

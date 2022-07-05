@@ -43,9 +43,10 @@
 
 .search-items-list-container{
   position: absolute;
-  max-height: 405px;
+  height: 405px;
   overflow: hidden;
   border: 1px solid #cbcdd4;
+  background-color: white;
 
   top: 54px;
   .search-items-list{
