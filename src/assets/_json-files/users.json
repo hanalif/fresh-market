@@ -1,7 +1,8 @@
 [
   {
       "_id": "R4bUuuvWM6",
-      "fullname": "Hana Lipschutz",
+      "name": "Hana",
+      "lastname": "Lipschutz",
       "isAdmin": "true",
       "username": "hanalif619",
       "password": "1234",
@@ -11,7 +12,8 @@
   },
   {
     "_id": "QcHdg2o088",
-    "fullname": "Bina Lipschutz",
+    "name": "Bina",
+    "lastname":"Lipschutz",
     "isAdmin": "false",
     "username": "bina1234",
     "password": "1234",

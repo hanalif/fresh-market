@@ -1,7 +1,9 @@
+import { User } from "./user.model";
 
 export interface SignupDetails {
+  name: string,
+  lastname: string,
   username: string,
-  fullname: string,
   password: string,
   email: string,
   phone: number,

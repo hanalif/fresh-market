@@ -1,7 +1,14 @@
-<div *ngIf="loggedInUser;else registrationMenu" class="logged-in-user-menu">
-<h1>loggedInUser name</h1>
-</div>
-<ng-template #registrationMenu class="registration-menu">
-  <h1>registration-menu</h1>
-</ng-template>
+<div *ngIf="loggedInUser; else registrationMenu" class="logged-in-user-menu">
+<h1>logged in user menue</h1>
+<h2>Hello {{loggedInUser.name}}</h2>
+
 <button (click)="logOut()">Log Out</button>
+</div>
+
+<ng-template #registrationMenu class="registration-menu" >
+  <h1>registration-menu</h1>
+  <button style="cursor: pointer;" (click)="logIn()">Log In</button>
+  <button (click)="signUp()">Sign Up</button>
+</ng-template>
+
+

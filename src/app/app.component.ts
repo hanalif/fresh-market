@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, OnDestroy
 import { Observable, ReplaySubject, Subject, Subscription, takeUntil, tap } from 'rxjs';
 import { Animations } from './animations'
 import { AuthService } from './modules/auth/services/auth.service';
+import { UserService } from './modules/auth/services/user.service';
 import { CartService } from './services/cart.service';
 import { UIService } from './services/UI.service';
 import { UIQuery } from './state/UI/UIQuery';
@@ -28,7 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
     private uIService:UIService,
      private cartService: CartService,
      private renderer: Renderer2,
-     private authService: AuthService) { }
+     private authService: AuthService,
+     private userService: UserService) { }
 
 
   ngOnInit(): void {
@@ -51,7 +53,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.uIService.getItemsCategories().pipe(takeUntil(this.destroyed$)).subscribe(); // todo add routing to app and move to resolver
     this.uIService.updateWhenUrlChangesOccur().pipe(takeUntil(this.destroyed$)).subscribe();
     this.cartService.loadItemsOrderInfoFromStorage().pipe(takeUntil(this.destroyed$)).subscribe();
-    this.authService.login({username: 'hanalif619', password: '1234'}).subscribe()
+
+    this.authService.setInitialLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe();
+    this.userService.getUsers().pipe(takeUntil(this.destroyed$)).subscribe();
+
 
   }
 

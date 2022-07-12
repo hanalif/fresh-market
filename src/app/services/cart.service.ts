@@ -66,7 +66,7 @@ export class CartService{
       map(massage=>{
         console.log(massage);
         this.itemService.removeAllItemsFromItemsToShowInCart();
-        this.cartStore.set([]);
+        this.cartStore.remove();
       })
     )
 

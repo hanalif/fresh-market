@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { map, Observable, Subscription } from 'rxjs';
+import { UserQuery } from 'src/app/modules/auth/state/user-state/userQuery';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
 import { Item } from 'src/app/modules/items-shared.module.ts/models/item.model';
 import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
@@ -37,6 +38,7 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart();
     this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
     this.cartTotalPrice$ = this.cartQuery.getTotalPrice();
+
   }
 
   onCloseCart(val: boolean){

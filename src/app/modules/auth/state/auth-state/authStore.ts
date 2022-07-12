@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
-import { User } from '../models/user.model';
+import { User } from '../../models/user.model';
+
 
 
 
 export interface AuthState {
-  loggedInUser?: User
+  loggedInUserId?: string | undefined
 }
 
 export const getInitialState = () => {
   return {
-    loggedInUser: undefined
+    loggedInUserId: undefined
   };
 };
 
