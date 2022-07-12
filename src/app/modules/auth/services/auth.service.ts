@@ -1,7 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { EMPTY, forkJoin, map, Observable, of, switchMap, tap } from "rxjs";
+import { EMPTY, forkJoin, map, Observable, of, switchMap, tap, throwError } from "rxjs";
 import { StorageService } from "src/app/services/async-storag.service";
+import { UtilService } from "src/app/services/util.service";
 import { LoggedInUserStorageDetails } from "../models/logged-in-user-storage-details.model";
 
 import { LoginDetails } from "../models/login-details.model";
@@ -15,15 +16,15 @@ export class AuthService{
   private readonly entityType: string = 'loggedInUser';
 
 
-  constructor(private http: HttpClient,
-              private authStore:AuthStore,
+  constructor(private authStore:AuthStore,
               private storageService: StorageService,
+              private utilService: UtilService,
               private userService:UserService){}
 
   signup(userCred: SignupDetails){
 
     const newUser:User = {
-      _id: this._makeId(),
+      _id: this.utilService.makeId(),
       name: userCred.name,
       lastname: userCred.lastname,
       isAdmin: false,
@@ -42,11 +43,15 @@ export class AuthService{
     return this.userService.findUser(loginDetails).pipe(
       switchMap(user=>{
         if(!user){
-          return this.saveSignUpUser(newUser);
+          return forkJoin([this.userService.addUser(newUser), this.saveLoggedInUserId(newUser._id)]).pipe(
+            map(res=> {return})
+          )
         }else{
-          return of('user already exists');
+          return throwError(() => new Error(`user already exists`));
         }
       })
+
+
     )
 
   }
@@ -57,16 +62,8 @@ export class AuthService{
         if(user){
           return this.saveLoggedInUserId(user?._id);
         }else{
-          return of('could not find user');
+          return throwError(() => new Error(`could not find user`));
         }
-      })
-    )
-  }
-
-  saveSignUpUser(newUser: User){
-    return this.userService.addUser(newUser).pipe(
-      switchMap(()=>{
-        return this.saveLoggedInUserId(newUser._id);
       })
     )
   }
@@ -79,24 +76,23 @@ export class AuthService{
     }else{
       setLoggedInUserIdToStorage$ = EMPTY;
     }
+    this.saveLoggedInUserIdToStore(userId);
+    return setLoggedInUserIdToStorage$
+  }
+
+  saveLoggedInUserIdToStore(userId?:string){
     this.authStore.update(state=>{
-      return {
+      return{
         ...state,
         loggedInUserId: userId
       }
     })
-    return setLoggedInUserIdToStorage$
   }
 
   logout(){
     return this.storageService.removeLocalStorageSessions(this.entityType).pipe(
       map(massage=>{
-        this.authStore.update(state=>{
-          return{
-            ...state,
-            loggedInUserId: undefined
-          }
-        })
+        this.saveLoggedInUserIdToStore(undefined);
       })
     )
   }
@@ -107,26 +103,11 @@ export class AuthService{
         if(loggedInUserId.length == 0){
           return EMPTY;
         }
-         return of(this.authStore.update(state=>{
-            return{
-              ...state,
-              loggedInUserId: loggedInUserId[0]._id
-            }
-        }))
+         return of (this.saveLoggedInUserIdToStore(loggedInUserId[0]._id));
       }),
     )
   }
 
-
-
-  _makeId(length = 8) {
-    let txt = '';
-    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (let i = 0; i < length; i++) {
-        txt += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return txt;
-}
 
 
 }
