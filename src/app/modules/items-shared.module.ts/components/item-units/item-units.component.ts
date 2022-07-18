@@ -83,7 +83,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   private initForm(){
     this.itemAmountForm = new FormGroup({
       'unitType': new FormControl(this.itemUnitsValue != null ? this.itemUnitsValue.unitType : this.item.units[0].unitType),
-      'amount': new FormControl(this.itemUnitsValue != null ? this.itemUnitsValue.amount : 0),
+      'amount': new FormControl(this.itemUnitsValue != null ? this.itemUnitsValue.amount : 0)
     })
   }
 

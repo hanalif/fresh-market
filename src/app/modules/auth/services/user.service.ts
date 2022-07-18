@@ -57,7 +57,7 @@ export class UserService {
   findUser(userCred: LoginDetails){
     return this.getUsers().pipe(
       switchMap(users=>{
-        const index = users.findIndex(user=> user.username === userCred.username && user.password === userCred.password);
+        const index = users.findIndex(user=> user.email === userCred.email && user.password === userCred.password);
         if(index === -1){
           return of(undefined)
         }else{

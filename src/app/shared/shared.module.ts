@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MinusPlusInputComponent } from "./components/minus-plus-input/minus-plus-input.component";
 import { SelectBtnsComponent } from "./components/select-btns/select-btns.component";
 
+
 @NgModule({
   declarations: [
     MinusPlusInputComponent,

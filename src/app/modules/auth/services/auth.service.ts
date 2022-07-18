@@ -28,7 +28,6 @@ export class AuthService{
       name: userCred.name,
       lastname: userCred.lastname,
       isAdmin: false,
-      username: userCred.username,
       password: userCred.password,
       email: userCred.email,
       phone: userCred.phone,
@@ -36,7 +35,7 @@ export class AuthService{
     }
 
     const loginDetails: LoginDetails = {
-      username: newUser.username,
+      email: newUser.email,
       password: newUser.password
     }
 

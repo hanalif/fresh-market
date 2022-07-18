@@ -1,0 +1,31 @@
+<div class="form-container">
+  <form class="form" [formGroup]="signUpForm">
+    <mat-form-field>
+      <mat-label>Name:</mat-label>
+      <input required  formControlName="name"  matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Last name:</mat-label>
+      <input required formControlName="lastname"   matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>password:</mat-label>
+      <input required formControlName="password" matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email:</mat-label>
+      <input required formControlName="email"  type="email"  matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Phone number:</mat-label>
+      <input required formControlName="phone" matInput>
+    </mat-form-field>
+
+    <button type="submit" style="cursor: pointer;"  (click)="signUp()" mat-stroked-button>Sign Up</button>
+  </form>
+</div>
+

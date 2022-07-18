@@ -1,0 +1,36 @@
+
+<div class="menu-container">
+  <div class="top-menu">
+    <h2>Hello, {{loggedInUserName}}</h2>
+    <div  (click)="logOut()" class="log-out-icon-container">
+      <div class="log-out-icon">
+        <img src="../../../../../assets/icons/log-out.png" alt="">
+      </div>
+      <small>Log Out</small>
+    </div>
+  </div>
+  <div class="main-menu">
+    <a class="menu-link" >
+      <span><mat-icon>account_circle</mat-icon></span>
+      <span class="menu-link-title">Personal Area</span>
+    </a>
+    <a class="menu-link" >
+      <span><mat-icon>edit</mat-icon></span>
+      <span  class="menu-link-title">Edit Personal Details</span>
+    </a>
+    <a class="menu-link" >
+      <span><mat-icon>shopping_cart</mat-icon></span>
+      <span  class="menu-link-title">My Orders</span>
+    </a>
+    <a class="menu-link" >
+      <span><mat-icon> local_shipping</mat-icon></span>
+      <span  class="menu-link-title">Shipping Details</span>
+    </a>
+    <a class="menu-link" >
+      <span><mat-icon>home</mat-icon></span>
+      <span  class="menu-link-title">To Shopping</span>
+    </a>
+  </div>
+
+
+</div>

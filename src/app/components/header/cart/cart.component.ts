@@ -24,6 +24,7 @@ export class CartComponent implements OnInit, OnDestroy {
       private uIService:UIService,
       private itemQuery: ItemQuery,
       private cartQuery:CartQuery,
+      private userQuery: UserQuery,
       private cartService: CartService) { }
 
   cartItemsToShow$! :Observable<Item[]>
@@ -32,12 +33,16 @@ export class CartComponent implements OnInit, OnDestroy {
   itemOrderInfoSubscription!: Subscription;
   ItemCardMode = ItemCardMode;
   emptyCartSubscription!: Subscription;
+  loggedInUserName$!: Observable<string | undefined>;
 
 
   ngOnInit(): void {
     this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart();
     this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
     this.cartTotalPrice$ = this.cartQuery.getTotalPrice();
+    this.loggedInUserName$ = this.userQuery.getLoggedInUser().pipe(
+      map(user=> user?.name)
+    )
 
   }
 

@@ -2,7 +2,10 @@
   <div class="cart-head">
     <button (click)="onCloseCart(false)" class="clear-icon"></button>
     <div class="cart-head_title">
-      <small>My Cart</small>
+      <small *ngIf="loggedInUserName$ | async as loggedInUserName; else noLoggedInUser">Hello, {{loggedInUserName}} </small>
+      <ng-template #noLoggedInUser>
+        <small >My Cart</small>
+      </ng-template>
     </div>
     <div class="cart-empty-btn-block">
       <div class="cart-empty-btn-bg"></div>

@@ -1,6 +1,6 @@
 import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, Injectable, OnDestroy, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { EMPTY, map, Observable, of, ReplaySubject, Subscription, takeUntil, tap } from 'rxjs';
+import { ReplaySubject, Subscription, takeUntil, tap } from 'rxjs';
 import { User } from '../../models/user.model';
 import { AuthService } from '../../services/auth.service';
 import { AuthQuery } from '../../state/auth-state/authQuery';
@@ -17,16 +17,14 @@ import { UserQuery } from '../../state/user-state/userQuery';
 export class UserMenuModalComponent implements OnInit, OnDestroy {
 
   loggedInUser!: User | undefined;
+
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
   constructor(
-              private authService: AuthService,
               private cd: ChangeDetectorRef,
               private userQuery: UserQuery,
-              private authQuery: AuthQuery,
               public dialogRef: MatDialogRef<UserMenuModalComponent>,
               @Inject(MAT_DIALOG_DATA) public data: {}) { }
-
 
 
   ngOnInit(): void {
@@ -38,18 +36,13 @@ export class UserMenuModalComponent implements OnInit, OnDestroy {
 
   }
 
-
-  logOut(){
-    this.authService.logout().pipe(takeUntil(this.destroyed$)).subscribe()
+  onCloseModal(): void{
+    this.dialogRef.close();
   }
 
-  logIn(){
-    this.authService.login({username: 'Amit', password: '1234'}).pipe(takeUntil(this.destroyed$)).subscribe()
-  }
 
-  signUp(){
-    this.authService.signup({username: 'Amit', name: 'Amit',lastname: 'zvaygen', password: '1234', email: 'helo@helo.com', phone: 1234}).pipe(takeUntil(this.destroyed$)).subscribe()
-  }
+
+
 
   ngOnDestroy(): void {
     this.destroyed$.next(true);

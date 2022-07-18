@@ -14,7 +14,7 @@
 
       <div class="main-header_actions">
         <app-information-menu></app-information-menu>
-        <app-user-menu-btn></app-user-menu-btn>
+        <app-user-menu-btn [LoggedInUserTitleMode]="loggedInUserTitleMode.main"></app-user-menu-btn>
         <app-cart-btn (click)="onToggleCart(true)"></app-cart-btn>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <div class="mobile-menu">
   <div class="mobile-menu_top">
     <button (click)="onCloseMenu(false)" class="clear-icon"></button>
-    <app-user-menu-btn></app-user-menu-btn>
+    <app-user-menu-btn [LoggedInUserTitleMode]="loggedInUserTitleMode.sideNav"></app-user-menu-btn>
   </div>
   <div class="mobile-menu_inner">
     <app-categories-menu></app-categories-menu>
