@@ -2,13 +2,12 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SharedModule } from "src/app/shared/shared.module";
-import { LoginFormComponent } from './components/login-form/login-form.component';
-import { UserMenuModalComponent } from './components/user-menu-modal/user-menu-modal.component';
-import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { AngularMaterialModule } from "../angular-material.module";
 import { NgScrollbarModule } from 'ngx-scrollbar';
-import { LoggedInUserMenuComponent } from './components/logged-in-user-menu/logged-in-user-menu.component';
 import {RouterModule} from '@angular/router';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { EditPersonalDetailsComponent } from './components/edit-personal-details/edit-personal-details.component';
+import { ShippingInfoComponent } from './components/shipping-info/shipping-info.component';
 
 
 
@@ -16,15 +15,12 @@ import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
-    LoginFormComponent,
-    UserMenuModalComponent,
-    SignupFormComponent,
-    LoggedInUserMenuComponent,
-
+  
+    MyOrdersComponent,
+       EditPersonalDetailsComponent,
+       ShippingInfoComponent
   ],
   exports: [
-    LoginFormComponent,
-    UserMenuModalComponent,
   ],
   imports: [
     CommonModule,
@@ -34,8 +30,6 @@ import {RouterModule} from '@angular/router';
     AngularMaterialModule,
     NgScrollbarModule,
     RouterModule
-
-
   ],
   providers: [
 

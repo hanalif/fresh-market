@@ -3,6 +3,7 @@ import { Observable, ReplaySubject, Subject, Subscription, takeUntil, tap } from
 import { Animations } from './animations'
 import { AuthService } from './modules/auth/services/auth.service';
 import { UserService } from './modules/auth/services/user.service';
+import { OrderService } from './modules/personal-area/services/order.service';
 import { CartService } from './services/cart.service';
 import { UIService } from './services/UI.service';
 import { UIQuery } from './state/UI/UIQuery';

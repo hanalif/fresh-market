@@ -5,7 +5,7 @@ import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/
 import { PageTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
-import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
+import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { Item } from '../../../items-shared.module.ts/models/item.model';

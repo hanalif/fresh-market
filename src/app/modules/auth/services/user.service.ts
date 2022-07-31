@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { forkJoin, map, Observable, of, switchMap, tap } from "rxjs";
+import {  map, of, switchMap, tap } from "rxjs";
 import { StorageService } from "src/app/services/async-storag.service";
 import { LoginDetails } from "../models/login-details.model";
 import { User } from "../models/user.model";

@@ -4,7 +4,7 @@ import { Observable, Subscription } from 'rxjs';
 import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
 import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
 import { CartService } from 'src/app/services/cart.service';
-import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
+import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 import { ItemModalData } from './models/data.model';
 

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnD
 import { Item } from '../../models/item.model';
 import {MatDialog } from '@angular/material/dialog';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
-import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
+import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
 import { ItemModalComponent } from 'src/app/modules/items/components/item-modal/item-modal.component';
 import { ItemCardMode } from './item-card-mode.enum';
 import { CartService } from 'src/app/services/cart.service';

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { map, Observable, switchMap } from "rxjs";
 import { ItemService } from "../modules/items/services/item.service";
-import { ItemOrderInfo } from "../shared/models/itemOrderInfo.model";
+import { ItemOrderInfo } from "../shared/models/order/itemOrderInfo.model";
 import { CartStore } from "../state/cart/cartStore";
 import { StorageService } from "./async-storag.service";
 

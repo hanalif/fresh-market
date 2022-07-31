@@ -7,7 +7,8 @@ import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/it
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
 import { UIService } from 'src/app/services/UI.service';
-import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
+import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
+
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 
 
@@ -56,6 +57,10 @@ export class CartComponent implements OnInit, OnDestroy {
 
   saveItemUnitsValue(itemOrderInfo: ItemOrderInfo){
     this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
+  }
+
+  onCeckOut(){
+
   }
 
   ngOnDestroy(): void {

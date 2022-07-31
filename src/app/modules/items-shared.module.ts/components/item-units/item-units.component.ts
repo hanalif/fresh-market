@@ -14,7 +14,6 @@ import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
-  public quantityInput: number = 0;
   @Input() item!: Item;
   @Input() itemUnitsValue!: ItemUnitsValue;
 
@@ -59,7 +58,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
     this.initForm();
     this.unitTypeControl = this.itemAmountForm.get('unitType') as FormControl;
 
-    this.unitTypeSubscription = this.itemAmountForm.get('unitType')?.valueChanges.subscribe(unitType=>{
+    this.unitTypeSubscription = this.unitTypeControl?.valueChanges.subscribe(unitType=>{
 
       let itemUnitsValue: ItemUnitsValue = {
         ...this.itemAmountForm.value,
@@ -70,7 +69,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
 
     this.amountControl = this.itemAmountForm.get('amount') as FormControl;
 
-    this.amountSubscription = this.itemAmountForm.get('amount')?.valueChanges.subscribe(amount=>{
+    this.amountSubscription = this.amountControl?.valueChanges.subscribe(amount=>{
 
       let itemUnitsValue: ItemUnitsValue = {
         ...this.itemAmountForm.value,

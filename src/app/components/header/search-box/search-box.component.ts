@@ -7,7 +7,8 @@ import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/it
 import { ItemService } from 'src/app/modules/items/services/item.service';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
-import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
+import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
+
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 
 @Component({
