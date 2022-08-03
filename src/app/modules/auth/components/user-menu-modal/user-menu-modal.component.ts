@@ -22,14 +22,14 @@ export class UserMenuModalComponent implements OnInit, OnDestroy {
 
   constructor(
               private cd: ChangeDetectorRef,
-              private userQuery: UserQuery,
+              private authQuery: AuthQuery,
               public dialogRef: MatDialogRef<UserMenuModalComponent>,
               @Inject(MAT_DIALOG_DATA) public data: {}) { }
 
 
   ngOnInit(): void {
 
-      this.userQuery.getLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe(loggedInUser=>{
+      this.authQuery.getLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe(loggedInUser=>{
           this.loggedInUser = loggedInUser;
           this.cd.detectChanges()
       });

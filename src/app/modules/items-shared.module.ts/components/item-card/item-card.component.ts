@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 import { Subscription } from 'rxjs';
 import { ItemUnit } from 'src/app/modules/items/models/itemUnit.model';
 import { ItemModalData } from 'src/app/modules/items/components/item-modal/models/data.model';
+import { ItemUnitType } from 'src/app/modules/items/models/itemUnitType.model';
 
 
 @Component({
@@ -48,10 +49,14 @@ export class ItemCardComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   saveItemUnitsValue(value: ItemUnitsValue){
+    const itemUnitType: ItemUnitType = value.unitType
+    const unit = this.item.units.find(unit=> unit.unitType === itemUnitType) as ItemUnit;
+
     let itemOrderInfo: ItemOrderInfo = {
       _id: this.item._id,
-      unitType: value.unitType,
-      amount: value.amount
+      unitType: itemUnitType,
+      amount: value.amount,
+      price: unit.price
     }
     this.onSaveItemOrderInfo.emit(itemOrderInfo);
   }

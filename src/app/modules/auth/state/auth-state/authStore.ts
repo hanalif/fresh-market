@@ -6,12 +6,12 @@ import { User } from '../../models/user.model';
 
 
 export interface AuthState {
-  loggedInUserId?: string | undefined
+  loggedInUser?: User | undefined
 }
 
 export const getInitialState = () => {
   return {
-    loggedInUserId: undefined
+    loggedInUser: undefined
   };
 };
 

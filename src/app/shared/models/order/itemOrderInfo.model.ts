@@ -4,5 +4,7 @@ import { Entity } from "../entity.model";
 export interface ItemOrderInfo extends Entity {
   unitType: ItemUnitType,
   amount: number,
+  price: number,
   note?: string,
+
 }

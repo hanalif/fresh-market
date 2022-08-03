@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { EMPTY, forkJoin, map, Observable, of, switchMap, tap, throwError } from "rxjs";
 import { StorageService } from "src/app/services/async-storag.service";
+import { CartService } from "src/app/services/cart.service";
 import { UtilService } from "src/app/services/util.service";
 import { LoggedInUserStorageDetails } from "../models/logged-in-user-storage-details.model";
 
@@ -19,6 +20,7 @@ export class AuthService{
   constructor(private authStore:AuthStore,
               private storageService: StorageService,
               private utilService: UtilService,
+              private cartService: CartService,
               private userService:UserService){}
 
   signup(userCred: SignupDetails){
@@ -42,7 +44,7 @@ export class AuthService{
     return this.userService.findUser(loginDetails).pipe(
       switchMap(user=>{
         if(!user){
-          return forkJoin([this.userService.addUser(newUser), this.saveLoggedInUserId(newUser._id)]).pipe(
+          return forkJoin([this.userService.addUser(newUser), this.saveLoggedInUser(newUser)]).pipe(
             map(res=> {return})
           )
         }else{
@@ -59,7 +61,7 @@ export class AuthService{
     return this.userService.findUser(userCred).pipe(
       switchMap(user=>{
         if(user){
-          return this.saveLoggedInUserId(user?._id);
+          return this.saveLoggedInUser(user);
         }else{
           return throwError(() => new Error(`could not find user`));
         }
@@ -67,33 +69,39 @@ export class AuthService{
     )
   }
 
-  saveLoggedInUserId(userId?: string){
+  saveLoggedInUser(user?: User){
     let setLoggedInUserIdToStorage$: Observable<void>;
-    if(userId){
-      const userStorageDetails: LoggedInUserStorageDetails = {_id: userId};
+    if(user){
+      const userStorageDetails: LoggedInUserStorageDetails = {_id: user._id};
       setLoggedInUserIdToStorage$ = this.storageService.post(this.entityType, userStorageDetails )
     }else{
       setLoggedInUserIdToStorage$ = EMPTY;
     }
-    this.saveLoggedInUserIdToStore(userId);
+    this.saveLoggedInUserToStore(user);
     return setLoggedInUserIdToStorage$
   }
 
-  saveLoggedInUserIdToStore(userId?:string){
+  saveLoggedInUserToStore(user?: User){
     this.authStore.update(state=>{
       return{
         ...state,
-        loggedInUserId: userId
+        loggedInUser: user
       }
     })
   }
 
+
+
   logout(){
-    return this.storageService.removeLocalStorageSessions(this.entityType).pipe(
+    const logout$ = this.storageService.removeLocalStorageSessions(this.entityType).pipe(
       map(massage=>{
-        this.saveLoggedInUserIdToStore(undefined);
+        this.saveLoggedInUser(undefined);
       })
     )
+
+    const emptyCart$ = this.cartService.emptyCart();
+
+    return forkJoin([logout$, emptyCart$ ])
   }
 
   setInitialLoggedInUser(){
@@ -102,7 +110,10 @@ export class AuthService{
         if(loggedInUserId.length == 0){
           return EMPTY;
         }
-         return of (this.saveLoggedInUserIdToStore(loggedInUserId[0]._id));
+          let loggedInUser$ = this.userService.findUserById(loggedInUserId[0]._id).pipe(
+            tap(loggedInUser => this.saveLoggedInUserToStore(loggedInUser))
+          );
+         return loggedInUser$;
       }),
     )
   }

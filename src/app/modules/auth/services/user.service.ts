@@ -33,11 +33,6 @@ export class UserService {
     )
   }
 
-  getUserById(userId: string){
-    return this.getUsers().pipe(
-      map(users => users.find(user=> user._id == userId))
-    )
-  }
 
   addUser(newUser: User){
     this.userStore.add(newUser);
@@ -67,6 +62,20 @@ export class UserService {
     )
 
   }
+
+  findUserById(userId:string){
+    return this.getUsers().pipe(
+      switchMap(users=>{
+        const index = users.findIndex(user=> user._id === userId);
+        if(index === -1){
+          return of(undefined)
+        }else{
+          return of(users[index])
+        }
+      })
+    )
+  }
+
 
   _getUsersFromJson(){
     return this.http.get<User[]>('assets/_json-files/users.json');

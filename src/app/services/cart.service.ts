@@ -69,8 +69,6 @@ export class CartService{
         this.cartStore.remove();
       })
     )
-
-
   }
 
 

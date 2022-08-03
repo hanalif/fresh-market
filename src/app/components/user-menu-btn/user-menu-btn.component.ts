@@ -16,10 +16,12 @@ export class UserMenuBtnComponent implements OnInit {
   @Input() LoggedInUserTitleMode!: LoggedInUserTitleMode;
   loggedInUserName$!: Observable<string | undefined>
 
-  constructor(public dialog: MatDialog, private userQuery: UserQuery) { }
+  constructor(
+    public dialog: MatDialog,
+    private authQuery: AuthQuery) { }
 
   ngOnInit(): void {
-    this.loggedInUserName$ = this.userQuery.getLoggedInUser().pipe(
+    this.loggedInUserName$ = this.authQuery.getLoggedInUser().pipe(
       map(user=> user?.name)
     )
   }

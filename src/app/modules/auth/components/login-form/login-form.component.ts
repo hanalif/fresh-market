@@ -29,7 +29,6 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   }
 
   logIn(){
-    console.log(this.loginForm.getRawValue())
     const userCred: LoginDetails = this.loginForm.getRawValue()
     this.loginSubscription = this.authService.login(userCred).subscribe()
     this.loginForm.reset()

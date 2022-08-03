@@ -8,7 +8,7 @@
         {"_id": "9Am8963zSC", "unit": "2", "amount": "1", "price": "3.5"}
       ],
       "buyerId": "QcHdg2o088",
-      "status": "delivered"
+      "status": 1
   }
 ]
 

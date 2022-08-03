@@ -32,7 +32,7 @@ export class ItemService{
     );
   }
 
-  gerRandItems(){
+  getRandItems(){
     return this._getItems().pipe(
       tap(fetchedItems => {
         const shuffled = fetchedItems.sort(() => 0.5 - Math.random());

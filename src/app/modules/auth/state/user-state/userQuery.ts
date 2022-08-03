@@ -17,23 +17,6 @@ export class UserQuery extends QueryEntity<UserState, User> {
     return this.selectAll();
   }
 
-  getLoggedInUser(){
-    return this.authQuery.getLoggedInUserId().pipe(
-      switchMap(loggedInUserId=>{
-        let loggedInUser;
-        if(loggedInUserId != undefined){
-          loggedInUser = this.selectEntity(loggedInUserId)
-        }else{
-          loggedInUser = of(undefined);
-        }
-         return loggedInUser;
-      })
-    )
-  }
-
-
-
-
 
   }
 

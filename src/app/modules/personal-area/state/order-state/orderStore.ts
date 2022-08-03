@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { ActiveState, EntityState, EntityStore, StoreConfig } from "@datorama/akita";
-import { Order } from "../../models/order.model";
+import { Order } from "src/app/shared/models/order/order.model";
+
 
 
 

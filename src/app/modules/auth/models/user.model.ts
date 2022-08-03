@@ -7,5 +7,5 @@ export interface User extends Entity{
   password: string,
   email: string,
   phone: number,
-  ordersId?: string[]
+  ordersId: string[]
 }

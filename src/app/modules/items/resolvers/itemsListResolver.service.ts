@@ -13,7 +13,7 @@ export class ItemsListResolver implements Resolve<Item[]>{
     const mainCtegoryId = route.params['mainCategoryId']
     const subcategoryId = route.params['subcategoryId'] ? route.params['subcategoryId'] : null;
     if(mainCtegoryId == null){
-      return this.itemService.gerRandItems();
+      return this.itemService.getRandItems();
 
     }
 

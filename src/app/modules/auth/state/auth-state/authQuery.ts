@@ -12,8 +12,8 @@ export class AuthQuery extends Query<AuthState>{
   }
 
 
-  getLoggedInUserId(): Observable<string | undefined>{
-    return this.select<string | undefined>(state => state.loggedInUserId);
+  getLoggedInUser(): Observable<User | undefined>{
+    return this.select<User | undefined>(state=> state.loggedInUser);
   }
 
 
