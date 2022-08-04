@@ -8,6 +8,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 
 
+
 @NgModule({
   exports:[
     MatIconModule,
@@ -20,6 +21,9 @@ import {MatTabsModule} from '@angular/material/tabs';
   ],
     providers: [
       {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
+    ],
+    declarations: [
+
     ]
 })
 export class AngularMaterialModule{

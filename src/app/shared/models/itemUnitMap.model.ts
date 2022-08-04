@@ -1,4 +1,4 @@
-import { ItemUnitsValue } from "src/app/modules/items-shared.module.ts/models/itemUnitsValue.model";
+import { ItemUnitsValue } from "src/app/modules/items-shared-module/models/itemUnitsValue.model";
 
 
 export interface itemUnitsMap {

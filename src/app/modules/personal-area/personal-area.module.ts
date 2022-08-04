@@ -8,6 +8,11 @@ import {RouterModule} from '@angular/router';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { EditPersonalDetailsComponent } from './components/edit-personal-details/edit-personal-details.component';
 import { ShippingInfoComponent } from './components/shipping-info/shipping-info.component';
+import { PersonalAreaRoutingModule } from "./personal-area-routing.module";
+import { PersonalAreaComponent } from './components/personal-area/personal-area.component';
+import { AuthModule } from "../auth/auth.module";
+import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
+import { PersonalAreaResolver } from "./resolvers/personalAreaResolver.service";
 
 
 
@@ -15,10 +20,11 @@ import { ShippingInfoComponent } from './components/shipping-info/shipping-info.
 
 @NgModule({
   declarations: [
-  
+
     MyOrdersComponent,
        EditPersonalDetailsComponent,
-       ShippingInfoComponent
+       ShippingInfoComponent,
+       PersonalAreaComponent
   ],
   exports: [
   ],
@@ -29,12 +35,14 @@ import { ShippingInfoComponent } from './components/shipping-info/shipping-info.
     SharedModule,
     AngularMaterialModule,
     NgScrollbarModule,
-    RouterModule
+    RouterModule,
+    PersonalAreaRoutingModule,
+    AuthSharedModule
   ],
   providers: [
-
+    PersonalAreaResolver
   ],
 })
-export class AuthModule{
+export class PersonalAreaModule{
 
 }

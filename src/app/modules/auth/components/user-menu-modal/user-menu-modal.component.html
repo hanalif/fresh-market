@@ -2,7 +2,7 @@
   <mat-icon (click)="onCloseModal()">close</mat-icon>
   <div class="user-menu-modal-container">
     <div *ngIf="loggedInUser; else registrationMenu" class="logged-in-user-menu">
-      <app-logged-in-user-menu [loggedInUserName]="loggedInUser.name"></app-logged-in-user-menu>
+      <app-logged-in-user-menu [loggedInUser]="loggedInUser"></app-logged-in-user-menu>
     </div>
     <ng-template #registrationMenu class="registration-menu">
       <mat-tab-group>

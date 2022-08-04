@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnChanges, OnDestroy, OnInit, Renderer2, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable, of, Subscription, switchMap } from 'rxjs';
-import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
+import { ItemCardMode } from 'src/app/modules/items-shared-module/components/item-card/item-card-mode.enum';
 import { PageTitles } from 'src/app/modules/items/models/categoriesTitles.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
 import { UIQuery } from 'src/app/state/UI/UIQuery';
-import { Item } from '../../../items-shared.module.ts/models/item.model';
-import { ItemUnitsValue } from '../../../items-shared.module.ts/models/itemUnitsValue.model';
+import { Item } from '../../../items-shared-module/models/item.model';
+import { ItemUnitsValue } from '../../../items-shared-module/models/itemUnitsValue.model';
 
 @Component({
   selector: 'app-items-list',

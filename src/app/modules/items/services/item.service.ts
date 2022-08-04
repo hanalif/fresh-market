@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { map, tap } from "rxjs/operators";
 import { ItemOrderInfo } from "src/app/shared/models/order/itemOrderInfo.model";
-import { Item } from "../../items-shared.module.ts/models/item.model";
+import { Item } from "../../items-shared-module/models/item.model";
 import { ItemStore } from "../state/itemStore";
 
 @Injectable({providedIn: 'root'})

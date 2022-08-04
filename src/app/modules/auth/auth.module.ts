@@ -7,8 +7,8 @@ import { UserMenuModalComponent } from './components/user-menu-modal/user-menu-m
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { AngularMaterialModule } from "../angular-material.module";
 import { NgScrollbarModule } from 'ngx-scrollbar';
-import { LoggedInUserMenuComponent } from './components/logged-in-user-menu/logged-in-user-menu.component';
 import {RouterModule} from '@angular/router';
+import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
 
 
 
@@ -19,12 +19,13 @@ import {RouterModule} from '@angular/router';
     LoginFormComponent,
     UserMenuModalComponent,
     SignupFormComponent,
-    LoggedInUserMenuComponent,
 
   ],
   exports: [
     LoginFormComponent,
     UserMenuModalComponent,
+
+
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,8 @@ import {RouterModule} from '@angular/router';
     SharedModule,
     AngularMaterialModule,
     NgScrollbarModule,
-    RouterModule
+    RouterModule,
+    AuthSharedModule
 
 
   ],

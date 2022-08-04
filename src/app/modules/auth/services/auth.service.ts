@@ -1,5 +1,7 @@
-import { HttpClient } from "@angular/common/http";
+
 import { Injectable } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
+import { Router } from "@angular/router";
 import { EMPTY, forkJoin, map, Observable, of, switchMap, tap, throwError } from "rxjs";
 import { StorageService } from "src/app/services/async-storag.service";
 import { CartService } from "src/app/services/cart.service";
@@ -21,6 +23,8 @@ export class AuthService{
               private storageService: StorageService,
               private utilService: UtilService,
               private cartService: CartService,
+              private router: Router,
+              private dialogRef: MatDialog,
               private userService:UserService){}
 
   signup(userCred: SignupDetails){
@@ -100,6 +104,8 @@ export class AuthService{
     )
 
     const emptyCart$ = this.cartService.emptyCart();
+    this.dialogRef.closeAll();
+    this.router.navigate(['']);
 
     return forkJoin([logout$, emptyCart$ ])
   }

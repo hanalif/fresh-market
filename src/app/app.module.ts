@@ -19,9 +19,10 @@ import { SharedModule } from './shared/shared.module';
 import { CartComponent } from './components/header/cart/cart.component';
 import { CartBtnComponent } from './components/cart-btn/cart-btn.component';
 import { environment } from 'src/environments/environment';
-import { ItemsSharedModule } from './modules/items-shared.module.ts/items-shared.module';
+import { ItemsSharedModule } from './modules/items-shared-module/items-shared.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { PersonalAreaModule } from './modules/personal-area/personal-area.module';
 
 
 
@@ -49,6 +50,7 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     ItemsSharedModule,
     AuthModule,
     NgScrollbarModule,
+    PersonalAreaModule,
     environment.production ? [] : AkitaNgDevtools.forRoot({})
   ],
   providers: [],

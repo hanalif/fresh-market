@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, OnChanges, OnDestroy, OnInit, Output, Renderer2, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Observable, Subscription, switchMap, tap } from 'rxjs';
-import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
-import { Item } from 'src/app/modules/items-shared.module.ts/models/item.model';
-import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
+import { ItemCardMode } from 'src/app/modules/items-shared-module/components/item-card/item-card-mode.enum';
+import { Item } from 'src/app/modules/items-shared-module/models/item.model';
+import { ItemUnitsValue } from 'src/app/modules/items-shared-module/models/itemUnitsValue.model';
 import { ItemService } from 'src/app/modules/items/services/item.service';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
 import { CartService } from 'src/app/services/cart.service';

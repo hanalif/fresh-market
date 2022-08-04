@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Inject, OnDestroy, OnInit, Output } from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Observable, Subscription } from 'rxjs';
-import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
-import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
+import { ItemCardMode } from 'src/app/modules/items-shared-module/components/item-card/item-card-mode.enum';
+import { ItemUnitsValue } from 'src/app/modules/items-shared-module/models/itemUnitsValue.model';
 import { CartService } from 'src/app/services/cart.service';
 import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
 import { CartQuery } from 'src/app/state/cart/cartQuery';
