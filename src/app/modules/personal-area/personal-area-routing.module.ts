@@ -13,20 +13,20 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     resolve: { user: PersonalAreaResolver },
     component: PersonalAreaComponent,
-    // children: [
-    //   {
-    //     path: 'personal-details',
-    //     component: EditPersonalDetailsComponent,
-    //   },
-    //   {
-    //     path: 'orders',
-    //     component: MyOrdersComponent
-    //   },
-    //   {
-    //     path: 'shipping-info',
-    //     component: ShippingInfoComponent,
-    //   },
-    // ],
+    children: [
+      {
+        path: 'edit-personal-details',
+        component: EditPersonalDetailsComponent
+      },
+      {
+        path: 'orders',
+        component: MyOrdersComponent
+      },
+      {
+        path: 'shipping-info',
+        component: ShippingInfoComponent,
+      },
+    ],
 
     runGuardsAndResolvers: 'always',
   },

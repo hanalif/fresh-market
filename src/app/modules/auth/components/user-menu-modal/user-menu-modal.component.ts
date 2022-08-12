@@ -1,10 +1,8 @@
-import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, Injectable, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ReplaySubject, Subscription, takeUntil, tap } from 'rxjs';
 import { User } from '../../models/user.model';
-import { AuthService } from '../../services/auth.service';
 import { AuthQuery } from '../../state/auth-state/authQuery';
-import { UserQuery } from '../../state/user-state/userQuery';
 
 
 

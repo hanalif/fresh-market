@@ -64,7 +64,6 @@ export class CartService{
   emptyCart(){
     return this.storageService.removeLocalStorageSessions(this.entityType).pipe(
       map(massage=>{
-        console.log(massage);
         this.itemService.removeAllItemsFromItemsToShowInCart();
         this.cartStore.remove();
       })

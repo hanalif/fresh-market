@@ -13,6 +13,7 @@ import { PersonalAreaComponent } from './components/personal-area/personal-area.
 import { AuthModule } from "../auth/auth.module";
 import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
 import { PersonalAreaResolver } from "./resolvers/personalAreaResolver.service";
+import { MatDialogRef } from "@angular/material/dialog";
 
 
 

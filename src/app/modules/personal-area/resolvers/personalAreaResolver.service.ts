@@ -4,10 +4,8 @@ import {
   Resolve,
   RouterStateSnapshot,
 } from '@angular/router';
-import { map, Observable, of } from 'rxjs';
+import { Observable} from 'rxjs';
 import { User } from '../../auth/models/user.model';
-import { AuthService } from '../../auth/services/auth.service';
-import { AuthQuery } from '../../auth/state/auth-state/authQuery';
 import { AuthStore } from '../../auth/state/auth-state/authStore';
 
 @Injectable({ providedIn: 'root' })

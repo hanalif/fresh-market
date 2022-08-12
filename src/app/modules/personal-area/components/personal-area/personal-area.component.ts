@@ -8,16 +8,13 @@ import { User } from 'src/app/modules/auth/models/user.model';
   styleUrls: ['./personal-area.component.scss']
 })
 export class PersonalAreaComponent implements OnInit {
-  user!: User
+  user!: User;
   constructor(
     private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-
-    console.log('personal-area-component')
     this.user = this.activatedRoute.snapshot.data['user'];
-
   }
 
 

@@ -2,7 +2,7 @@
 import { Injectable } from "@angular/core";
 import { QueryEntity } from "@datorama/akita";
 import { tap } from "rxjs";
-import { Order } from "../../models/order.model";
+import { Order } from "../../../../shared/models/order/order.model";
 import { OrderState, OrderStore } from "./orderStore";
 
 
