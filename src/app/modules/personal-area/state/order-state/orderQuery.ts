@@ -17,6 +17,9 @@ export class OrderQuery extends QueryEntity<OrderState, Order> {
     return this.selectAll().pipe(
       tap(res=> console.log(res))
     );
+
+
+
   }
 
 

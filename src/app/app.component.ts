@@ -31,7 +31,8 @@ export class AppComponent implements OnInit, OnDestroy {
      private cartService: CartService,
      private renderer: Renderer2,
      private authService: AuthService,
-     private userService: UserService) { }
+     private userService: UserService,
+     private orderService: OrderService) { }
 
 
   ngOnInit(): void {
@@ -57,6 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     this.authService.setInitialLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe();
     this.userService.getUsers().pipe(takeUntil(this.destroyed$)).subscribe();
+    this.orderService.getOrders().pipe(takeUntil(this.destroyed$)).subscribe();
 
 
   }

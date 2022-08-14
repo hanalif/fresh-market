@@ -95,6 +95,8 @@ export class ItemService{
   }
 
 
+
+
   removeItemFromItemsToShowInCart(itemId:string){
     let updatedItemsToShowInCart = [...this.itemStore._value().itemsToShowInCart]
     const index = updatedItemsToShowInCart.findIndex(item=> item._id === itemId);

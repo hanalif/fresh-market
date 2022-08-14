@@ -1,1 +1,6 @@
-<p>my-orders works!</p>
+<h1>My Orders:</h1>
+<div class="personal-orders-wrapper">
+  <div *ngFor="let personalOrder of personalOrders" class="personal-order-row">
+    {{personalOrder}}
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { PersonalAreaComponent } from './components/personal-area/personal-area.
 import { ShippingInfoComponent } from './components/shipping-info/shipping-info.component';
 import { AuthGuard } from './guards/authGuard.service';
 import { PersonalAreaResolver } from './resolvers/personalAreaResolver.service';
+import { PersonalAreaUserOrderResolver } from './resolvers/personalAreaUserOrdersResolver';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
       },
       {
         path: 'orders',
-        component: MyOrdersComponent
+        component: MyOrdersComponent,
+        resolve: {personalOrders: PersonalAreaUserOrderResolver}
       },
       {
         path: 'shipping-info',
