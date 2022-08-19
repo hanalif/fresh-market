@@ -1,8 +1,8 @@
-import { state } from "@angular/animations";
+
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { filter, map, tap } from "rxjs/operators";
 import { ItemOrderInfo } from "src/app/shared/models/order/itemOrderInfo.model";
 import { Item } from "../../items-shared-module/models/item.model";
 import { ItemStore } from "../state/itemStore";
@@ -30,6 +30,12 @@ export class ItemService{
         })
       }),
     );
+  }
+
+  getItemById(itemId: string){
+    return this._getItems().pipe(map(items=>{
+      return items.find(item=> item._id === itemId);
+    }))
   }
 
   getRandItems(){
@@ -130,6 +136,12 @@ export class ItemService{
         })
       })
     )
+  }
+
+  getItemsByIds(itemsIds: string[]){
+    return this._getItems().pipe(map(items=>{
+      return items.filter(item=> itemsIds.includes(item._id));
+    }))
   }
 
   _getItems(){

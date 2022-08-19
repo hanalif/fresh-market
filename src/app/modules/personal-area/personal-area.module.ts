@@ -15,6 +15,7 @@ import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
 import { PersonalAreaResolver } from "./resolvers/personalAreaResolver.service";
 import { MatDialogRef } from "@angular/material/dialog";
 import { PersonalAreaUserOrderResolver } from "./resolvers/personalAreaUserOrdersResolver";
+import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 
 
 
@@ -26,7 +27,8 @@ import { PersonalAreaUserOrderResolver } from "./resolvers/personalAreaUserOrder
     MyOrdersComponent,
        EditPersonalDetailsComponent,
        ShippingInfoComponent,
-       PersonalAreaComponent
+       PersonalAreaComponent,
+       OrderDetailComponent
   ],
   exports: [
   ],

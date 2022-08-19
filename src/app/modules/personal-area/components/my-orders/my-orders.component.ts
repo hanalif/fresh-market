@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/modules/auth/models/user.model';
 import { Order } from 'src/app/shared/models/order/order.model';
@@ -15,11 +15,13 @@ export class MyOrdersComponent implements OnInit  {
 
   personalOrders!: Order[];
 
-  constructor( private activatedRoute: ActivatedRoute) { }
+  constructor( private activatedRoute: ActivatedRoute, private route: Router) { }
 
 
   ngOnInit(): void {
     this.personalOrders = this.activatedRoute.snapshot.data['personalOrders']
   }
+
+
 
 }
