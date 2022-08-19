@@ -12,6 +12,15 @@ export class UtilService{
     return txt;
 }
 
+  makeStringNumbersId(length = 8){
+    let txt = '';
+    const possible = '0123456789'
+    for (let i = 0; i < length; i++) {
+      txt += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return txt;
+  }
+
 getRandomInt(min:number, max:number) {
   min = Math.ceil(min);
   max = Math.floor(max);

@@ -16,8 +16,7 @@ export const getInitialState = () => {
     isMobileMenuOpen: false,
     itemsCategories: [],
     isCartOpen: false,
-    isSearchBoxOpen: false,
-    isUserModalClose: false
+    isSearchBoxOpen: false
   };
 };
 

@@ -15,15 +15,11 @@ export class MyOrdersComponent implements OnInit  {
 
   personalOrders!: Order[];
 
-
-
   constructor( private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
-    this.personalOrders = this.activatedRoute.snapshot.data['personalOrders'];
-
-
+    this.personalOrders = this.activatedRoute.snapshot.data['personalOrders']
   }
 
 }

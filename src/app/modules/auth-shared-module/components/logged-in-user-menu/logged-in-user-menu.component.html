@@ -10,19 +10,19 @@
     </div>
   </div>
   <div class="main-menu">
-    <a (click)="onEditPersonalDetails()"  class="menu-link" >
+    <a (click)="onMenuLink()" routerLinkActive="active" [routerLink]="['/personal-area/edit-personal-details']" class="menu-link" >
       <span><mat-icon>edit</mat-icon></span>
       <span  class="menu-link-title">Edit Personal Details</span>
     </a>
-    <a (click)="onMyOrders()" class="menu-link" >
+    <a (click)="onMenuLink()" routerLinkActive="active"  [routerLink]="['/personal-area/orders']" class="menu-link" >
       <span><mat-icon>shopping_cart</mat-icon></span>
-      <span  class="menu-link-title">My Orders</span>
+      <span class="menu-link-title">My Orders</span>
     </a>
-    <a (click)="onShippingDetails()" class="menu-link" >
+    <a (click)="onMenuLink()" routerLinkActive="active" [routerLink]="['/personal-area/shipping-info']"   class="menu-link" >
       <span><mat-icon> local_shipping</mat-icon></span>
       <span  class="menu-link-title">Shipping Details</span>
     </a>
-    <a (click)="onToShopping()" class="menu-link" >
+    <a (click)="onMenuLink()" [routerLink]="['']" class="menu-link" >
       <span><mat-icon>home</mat-icon></span>
       <span  class="menu-link-title">To Shopping</span>
     </a>

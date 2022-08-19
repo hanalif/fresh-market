@@ -1,6 +1,14 @@
-<h1>My Orders:</h1>
+
 <div class="personal-orders-wrapper">
-  <div *ngFor="let personalOrder of personalOrders" class="personal-order-row">
-    {{personalOrder}}
+  <div *ngFor="let order of personalOrders" class="personal-order-row">
+    <div class="personal-order-flex-group">
+      <div class="personal-order-date">{{order.createdAt | date: 'dd/MM/yy'}} </div>
+      <div class="personal-order-name">
+        Order Number: {{order._id}}
+        <span>|</span>
+        <span>{{order.items.length}} Products</span>
+      </div>
+    </div>
+    <div class="personal-order-total-price">${{order.totalPrice | number: '.1-3'}}</div>
   </div>
 </div>

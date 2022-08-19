@@ -1,0 +1,40 @@
+.personal-order{
+
+  &s-wrapper{
+    cursor: pointer;
+  }
+
+
+  &-row{
+    background: transparent;
+    color: #1E3E20;
+    padding: 20px 30px;
+    border-bottom: 1px solid #AFAFAF;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-flex-group{
+    display: flex;
+    gap: 25px;
+
+  }
+
+  &-date{
+    color: #AFAFAF;
+    font-size: 1.15em;
+  }
+
+  &-name{
+    color: #1E3E20;
+    display: flex;
+    gap: 15px;
+  }
+
+  &-total-price{
+    color: #1E3E20;
+    display: flex;
+    justify-content: flex-end;
+    width: 45px;
+  }
+}

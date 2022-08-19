@@ -38,15 +38,6 @@ export class UIService{
     })
   }
 
-  setUiStoreisUserModalClose(val: boolean){
-    this.uIStore.update(state=>{
-      return {
-        ...state,
-        isUserModalClose: val
-      }
-    })
-  }
-
 
   setUiStoreAfterBackdropClicked(val: boolean){
     this.uIStore.update(state=>{

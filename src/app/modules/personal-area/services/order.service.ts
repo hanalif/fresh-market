@@ -28,7 +28,7 @@ export class OrderService{
   saveNewOrder(itemsOrderInfo: ItemOrderInfo[], totalPrice: number, loggedInUser: User){
 
     const newOrder: Order = {
-      _id: this.utilService.makeId(),
+      _id: this.utilService.makeStringNumbersId(),
       createdAt: new Date,
       totalPrice: totalPrice,
       items: itemsOrderInfo,

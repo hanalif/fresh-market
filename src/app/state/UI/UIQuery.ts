@@ -25,9 +25,6 @@ export class UIQuery extends Query<UIState>{
     return this.select<boolean>(state=> state.isSearchBoxOpen);
   }
 
-  setisUserModalClose(): Observable<boolean>{
-    return this.select<boolean>(state=> state.isUserModalClose);
-  }
 
   getItemsCategories(): Observable<ItemCategory[]>{
     return this.select<ItemCategory[]>(state=> state.itemsCategories);
