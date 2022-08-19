@@ -5,8 +5,8 @@
       <div class="personal-order-date">{{order.createdAt | date: 'dd/MM/yy'}} </div>
       <div class="personal-order-name">
         Order Number: {{order._id}}
-        <span>|</span>
-        <span>{{order.items.length}} Products</span>
+        <span class="no-mobile">|</span>
+        <span class="no-mobile">{{order.items.length}} Products</span>
       </div>
     </div>
     <div class="personal-order-total-price">${{order.totalPrice | number: '.1-3'}}</div>

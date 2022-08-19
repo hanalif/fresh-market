@@ -1,8 +1,13 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
 .personal-order{
 
   &s-wrapper{
     cursor: pointer;
   }
+
+
 
 
   &-row{
@@ -29,6 +34,16 @@
     color: #1E3E20;
     display: flex;
     gap: 15px;
+
+    .no-mobile{
+      display: block;
+    }
+
+    @include for-bpoint-min-tablet{
+      .no-mobile{
+        display: none;
+      }
+    }
   }
 
   &-total-price{
@@ -36,5 +51,7 @@
     display: flex;
     justify-content: flex-end;
     width: 45px;
+
+
   }
 }
