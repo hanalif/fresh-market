@@ -32,8 +32,7 @@ const routes: Routes = [
           {
             path: ':orderId',
             component: OrderDetailComponent,
-            resolve: {orderDetailsToDisplay: PersonalAreaOrderDetailResolver}
-
+            resolve: {orderDetailsInput: PersonalAreaOrderDetailResolver}
           }
         ]
       },

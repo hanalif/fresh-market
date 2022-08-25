@@ -11,15 +11,16 @@ import { OrderDetailsToDisplay } from '../models/orderDetailToDisplay.model';
 import { OrderQuery } from '../state/order-state/orderQuery';
 import { map, tap } from "rxjs/operators";
 import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
+import { OrderDetailsInput } from '../models/orderDetailsInput.model';
 
 @Injectable({ providedIn: 'root' })
-export class PersonalAreaOrderDetailResolver implements Resolve<OrderDetailsToDisplay[]> {
+export class PersonalAreaOrderDetailResolver implements Resolve<OrderDetailsInput> {
   constructor(private orderQuery: OrderQuery, private itemService: ItemService) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): OrderDetailsToDisplay[] | Observable<OrderDetailsToDisplay[]> | Promise<OrderDetailsToDisplay[]> {
+  ): OrderDetailsInput | Observable<OrderDetailsInput> | Promise<OrderDetailsInput> {
 
     const orderId = route.paramMap.get('orderId');
 
@@ -29,21 +30,25 @@ export class PersonalAreaOrderDetailResolver implements Resolve<OrderDetailsToDi
 
     let itemsIds = orderItems?.map(orderItem=> orderItem._id) as string[];
 
-    const orderDetalsToDispaly$ = this.itemService.getItemsByIds(itemsIds).pipe(
+    const orderDetailsInput$ = this.itemService.getItemsByIds(itemsIds).pipe(
       map(items=>{
-
         let orderItemDetailsToDisplay = orderItems?.map(orderItem => {
           let orderDetailsToDisplay: OrderDetailsToDisplay = {
             item: items.find(item=> item._id === orderItem._id) as Item,
-            itemOrderInfo: orderItem
+            itemOrderInfo: orderItem,
           }
           return orderDetailsToDisplay
         })
-        return orderItemDetailsToDisplay;
+
+        let orderDetailsInput :OrderDetailsInput = {
+          orderDetailsToDisplay: orderItemDetailsToDisplay,
+          orderTotalPrice: order?.totalPrice as number,
+        }
+        return orderDetailsInput;
       })
     )
 
-    return orderDetalsToDispaly$;
+    return orderDetailsInput$;
   }
 
 }

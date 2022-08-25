@@ -79,3 +79,30 @@ div{
   background-size: contain;
   cursor: pointer;
 }
+
+.main-btn{
+  text-align: center;
+  color: #1E3E20;
+  border-radius: 50rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.green-bg{
+  background: #A4D668;
+}
+
+.white-bg{
+  background: #ffff;
+
+}
+
+.green-bg:hover, .white-bg:hover{
+  background: #1E3E20;
+  color: #FFFFFF;
+}
+
+
+.border-btn{
+  border: 1px solid #1E3E20;
+}

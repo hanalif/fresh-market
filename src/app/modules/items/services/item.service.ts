@@ -100,6 +100,20 @@ export class ItemService{
     }
   }
 
+  addManyToItemsToShowInCart(orderItems: Item[]){
+    let updatedItemsToShowInCart: Item[] = [...this.itemStore._value().itemsToShowInCart, ...orderItems];
+    this.itemStore.update(state=>{
+      return {
+        ...state,
+        itemsToShowInCart: updatedItemsToShowInCart
+      }
+    })
+
+
+
+  }
+
+
 
 
 

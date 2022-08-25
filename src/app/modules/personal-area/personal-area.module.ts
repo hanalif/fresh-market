@@ -16,6 +16,7 @@ import { PersonalAreaResolver } from "./resolvers/personalAreaResolver.service";
 import { MatDialogRef } from "@angular/material/dialog";
 import { PersonalAreaUserOrderResolver } from "./resolvers/personalAreaUserOrdersResolver";
 import { OrderDetailComponent } from './components/order-detail/order-detail.component';
+import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
 
 
 
@@ -41,7 +42,8 @@ import { OrderDetailComponent } from './components/order-detail/order-detail.com
     NgScrollbarModule,
     RouterModule,
     PersonalAreaRoutingModule,
-    AuthSharedModule
+    AuthSharedModule,
+    ItemsSharedModule
   ],
   providers: [
     PersonalAreaResolver,

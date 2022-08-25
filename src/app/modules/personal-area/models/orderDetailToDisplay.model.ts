@@ -3,5 +3,5 @@ import { Item } from "../../items-shared-module/models/item.model";
 
 export interface OrderDetailsToDisplay {
   item: Item,
-  itemOrderInfo: ItemOrderInfo
+  itemOrderInfo: ItemOrderInfo,
 }
