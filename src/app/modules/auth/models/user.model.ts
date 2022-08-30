@@ -1,4 +1,5 @@
 import { Entity } from "src/app/shared/models/entity.model";
+import { ShippingAdress } from "./shippingAdress.model";
 
 export interface User extends Entity{
   name: string,
@@ -7,5 +8,6 @@ export interface User extends Entity{
   password: string,
   email: string,
   phone: number,
-  ordersId: string[]
+  ordersId: string[],
+  shippingAdress?: ShippingAdress
 }

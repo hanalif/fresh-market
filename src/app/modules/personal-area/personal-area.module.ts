@@ -10,10 +10,8 @@ import { EditPersonalDetailsComponent } from './components/edit-personal-details
 import { ShippingInfoComponent } from './components/shipping-info/shipping-info.component';
 import { PersonalAreaRoutingModule } from "./personal-area-routing.module";
 import { PersonalAreaComponent } from './components/personal-area/personal-area.component';
-import { AuthModule } from "../auth/auth.module";
 import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
 import { PersonalAreaResolver } from "./resolvers/personalAreaResolver.service";
-import { MatDialogRef } from "@angular/material/dialog";
 import { PersonalAreaUserOrderResolver } from "./resolvers/personalAreaUserOrdersResolver";
 import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
@@ -32,6 +30,7 @@ import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
        OrderDetailComponent
   ],
   exports: [
+    AngularMaterialModule
   ],
   imports: [
     CommonModule,

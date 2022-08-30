@@ -1,1 +1,25 @@
-<p>shipping-info works!</p>
+<div class="shipping-details-container main-layout">
+  <h1 class="main-title">{{'Shipping Adress' | uppercase}}</h1>
+  <div class="form-container"  [formGroup]="shippingDetailsForm">
+    <div class="form-group">
+      <label for="streetName">Street Name*</label>
+      <input id="streetName" class="form-input" formControlName="streetName">
+    </div>
+    <div class="form-group">
+      <label for="streetNumber">Street Number*</label>
+      <input id="streetNumber" class="form-input" formControlName="streetNumber">
+    </div>
+    <div class="form-group">
+      <label for="city">City*</label>
+      <input id="city"  class="form-input" formControlName="city">
+    </div>
+    <div class="form-group">
+      <label for="zipCode">Zip Code*</label>
+      <input id="zipCode" class="form-input" formControlName="zipCode">
+    </div>
+    <div class="form-group">
+      <button (click)="onUpdateAdress()" class="submit-btn main-btn green-bg">Update Adress</button>
+    </div>
+  </div>
+</div>
+

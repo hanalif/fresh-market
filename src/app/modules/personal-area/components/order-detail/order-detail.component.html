@@ -1,5 +1,5 @@
-<div class="order-details-container">
-    <h1 class="order-details-title">{{'Order Summary' | uppercase}}</h1>
+<div class="order-details-container main-layout">
+    <h1 class="main-title">{{'Order Summary' | uppercase}}</h1>
     <div *ngFor="let orderDetail of orderDetailsInput.orderDetailsToDisplay" class="order-details-row row">
       <div class="item-name">{{orderDetail.item.name}}</div>
       <div class="item-info">

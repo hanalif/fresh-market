@@ -6,9 +6,11 @@ import { EMPTY, forkJoin, map, Observable, of, switchMap, tap, throwError } from
 import { StorageService } from "src/app/services/async-storag.service";
 import { CartService } from "src/app/services/cart.service";
 import { UtilService } from "src/app/services/util.service";
+import { UserPersonalDetails } from "../../personal-area/models/personalDetails.model";
 import { LoggedInUserStorageDetails } from "../models/logged-in-user-storage-details.model";
 
 import { LoginDetails } from "../models/login-details.model";
+import { ShippingAdress } from "../models/shippingAdress.model";
 import { SignupDetails } from "../models/signup-details.model";
 import { User } from "../models/user.model";
 import { AuthStore } from "../state/auth-state/authStore";
@@ -83,6 +85,28 @@ export class AuthService{
     }
     this.saveLoggedInUserToStore(user);
     return setLoggedInUserIdToStorage$
+  }
+
+  saveLoggedInUserUpdatedPersonalDetails(loggedInUser: User, newPersonalDetails: UserPersonalDetails){
+    const updatedUser: User = {
+      ...loggedInUser,
+      name: newPersonalDetails.name,
+      lastname: newPersonalDetails.lastName,
+      email: newPersonalDetails.email,
+      phone: +newPersonalDetails.phone
+    }
+
+    this.saveLoggedInUserToStore(updatedUser);
+    return this.userService.updateUser(updatedUser);
+  }
+
+  saveShippingAdress(loggedInUser: User, updatedShippingAdress: ShippingAdress){
+    const updatedUser = {...loggedInUser,
+      shippingAdress: updatedShippingAdress
+    }
+
+    this.saveLoggedInUserToStore(updatedUser);
+    return this.userService.updateUser(updatedUser);
   }
 
   saveLoggedInUserToStore(user?: User){

@@ -18,11 +18,10 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.orderDetailsInput = this.activatedRoute.snapshot.data['orderDetailsInput'];
-    console.log(this.orderDetailsInput)
   }
 
   ngOnDestroy(): void {
-      this.copyItemsToCartSubscription.unsubscribe();
+      this.copyItemsToCartSubscription?.unsubscribe();
   }
 
   onCopyItemsToCart(){

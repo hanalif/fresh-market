@@ -1,1 +1,24 @@
-<p>edit-personal-details works!</p>
+<div class="edit-personal-details-container main-layout">
+  <h1 class="main-title">{{'Persona Details' | uppercase}}</h1>
+  <div class="form-container"  [formGroup]="editPersonalDetailsForm">
+    <div class="form-group">
+      <label for="name">Name*</label>
+      <input id="name" class="form-input" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name*</label>
+      <input id="lastName" class="form-input" formControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input id="email" type="email" class="form-input" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone*</label>
+      <input id="phone" class="form-input" formControlName="phone">
+    </div>
+    <div class="form-group">
+      <button (click)="onUpdateChanges()" class="submit-btn main-btn green-bg">Update Changes</button>
+    </div>
+  </div>
+</div>

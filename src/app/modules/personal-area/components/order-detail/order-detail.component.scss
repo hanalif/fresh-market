@@ -7,6 +7,7 @@
 
   &-container{
     padding-block-start: 20px;
+    z-index: 801;
   }
 
   &-row{
@@ -25,10 +26,6 @@
         gap: 5px;
       }
     }
-  }
-
-  &-title{
-    font-size: 27px;
   }
 
   &-total-price{
