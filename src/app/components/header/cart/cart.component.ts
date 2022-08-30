@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { map, Observable, ReplaySubject, Subscription, takeUntil } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { tap, Observable, ReplaySubject, Subscription, switchMap, takeUntil } from 'rxjs';
 import { User } from 'src/app/modules/auth/models/user.model';
 import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
 import { UserQuery } from 'src/app/modules/auth/state/user-state/userQuery';
@@ -30,7 +32,9 @@ export class CartComponent implements OnInit, OnDestroy {
       private cartQuery:CartQuery,
       private authQuery: AuthQuery,
       private orderService: OrderService,
-      private cartService: CartService) { }
+      private cartService: CartService,
+      private _snackBar: MatSnackBar,
+      public dialog: MatDialog) { }
 
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
 
@@ -74,25 +78,26 @@ export class CartComponent implements OnInit, OnDestroy {
 
   onCeckOut(){
     if(this.cartItemsToShow.length == 0 || this.cartItemsToShow.length == -1){
-      console.log('No items in cart!')
+      this._snackBar.open('No Items In Cart', 'OK' ,{panelClass: ['snackbar-style']} )
       return;
     }
-
     this.onCeckOutClickCount++;
-    if (this.onCeckOutClickCount > 1 ){
+    if (this.onCeckOutClickCount === 1 ){
       if(this.loggedInUser){
+        let snackBarRef = this._snackBar.open('Are you sure you want to checkout?', 'OK' ,{panelClass: ['snackbar-style']} );
         let itemsOrderInfo: ItemOrderInfo[];
         itemsOrderInfo = this.cartQuery.getAll();
-        this.orderService.saveNewOrder(itemsOrderInfo, this.cartTotalPrice, this.loggedInUser).pipe(takeUntil(this.destroyed$)).subscribe();
+        let saveNewOrder$ =  this.orderService.saveNewOrder(itemsOrderInfo, this.cartTotalPrice, this.loggedInUser);
+        snackBarRef.onAction().pipe(
+          takeUntil(this.destroyed$),
+          switchMap(res=> saveNewOrder$),
+          tap(()=> this.onCeckOutClickCount = 0))
+          .subscribe();
       }else{
-        console.log('Please Log in or sign up first!')
+        this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
       }
       this.onCeckOutClickCount = 0;
-    }else{
-      console.log('Are you sure you want to checkout?');
     }
-
-
   }
 
   ngOnDestroy(): void {

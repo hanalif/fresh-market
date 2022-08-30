@@ -45,7 +45,6 @@ export class EditPersonalDetailsComponent implements OnInit, OnDestroy {
   }
 
   onUpdateChanges(){
-
     const userUpdatedDetails: UserPersonalDetails = this.editPersonalDetailsForm.value;
     this._snackBar.open('Your Personal Details Changed', 'OK' ,{panelClass: ['snackbar-style']} )
     this.authService.saveLoggedInUserUpdatedPersonalDetails(this.user, userUpdatedDetails).pipe(takeUntil(this.destroyed$)).subscribe()

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { ReplaySubject, takeUntil } from 'rxjs';
 import { User } from 'src/app/modules/auth/models/user.model';
@@ -16,7 +17,7 @@ export class ShippingInfoComponent implements OnInit, OnDestroy {
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
 
-  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService) { }
+  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     let parentRoutData = this.activatedRoute.parent;
@@ -44,6 +45,7 @@ export class ShippingInfoComponent implements OnInit, OnDestroy {
   }
 
   onUpdateAdress(){
+    this._snackBar.open('Shipping Address Is Updated', 'OK' ,{panelClass: ['snackbar-style']} )
     this.authService.saveShippingAdress(this.user, this.shippingDetailsForm.value).pipe(takeUntil(this.destroyed$)).subscribe();
   }
 
