@@ -150,3 +150,25 @@ div{
     color: #212529;
   }
 }
+
+.form-groups-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+
+  @include for-bpoint-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include for-bpoint-mobile{
+    justify-content: center;
+  }
+}

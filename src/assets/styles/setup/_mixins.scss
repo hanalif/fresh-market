@@ -27,3 +27,8 @@
   }
 }
 
+@mixin for-bpoint-mobile-small {
+  @media (max-width: $bpoint-mobile-small){
+    @content;
+  }
+}

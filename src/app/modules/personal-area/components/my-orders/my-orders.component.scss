@@ -9,21 +9,38 @@
   &s-wrapper{
     cursor: pointer;
     position: relative;
-    z-index: 900;
 
 
   }
 
 
+  &-list-container{
+    overflow: hidden;
+    scroll-behavior: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
 
+
+  }
 
   &-row{
+    margin-inline-end: 15px;
     background: transparent;
     color: #1E3E20;
-    padding: 20px 30px;
     border-bottom: 1px solid #AFAFAF;
     display: flex;
     justify-content: space-between;
+    padding-block-end: 20px;
+    padding-block-start: 10px;
+    margin-inline-start: 26px;
+
+    @include for-bpoint-mobile{
+      margin-inline-start: 0;
+    }
+
+
   }
 
   &-flex-group{
@@ -59,6 +76,15 @@
     justify-content: flex-end;
     width: 45px;
 
+    &.no-mobile{
+      display: block;
+    }
+
+    @include for-bpoint-min-tablet{
+      &.no-mobile{
+        display: none;
+      }
+    }
 
   }
 }

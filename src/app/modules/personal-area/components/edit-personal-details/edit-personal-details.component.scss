@@ -1,16 +1,19 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
 .edit-personal-details-container{
   padding-block-start: 20px;
   color: #1E3E20;
 
   .form-container{
-    display: grid;
 
-    .submit-btn{
-      height: 57px;
-      line-height: 57px;
-      width: 210px;
-      font-size: 19px;
-    }
+      .submit-btn{
+        height: 57px;
+        line-height: 57px;
+        width: 210px;
+        font-size: 19px;
+        margin-block-start: 20px;
+      }
 
   }
 

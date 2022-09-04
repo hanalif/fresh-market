@@ -15,6 +15,8 @@ import { UIService } from 'src/app/services/UI.service';
 import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
 
 import { CartQuery } from 'src/app/state/cart/cartQuery';
+import { OrderConfirmationComponent } from '../../order-confirmation/order-confirmation.component';
+import { OrderConfirmationDialogData } from '../../order-confirmation/orderConfirmationDialogData.model';
 
 
 @Component({
@@ -43,9 +45,6 @@ export class CartComponent implements OnInit, OnDestroy {
   ItemCardMode = ItemCardMode;
   loggedInUser: User | undefined;
   cartItemsToShow!: Item[];
-
-  private onCeckOutClickCount: number = 0;
-
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
@@ -81,22 +80,15 @@ export class CartComponent implements OnInit, OnDestroy {
       this._snackBar.open('No Items In Cart', 'OK' ,{panelClass: ['snackbar-style']} )
       return;
     }
-    this.onCeckOutClickCount++;
-    if (this.onCeckOutClickCount === 1 ){
-      if(this.loggedInUser){
-        let snackBarRef = this._snackBar.open('Are you sure you want to checkout?', 'OK' ,{panelClass: ['snackbar-style']} );
-        let itemsOrderInfo: ItemOrderInfo[];
-        itemsOrderInfo = this.cartQuery.getAll();
-        let saveNewOrder$ =  this.orderService.saveNewOrder(itemsOrderInfo, this.cartTotalPrice, this.loggedInUser);
-        snackBarRef.onAction().pipe(
-          takeUntil(this.destroyed$),
-          switchMap(res=> saveNewOrder$),
-          tap(()=> this.onCeckOutClickCount = 0))
-          .subscribe();
-      }else{
-        this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
+    if(this.loggedInUser){
+      let orderConfirmationData: OrderConfirmationDialogData = {
+        itemsOrderInfo: this.cartQuery.getAll(),
+        totalPrice: this.cartTotalPrice,
+        user: this.loggedInUser
       }
-      this.onCeckOutClickCount = 0;
+      this.dialog.open(OrderConfirmationComponent, { data: orderConfirmationData});
+    }else{
+      this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
     }
   }
 

@@ -51,7 +51,7 @@ export class ItemCardComponent implements OnInit, OnChanges, OnDestroy {
   saveItemUnitsValue(value: ItemUnitsValue){
     const itemUnitType: ItemUnitType = value.unitType
     const unit = this.item.units.find(unit=> unit.unitType === itemUnitType) as ItemUnit;
-
+    console.log('item saved')
     let itemOrderInfo: ItemOrderInfo = {
       _id: this.item._id,
       unitType: itemUnitType,

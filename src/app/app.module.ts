@@ -23,6 +23,7 @@ import { ItemsSharedModule } from './modules/items-shared-module/items-shared.mo
 import { AuthModule } from './modules/auth/auth.module';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { PersonalAreaModule } from './modules/personal-area/personal-area.module';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 
 
@@ -37,6 +38,7 @@ import { PersonalAreaModule } from './modules/personal-area/personal-area.module
     UserMenuBtnComponent,
     CartComponent,
     CartBtnComponent,
+    OrderConfirmationComponent,
   ],
   imports: [
     BrowserModule,
