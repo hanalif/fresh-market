@@ -1,7 +1,7 @@
 <div (click)="openDialog()" class="main-header_user-info" [ngClass]="LoggedInUserTitleMode">
-  <div class="user-img"></div>
+  <div class="user-img" [matBadge]="badgenum" matBadgeColor="warn" [matBadgeHidden]="hidden"></div>
   <small
       class="logged-in-user-name-title"
       [ngClass]="LoggedInUserTitleMode"
-      *ngIf="loggedInUserName$ | async as loggedInUserName">Hello, {{loggedInUserName}}</small>
+      *ngIf="loggedInUser">Hello, {{loggedInUser.name}}</small>
 </div>

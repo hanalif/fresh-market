@@ -11,8 +11,6 @@ import { ShippingInfoComponent } from './components/shipping-info/shipping-info.
 import { PersonalAreaRoutingModule } from "./personal-area-routing.module";
 import { PersonalAreaComponent } from './components/personal-area/personal-area.component';
 import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
-import { PersonalAreaResolver } from "./resolvers/personalAreaResolver.service";
-import { PersonalAreaUserOrderResolver } from "./resolvers/personalAreaUserOrdersResolver";
 import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
 
@@ -45,8 +43,6 @@ import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
     ItemsSharedModule
   ],
   providers: [
-    PersonalAreaResolver,
-    PersonalAreaUserOrderResolver
   ],
 })
 export class PersonalAreaModule{

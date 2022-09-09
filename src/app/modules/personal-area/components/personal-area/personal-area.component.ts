@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { User } from 'src/app/modules/auth/models/user.model';
+import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
 
 @Component({
   selector: 'app-personal-area',
@@ -9,13 +11,20 @@ import { User } from 'src/app/modules/auth/models/user.model';
 })
 export class PersonalAreaComponent implements OnInit {
   user!: User;
+  userSubscription!: Subscription;
+
   constructor(
-    private activatedRoute: ActivatedRoute
+   private authQuery: AuthQuery
   ) { }
 
   ngOnInit(): void {
-    this.user = this.activatedRoute.snapshot.data['user'];
+    this.userSubscription = this.authQuery.getLoggedInUser().subscribe(user=>{
+      let loggedInUser = user as User;
+      this.user = loggedInUser;
+    })
   }
+
+
 
 
 

@@ -4,7 +4,7 @@
       <div *ngFor="let order of personalOrders" class="personal-order-row" [routerLink]="'/orders/'+ order._id">
         <div class="personal-order-flex-group">
           <div class="personal-order-date">{{order.createdAt | date: 'dd/MM/yy'}} </div>
-          <div class="personal-order-name">
+          <div class="personal-order-name" [ngClass]="{'is-read': order.isRead}">
             Order Number: {{order._id}}
             <span class="no-mobile">|</span>
             <span class="no-mobile">{{order.items.length}} Products</span>

@@ -1,8 +1,11 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Route, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { OrderService } from 'src/app/modules/personal-area/services/order.service';
+import { UIService } from 'src/app/services/UI.service';
+import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { OrderConfirmationDialogData } from './orderConfirmationDialogData.model';
 
 @Component({
@@ -17,7 +20,8 @@ export class OrderConfirmationComponent implements OnInit, OnDestroy {
     public dialogRef: MatDialogRef<OrderConfirmationComponent>,
     @Inject(MAT_DIALOG_DATA) public data: OrderConfirmationDialogData,
     private orderService: OrderService,
-    private _snackBar: MatSnackBar,) { }
+    private _snackBar: MatSnackBar,
+    private uiService: UIService) { }
 
   ngOnInit(): void {
 
@@ -28,6 +32,7 @@ export class OrderConfirmationComponent implements OnInit, OnDestroy {
     this.orderConfirmationSubscription = this.orderService.saveNewOrder(data.itemsOrderInfo, data.totalPrice, data.user).subscribe();
     this._snackBar.open('Order Saved', 'OK' ,{panelClass: ['snackbar-style']} );
     this.dialogRef.close();
+    this.uiService.setIsCartOpen(false);
   }
 
   onBack(){
@@ -37,6 +42,5 @@ export class OrderConfirmationComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
       this.orderConfirmationSubscription?.unsubscribe();
   }
-
 
 }

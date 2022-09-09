@@ -8,5 +8,6 @@ export interface Order{
   totalPrice: number,
   items: ItemOrderInfo[],
   buyerId: string,
-  status: OrderStatus
+  status: OrderStatus,
+  isRead: boolean
 }

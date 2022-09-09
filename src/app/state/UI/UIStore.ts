@@ -8,7 +8,8 @@ export interface UIState {
   itemsCategories: ItemCategory[],
   isCartOpen: boolean,
   isSearchBoxOpen: boolean,
-  isUserModalClose: boolean
+  isUserModalClose: boolean,
+  numOfNewOrders: number
 }
 
 export const getInitialState = () => {
@@ -16,7 +17,8 @@ export const getInitialState = () => {
     isMobileMenuOpen: false,
     itemsCategories: [],
     isCartOpen: false,
-    isSearchBoxOpen: false
+    isSearchBoxOpen: false,
+    numOfNewOrders: 0
   };
 };
 

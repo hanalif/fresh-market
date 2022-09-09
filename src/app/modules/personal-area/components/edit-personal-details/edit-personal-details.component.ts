@@ -2,10 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import { ReplaySubject, takeUntil } from 'rxjs';
+import { ReplaySubject, Subscription, takeUntil } from 'rxjs';
 import { User } from 'src/app/modules/auth/models/user.model';
 
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
+import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
 import { UserPersonalDetails } from '../../models/personalDetails.model';
 
 @Component({
@@ -16,17 +17,16 @@ import { UserPersonalDetails } from '../../models/personalDetails.model';
 export class EditPersonalDetailsComponent implements OnInit, OnDestroy {
   editPersonalDetailsForm!: FormGroup;
   user!: User
+  userSubscription!: Subscription;
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
-  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private _snackBar: MatSnackBar) { }
+  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private _snackBar: MatSnackBar, private authQuery: AuthQuery) { }
 
   ngOnInit(): void {
-    let parentRoutData = this.activatedRoute.parent;
-    if(parentRoutData){
-        parentRoutData.data.pipe(takeUntil(this.destroyed$)).subscribe(data=>{
-        this.user = data['user']
-      });
-    }
+   this.authQuery.getLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe(user=>{
+    const loggedInUser = user as User;
+    this.user = loggedInUser;
+   })
     this.initForm()
   }
 

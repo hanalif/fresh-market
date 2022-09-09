@@ -16,7 +16,7 @@
     </a>
     <a (click)="onMenuLink()" routerLinkActive="active"  [routerLink]="['/personal-area/orders']" class="menu-link" >
       <span><mat-icon>shopping_cart</mat-icon></span>
-      <span class="menu-link-title">My Orders</span>
+      <span class="menu-link-title" [matBadge]="badgenum" matBadgeColor="warn" matBadgeOverlap="false" [matBadgeHidden]="hidden">My Orders</span>
     </a>
     <a (click)="onMenuLink()" routerLinkActive="active" [routerLink]="['/personal-area/shipping-info']"   class="menu-link" >
       <span><mat-icon> local_shipping</mat-icon></span>

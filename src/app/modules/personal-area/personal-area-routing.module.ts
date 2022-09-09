@@ -7,14 +7,11 @@ import { PersonalAreaComponent } from './components/personal-area/personal-area.
 import { ShippingInfoComponent } from './components/shipping-info/shipping-info.component';
 import { AuthGuard } from './guards/authGuard.service';
 import { PersonalAreaOrderDetailResolver } from './resolvers/personalAreaOrderDetailResolver.service';
-import { PersonalAreaResolver } from './resolvers/personalAreaResolver.service';
-import { PersonalAreaUserOrderResolver } from './resolvers/personalAreaUserOrdersResolver';
 
 const routes: Routes = [
   {
     path: '',
     canActivate: [AuthGuard],
-    resolve: { user: PersonalAreaResolver },
     component: PersonalAreaComponent,
     children: [
       {
@@ -26,8 +23,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            component: MyOrdersComponent,
-            resolve: {personalOrders: PersonalAreaUserOrderResolver}
+            component: MyOrdersComponent
           },
           {
             path: ':orderId',

@@ -3,7 +3,6 @@
 
 
 
-
 .personal-order{
 
   &s-wrapper{
@@ -21,6 +20,8 @@
     flex-direction: column;
     gap: 10px;
     padding: 16px;
+
+
 
 
   }
@@ -58,6 +59,11 @@
     color: #1E3E20;
     display: flex;
     gap: 15px;
+    font-weight: 800;
+
+    &.is-read{
+      font-weight: 400;
+    }
 
     .no-mobile{
       display: block;

@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -20,7 +21,8 @@ import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/materia
     MatButtonModule,
     MatDividerModule,
     MatTabsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatBadgeModule
   ],
     providers: [
       {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}},

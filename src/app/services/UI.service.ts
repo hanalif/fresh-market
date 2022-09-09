@@ -29,6 +29,21 @@ export class UIService{
     })
   }
 
+  setNumberOfNewOrdersOnBadge(num: number){
+
+    let currNum = this.uIStore.getValue().numOfNewOrders;
+    if(currNum + num < 0){
+      return;
+    }
+    this.uIStore.update(state=>{
+      return{
+        ...state,
+        numOfNewOrders: currNum+num
+      }
+    })
+
+  }
+
   setIsSearchBoxOpen(val: boolean){
     this.uIStore.update(state=>{
       return {
