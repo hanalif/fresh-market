@@ -1,0 +1,23 @@
+[
+  {
+      "_id": "R4bUuuvWM6",
+      "name": "Hana",
+      "lastname": "Lipschutz",
+      "isAdmin": "true",
+      "password": "1234",
+      "email": "hanalif619@gmail.com",
+      "phone": "0544345666",
+      "ordersId": []
+  },
+  {
+    "_id": "QcHdg2o088",
+    "name": "Bina",
+    "lastname":"Lipschutz",
+    "isAdmin": "false",
+    "password": "1234",
+    "email": "bina@gmail.com",
+    "phone": "0543223334",
+    "ordersId": ["12334455"]
+}
+]
+

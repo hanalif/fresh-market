@@ -1,0 +1,19 @@
+/* colors */
+
+$clr1: #62328a;
+$clr2: #b0d137;
+$clr3: #f2b21c;
+
+
+/* LAYOUT BRAKEPOINTS */
+
+$bpoint-pc: 1440px;
+$bpoint-tablet-landscape: 1230px;
+$bpoint-min-tablet: 980px;
+$bpoint-tablet: 768px;
+$bpoint-mobile: 680px;
+
+
+$nav-bar-height: 250px;
+$content-height: calc(100vh - #{$nav-bar-height});
+
