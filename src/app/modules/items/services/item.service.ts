@@ -159,7 +159,7 @@ export class ItemService{
   }
 
   _getItems(){
-    return this.http.get<Item[]>('assets/_json-files/items-en.json');
+    return this.http.get<Item[]>('assets/json-files/items-en.json');
   }
 
 }

@@ -90,7 +90,7 @@ export class OrderService{
   }
 
   _getOrdersFromJson(){
-    return this.http.get<Order[]>('assets/_json-files/orders.json');
+    return this.http.get<Order[]>('assets/json-files/orders.json');
   }
 
   _getOrdersFromLocalStorage(){

@@ -67,7 +67,7 @@ export class UIService{
 
 
   getItemsCategories():Observable<ItemCategory[]>{
-      return this.http.get<ItemCategory[]>('assets/_json-files/items-categories.json').pipe(
+      return this.http.get<ItemCategory[]>('assets/json-files/items-categories.json').pipe(
        tap(itemsCategoriesFromJson=>{
           this.uIStore.update(state=> {
             return {

@@ -78,7 +78,7 @@ export class UserService {
 
 
   _getUsersFromJson(){
-    return this.http.get<User[]>('assets/_json-files/users.json');
+    return this.http.get<User[]>('assets/json-files/users.json');
   }
 
   _getUsersFromLocalStorage(){
