@@ -11,6 +11,11 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 7px 0 rgb(0 0 0 / 12%);
+
+    @include for-bpoint-mobile{
+      width: 284px;
+    }
+
   }
 
   &_input{
@@ -20,6 +25,10 @@
     padding-inline-start: 35px;
     height: 28px;
     border-radius: 19px;
+
+    @include for-bpoint-mobile{
+      width: 263px;
+    }
 
 
     &:focus{
@@ -48,6 +57,12 @@
   border: 1px solid #cbcdd4;
   background-color: white;
 
+  @include for-bpoint-mobile{
+    width: 281px;
+  }
+
+
+
   top: 54px;
   .search-items-list{
       display: flex;
@@ -56,6 +71,10 @@
       gap: 9px;
       background-color: white;
       width: 465px;
+
+      @include for-bpoint-mobile{
+        align-items: baseline;
+      }
 
   }
 }

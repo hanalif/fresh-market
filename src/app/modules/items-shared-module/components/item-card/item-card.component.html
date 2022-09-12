@@ -8,12 +8,12 @@
     <div class="item-card_content_title" [ngClass]="displayMode">{{item.name}}</div>
   </div>
 
-  <div class="item-card_content">
-      <app-item-units [itemUnitsValue]="itemUnitsValue" [item]="item" (itemUnitsValueChanged)="saveItemUnitsValue($event)"></app-item-units>
+  <div class="item-card_content item-units" [ngClass]="displayMode" >
+      <app-item-units [displayMode]="displayMode" [itemUnitsValue]="itemUnitsValue" [item]="item" (itemUnitsValueChanged)="saveItemUnitsValue($event)"></app-item-units>
   </div>
 
-  <div *ngIf="displayMode === ItemCardMode.small" class="item-card_content">
-    <button (click)="onRemoveItem(item._id)"><mat-icon>delete</mat-icon></button>
+  <div *ngIf="displayMode === ItemCardMode.small" class="item-card_content remove-btn" [ngClass]="displayMode">
+    <button [ngClass]="displayMode"  (click)="onRemoveItem(item._id)"><mat-icon>delete</mat-icon></button>
 
 
 </div>

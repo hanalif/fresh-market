@@ -6,6 +6,10 @@
   height: 160px;
   box-shadow: 0px -4px 8px 0px #000000;
 
+  @include for-bpoint-mobile{
+    height: 244px;
+  }
+
 
   &_container {
     padding-block-start: 20px;
@@ -14,6 +18,11 @@
     justify-content: space-between;
     height: inherit;
     gap: 10px;
+
+    @include for-bpoint-mobile{
+      padding-block-end: 14px;
+      align-items: end;
+    }
 
   }
 
@@ -31,6 +40,11 @@
       width: 200px;
     }
 
+    @include for-bpoint-mobile{
+      width: 245px;
+      left: 20px;
+    }
+
 
   }
 
@@ -41,6 +55,10 @@
 
     @include for-bpoint-tablet-landscape{
       gap: 30px;
+    }
+
+    @include for-bpoint-mobile{
+      gap: 10px;
     }
 
     app-information-menu{
@@ -113,6 +131,11 @@
       @include for-bpoint-tablet-landscape{
         top: 68px;
         left: 55px;
+      }
+
+      @include for-bpoint-mobile{
+        top: 53px;
+        left: -9px;
       }
 
     }

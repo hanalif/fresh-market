@@ -59,11 +59,7 @@ export class ItemCardComponent implements OnInit, OnChanges, OnDestroy {
       price: unit.price
     }
 
-    if(itemOrderInfo.amount === 0){
-      return;
-    }else{
-      this.onSaveItemOrderInfo.emit(itemOrderInfo);
-    }
+    this.onSaveItemOrderInfo.emit(itemOrderInfo);
   }
 
   onRemoveItem(itemId: string){

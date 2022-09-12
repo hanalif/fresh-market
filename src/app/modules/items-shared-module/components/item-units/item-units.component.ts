@@ -5,6 +5,7 @@ import { SelectOptions } from 'src/app/shared/components/select-btns/models/sele
 import { Item } from '../../models/item.model';
 import { ItemUnitsValue } from '../../models/itemUnitsValue.model';
 import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
+import { ItemCardMode } from '../item-card/item-card-mode.enum';
 
 
 @Component({
@@ -16,6 +17,8 @@ import { ItemUnitNamePipe } from '../../pipes/itemUnitName/item-unit-name.pipe';
 export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   @Input() item!: Item;
   @Input() itemUnitsValue!: ItemUnitsValue;
+  @Input() displayMode!: ItemCardMode;
+  ItemCardMode = ItemCardMode;
 
   @Output() itemUnitsValueChanged = new EventEmitter<ItemUnitsValue>()
   options!: SelectOptions[];
@@ -24,6 +27,7 @@ export class ItemUnitsComponent implements OnInit, OnChanges, OnDestroy {
   amountControl!: FormControl;
   amountSubscription: Subscription | undefined;
   unitTypeSubscription: Subscription | undefined;
+
 
 
   constructor(private unitPipe: ItemUnitNamePipe) { }

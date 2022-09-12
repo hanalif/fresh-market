@@ -1,16 +1,25 @@
 @import "../../../../../assets/styles/setup/mixins";
 @import "../../../../../assets/styles/setup/variables";
 
+
 .item-card{
   display: flex;
   align-items: center;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 9%);
   width: 100%;
 
+
+
   &.xs{
-    height: 107px;
+    height: 120px;
     width: 426px;
     background-color: white;
+
+    @include for-bpoint-mobile {
+      height: 366px;
+      width: 280px;
+      flex-direction: column;
+    }
   }
 
 
@@ -35,6 +44,21 @@
     border-radius: 10px;
     box-shadow: 0 3px 9px 1px rgb(0 0 0 / 10%);
 
+    @include for-bpoint-mobile{
+      display: grid;
+      grid-template-areas:
+      "trash trash trash"
+      "img title units"
+      ;
+
+	    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  }
+
+  &.large{
+    display: block;
+    box-shadow: none;
   }
 
   mat-icon{
@@ -45,6 +69,11 @@
   &_img-container{
     display: contents;
     cursor: pointer;
+
+    &.large{
+      display: none;
+    }
+
   }
 
   &_img{
@@ -54,8 +83,25 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    &.large{
+      display: none;
+    }
+
+
     &.xs{
       height: 89px;
+
+      @include for-bpoint-mobile {
+        height: 123px;
+      }
+
+
+    }
+
+    &.small{
+      @include for-bpoint-mobile{
+        grid-area: img;
+      }
     }
 }
 
@@ -81,16 +127,38 @@
       font-size: 16px;
     }
 
-
+    &.large{
+      display: none;
+    }
 
     &.xs{
       border: none;
       font-size: 22px;
+
+      @include for-bpoint-mobile {
+        width: 100%;
+        display: block;
+        text-align: center;
+        border: none;
+        height: 49px;
+        font-size: 20px;
+      }
     }
 
     &.small{
       border: none;
       font-size: 20px;
+
+      @include for-bpoint-mobile{
+        grid-area: title;
+      }
+
+    }
+
+    &.item-units.small{
+      @include for-bpoint-mobile{
+        grid-area: units;
+      }
     }
 
   }
@@ -99,8 +167,15 @@
     width: 100%;
   }
 
+  &.remove-btn.small{
+    @include for-bpoint-mobile{
+      grid-area: trash;
+      display: flex;
+      align-items: baseline;
+      padding-block-start: 9px;
 
-
+    }
+  }
 }
 
 }

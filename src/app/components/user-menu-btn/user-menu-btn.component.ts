@@ -19,7 +19,6 @@ export class UserMenuBtnComponent implements OnInit, OnDestroy {
   loggedInUser: User | undefined;
   badgenum!: number;
   loggedInUserSubscription!: Subscription;
-  badgeNumSubscription!: Subscription;
   hidden: boolean = true;
 
   constructor(
@@ -51,7 +50,6 @@ export class UserMenuBtnComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-      this.badgeNumSubscription.unsubscribe();
       this.loggedInUserSubscription.unsubscribe();
   }
 

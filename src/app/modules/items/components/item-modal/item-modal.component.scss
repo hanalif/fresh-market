@@ -1,0 +1,36 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
+.item-modal-container{
+
+  display: flex;
+
+  @include for-bpoint-mobile{
+    flex-direction: column;
+  }
+
+
+
+  .clear-icon:focus-visible{
+    display: none;
+
+  }
+
+
+  .modal-title{
+    text-align: left;
+  }
+
+  .img-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #889489;
+  }
+}
+

@@ -31,7 +31,7 @@
   </ng-scrollbar>
 
   <div class="cart-bottom">
-    <h1>Total: ${{cartTotalPrice | number: '.1-3'}}</h1>
+    <h1 class="total-price-title">Total: ${{cartTotalPrice | number: '.1-3'}}</h1>
     <button (click)="onCeckOut()" class="check-out-btn main-btn green-bg">Check Out</button>
   </div>
 </div>

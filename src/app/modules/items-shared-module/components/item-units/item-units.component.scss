@@ -1,3 +1,6 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
 .item-units{
 
   &_container{
@@ -7,6 +10,18 @@
     width: inherit;
     align-items: center;
     height: 100px;
+
+    &.small{
+      @include for-bpoint-mobile{
+        gap: none;
+        height: 175px;
+      }
+    }
+
+    &.large{
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &_type{
