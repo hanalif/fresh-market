@@ -1,0 +1,96 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
+
+
+.personal-order{
+
+  &s-wrapper{
+    cursor: pointer;
+    position: relative;
+
+
+  }
+
+
+  &-list-container{
+    overflow: hidden;
+    scroll-behavior: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+
+
+
+
+  }
+
+  &-row{
+    margin-inline-end: 15px;
+    background: transparent;
+    color: #1E3E20;
+    border-bottom: 1px solid #AFAFAF;
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: 20px;
+    padding-block-start: 10px;
+    margin-inline-start: 26px;
+
+    @include for-bpoint-mobile{
+      margin-inline-start: 0;
+    }
+
+
+  }
+
+  &-flex-group{
+    display: flex;
+    gap: 25px;
+
+  }
+
+  &-date{
+    color: #AFAFAF;
+    font-size: 1.15em;
+  }
+
+  &-name{
+    color: #1E3E20;
+    display: flex;
+    gap: 15px;
+    font-weight: 800;
+
+    &.is-read{
+      font-weight: 400;
+    }
+
+    .no-mobile{
+      display: block;
+    }
+
+    @include for-bpoint-min-tablet{
+      .no-mobile{
+        display: none;
+      }
+    }
+  }
+
+  &-total-price{
+    color: #1E3E20;
+    display: flex;
+    justify-content: flex-end;
+    width: 45px;
+
+    &.no-mobile{
+      display: block;
+    }
+
+    @include for-bpoint-min-tablet{
+      &.no-mobile{
+        display: none;
+      }
+    }
+
+  }
+}

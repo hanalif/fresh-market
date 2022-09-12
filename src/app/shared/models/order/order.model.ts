@@ -1,10 +1,13 @@
-import { OrderItem } from "./orderItems.model"
+import { ItemOrderInfo } from "./itemOrderInfo.model"
+import { OrderStatus } from "./orderStatus.model"
+
 
 export interface Order{
   _id: string,
   createdAt: Date,
   totalPrice: number,
-  items: OrderItem[],
+  items: ItemOrderInfo[],
   buyerId: string,
-  status: string
+  status: OrderStatus,
+  isRead: boolean
 }

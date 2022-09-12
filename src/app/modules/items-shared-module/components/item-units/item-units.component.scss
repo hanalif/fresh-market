@@ -1,0 +1,34 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
+.item-units{
+
+  &_container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: inherit;
+    align-items: center;
+    height: 100px;
+
+    &.small{
+      @include for-bpoint-mobile{
+        gap: none;
+        height: 175px;
+      }
+    }
+
+    &.large{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &_type{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

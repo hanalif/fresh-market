@@ -1,3 +1,6 @@
+@import "../../../../assets/styles/setup/mixins";
+@import "../../../../assets/styles/setup/variables";
+
 
 .selection-form{
   display: flex;
@@ -5,6 +8,12 @@
   border-radius: 30px;
   overflow: hidden;
   background: #ebebeb52;
+
+  @include for-bpoint-mobile {
+    display: block;
+    border-radius: 20px;
+
+  }
 
 
   .selection-container{

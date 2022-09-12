@@ -10,7 +10,7 @@ import { ItemsListComponent } from "./components/items-list/items-list.component
 import { ItemsListResolver } from "./resolvers/itemsListResolver.service";
 import { SharedModule } from "src/app/shared/shared.module";
 import { ItemStore } from "./state/itemStore";
-import { ItemsSharedModule } from "../items-shared.module.ts/items-shared.module";
+import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
 
 @NgModule({
   declarations: [

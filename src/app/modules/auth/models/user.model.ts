@@ -1,11 +1,13 @@
+import { Entity } from "src/app/shared/models/entity.model";
+import { ShippingAdress } from "./shippingAdress.model";
 
-export interface User {
-  _id: string,
-  fullname: string,
+export interface User extends Entity{
+  name: string,
+  lastname: string,
   isAdmin: boolean,
-  username: string,
   password: string,
   email: string,
   phone: number,
-  ordersId?: string[]
+  ordersId: string[],
+  shippingAdress?: ShippingAdress
 }

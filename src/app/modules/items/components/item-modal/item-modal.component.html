@@ -1,6 +1,18 @@
-<h1 mat-dialog-title>{{data.item.name}}</h1>
+
 <div mat-dialog-content>
-  <app-item-card [item]="data.item" [itemUnitsValue]="(itemUnitsMap$ | async)![data.item._id]" [displayMode]="ItemCardMode.large" (onSaveItemOrderInfo)="saveItemUnitsValue($event)"></app-item-card>
-  <p>{{data.item.description}}</p>
-  <button mat-button (click)="onNoClick()">close</button>
+  <div class="item-modal-container">
+    <div class="item-modal-content">
+      <button mat-button (click)="onNoClick()" class="clear-icon"></button>
+     <div class="img-container">
+      <img [src]="data.item.images[0].thumbnailImgUrl" alt="item-img">
+     </div>
+    </div>
+    <div class="item-modal-content">
+      <h1 class="modal-title" mat-dialog-title>{{data.item.name}}</h1>
+      <div class="item-description">
+        <p>{{data.item.description}}</p>
+      </div>
+      <app-item-card [displayMode]="ItemCardMode.large" [item]="data.item" [itemUnitsValue]="(itemUnitsMap$ | async)![data.item._id]" [displayMode]="ItemCardMode.large" (onSaveItemOrderInfo)="saveItemUnitsValue($event)"></app-item-card>
+    </div>
+  </div>
 </div>

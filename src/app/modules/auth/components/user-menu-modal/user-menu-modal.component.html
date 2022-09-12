@@ -1,7 +1,21 @@
-<div *ngIf="loggedInUser;else registrationMenu" class="logged-in-user-menu">
-<h1>loggedInUser name</h1>
-</div>
-<ng-template #registrationMenu class="registration-menu">
-  <h1>registration-menu</h1>
-</ng-template>
-<button (click)="logOut()">Log Out</button>
+<ng-scrollbar style="height: 400px; width: 400px;">
+  <mat-icon (click)="onCloseModal()">close</mat-icon>
+  <div class="user-menu-modal-container">
+    <div *ngIf="loggedInUser; else registrationMenu" class="logged-in-user-menu">
+      <app-logged-in-user-menu></app-logged-in-user-menu>
+    </div>
+    <ng-template #registrationMenu class="registration-menu">
+      <mat-tab-group>
+        <mat-tab label="Login">
+          <app-login-form></app-login-form>
+        </mat-tab>
+        <mat-tab label="Sign Up">
+            <app-signup-form></app-signup-form>
+        </mat-tab>
+      </mat-tab-group>
+    </ng-template>
+  </div>
+</ng-scrollbar>
+
+
+

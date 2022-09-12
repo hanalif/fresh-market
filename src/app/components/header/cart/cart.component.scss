@@ -1,3 +1,7 @@
+@import "../../../../assets/styles/setup/mixins";
+@import "../../../../assets/styles/setup/variables";
+
+
 .cart{
   position: relative;
   background-color: #F5F5F4;
@@ -12,9 +16,19 @@
     padding-block-end: 16px;
     background-color: white;
 
+    @include for-bpoint-mobile{
+      gap: 0px;
+      padding-inline-end: 20px;
+      padding-inline-start: 10px;
+    }
+
 
     small{
       font-size: 25px;
+
+      @include for-bpoint-mobile{
+        font-size: 14px;
+      }
     }
   }
 
@@ -32,6 +46,11 @@
     cursor: pointer;
     font-size: 16px;
 
+    @include for-bpoint-mobile{
+      font-size: 13px;
+      gap: 10px;
+    }
+
     &-bg{
       position: absolute;
       background-color: #F5F5F4;
@@ -40,6 +59,11 @@
       border-radius: 50%;
       left: 15px;
       bottom: 23px;
+
+      @include for-bpoint-mobile{
+        height: 45px;
+        width: 45px;
+      }
     }
 
     .delete-icon-img{
@@ -77,6 +101,14 @@
     align-items: center;
     justify-content: space-around;
 
+
+
+    @include for-bpoint-mobile{
+      .total-price-title{
+        font-size: 18px;
+      }
+    }
+
     h1{
       margin: 0;
     }
@@ -97,13 +129,17 @@
       height: 57px;
       line-height: 57px;
       width: 210px;
-      text-align: center;
       font-size: 22px;
-      background: #A4D668;
-      color: #1E3E20;
-      border-radius: 50rem;
-      cursor: pointer;
+
+      @include for-bpoint-mobile{
+        height: 45px;
+        line-height: 30px;
+        width: 121px;
+        font-size: 16px;
+      }
     }
   }
+
+
 
 }

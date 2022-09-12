@@ -1,0 +1,23 @@
+<div class="order-details-container main-layout">
+    <h1 class="main-title">{{'Order Summary' | uppercase}}</h1>
+    <div *ngFor="let orderDetail of orderDetailsInput.orderDetailsToDisplay" class="order-details-row row">
+      <div class="item-name">{{orderDetail.item.name}}</div>
+      <div class="item-info">
+        <div class="item-type-and-amount">
+          <span class="item-amount">{{orderDetail.itemOrderInfo.amount}}</span>
+          <span class="item-unit-type">{{orderDetail.itemOrderInfo.unitType | itemUnitName}}</span>
+        </div>
+        <span class="item-price">${{orderDetail.itemOrderInfo.price}}</span>
+      </div>
+    </div>
+    <div class="order-details-total-price row">
+      <span>Total Price</span>
+      <span>${{orderDetailsInput.orderTotalPrice | number: '.1-3'}}</span>
+    </div>
+    <h2 class="note">Prices of items may change from the time the order was made</h2>
+    <div class="action-container">
+      <button class="action-btn main-btn border-btn white-bg"  [routerLink]="['/personal-area/orders']">Back To Orders</button>
+      <button class="action-btn main-btn green-bg" (click)="onCopyItemsToCart()" >Copy Items To Cart</button>
+    </div>
+
+</div>

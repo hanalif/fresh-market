@@ -1,0 +1,32 @@
+
+<div class="menu-container">
+  <div class="top-menu">
+    <h2>Hello, {{loggedInUser.name}}</h2>
+    <div  (click)="logOut()" class="log-out-icon-container">
+      <div class="log-out-icon">
+        <img src="../../../../../assets/icons/log-out.png" alt="">
+      </div>
+      <small>Log Out</small>
+    </div>
+  </div>
+  <div class="main-menu">
+    <a (click)="onMenuLink()" routerLinkActive="active" [routerLink]="['/personal-area/edit-personal-details']" class="menu-link" >
+      <span><mat-icon>edit</mat-icon></span>
+      <span  class="menu-link-title">Edit Personal Details</span>
+    </a>
+    <a (click)="onMenuLink()" routerLinkActive="active"  [routerLink]="['/personal-area/orders']" class="menu-link" >
+      <span><mat-icon>shopping_cart</mat-icon></span>
+      <span class="menu-link-title" [matBadge]="badgenum" matBadgeColor="warn" matBadgeOverlap="false" [matBadgeHidden]="hidden">My Orders</span>
+    </a>
+    <a (click)="onMenuLink()" routerLinkActive="active" [routerLink]="['/personal-area/shipping-info']"   class="menu-link" >
+      <span><mat-icon> local_shipping</mat-icon></span>
+      <span  class="menu-link-title">Shipping Details</span>
+    </a>
+    <a (click)="onMenuLink()" [routerLink]="['']" class="menu-link" >
+      <span><mat-icon>home</mat-icon></span>
+      <span  class="menu-link-title">To Shopping</span>
+    </a>
+  </div>
+
+
+</div>

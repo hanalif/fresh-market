@@ -2,10 +2,10 @@
 import { Injectable } from "@angular/core";
 import { QueryEntity } from "@datorama/akita";
 import { combineLatestWith, map, tap } from "rxjs";
-import { ItemUnitsValue } from "src/app/modules/items-shared.module.ts/models/itemUnitsValue.model";
+import { ItemUnitsValue } from "src/app/modules/items-shared-module/models/itemUnitsValue.model";
 import { ItemUnit } from "src/app/modules/items/models/itemUnit.model";
 import { ItemQuery } from "src/app/modules/items/state/itemQuery";
-import { ItemOrderInfo } from "src/app/shared/models/itemOrderInfo.model";
+import { ItemOrderInfo } from "src/app/shared/models/order/itemOrderInfo.model";
 import { itemUnitsMap } from "src/app/shared/models/itemUnitMap.model";
 import { CartState, CartStore } from "./cartStore";
 

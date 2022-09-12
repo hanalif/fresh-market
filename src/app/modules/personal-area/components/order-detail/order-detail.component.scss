@@ -1,0 +1,78 @@
+@import "../../../../../assets/styles/setup/mixins";
+@import "../../../../../assets/styles/setup/variables";
+
+.row{
+  border-bottom: 1px solid #afafaf;
+  padding: 10px 0;
+}
+
+.order-details{
+
+  &-container{
+    padding-block-start: 20px;
+    z-index: 801;
+  }
+
+  &-row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+
+    .item{
+      &-info{
+        display: flex;
+        gap: 13px;
+      }
+
+      &-type-and-amount{
+        display: flex;
+        gap: 5px;
+      }
+    }
+  }
+
+  &-total-price{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    font-weight: 600;
+
+  }
+
+}
+
+.action-container{
+  margin-block-start: 20px;
+  display: flex;
+  justify-content: space-between;
+
+
+  @include for-bpoint-mobile{
+    gap: 15px;
+  }
+
+
+
+  .action-btn{
+      height: 57px;
+      line-height: 57px;
+      width: 210px;
+      font-size: 19px;
+
+      @include for-bpoint-mobile{
+        height: 40px;
+        line-height: 38px;
+        font-size: 12px;
+      }
+  }
+
+}
+
+.note{
+  font-size: 11px;
+    line-height: 1.7;
+    margin-block-start: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+

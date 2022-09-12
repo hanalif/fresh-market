@@ -1,10 +1,10 @@
-import { state } from "@angular/animations";
+
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { map, tap } from "rxjs/operators";
-import { ItemOrderInfo } from "src/app/shared/models/itemOrderInfo.model";
-import { Item } from "../../items-shared.module.ts/models/item.model";
+import { filter, map, tap } from "rxjs/operators";
+import { ItemOrderInfo } from "src/app/shared/models/order/itemOrderInfo.model";
+import { Item } from "../../items-shared-module/models/item.model";
 import { ItemStore } from "../state/itemStore";
 
 @Injectable({providedIn: 'root'})
@@ -32,7 +32,13 @@ export class ItemService{
     );
   }
 
-  gerRandItems(){
+  getItemById(itemId: string){
+    return this._getItems().pipe(map(items=>{
+      return items.find(item=> item._id === itemId);
+    }))
+  }
+
+  getRandItems(){
     return this._getItems().pipe(
       tap(fetchedItems => {
         const shuffled = fetchedItems.sort(() => 0.5 - Math.random());
@@ -94,6 +100,22 @@ export class ItemService{
     }
   }
 
+  addManyToItemsToShowInCart(orderItems: Item[]){
+    let updatedItemsToShowInCart: Item[] = [...this.itemStore._value().itemsToShowInCart, ...orderItems];
+    this.itemStore.update(state=>{
+      return {
+        ...state,
+        itemsToShowInCart: updatedItemsToShowInCart
+      }
+    })
+
+
+
+  }
+
+
+
+
 
   removeItemFromItemsToShowInCart(itemId:string){
     let updatedItemsToShowInCart = [...this.itemStore._value().itemsToShowInCart]
@@ -128,6 +150,12 @@ export class ItemService{
         })
       })
     )
+  }
+
+  getItemsByIds(itemsIds: string[]){
+    return this._getItems().pipe(map(items=>{
+      return items.filter(item=> itemsIds.includes(item._id));
+    }))
   }
 
   _getItems(){

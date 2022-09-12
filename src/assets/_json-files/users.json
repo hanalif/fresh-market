@@ -1,9 +1,9 @@
 [
   {
       "_id": "R4bUuuvWM6",
-      "fullname": "Hana Lipschutz",
+      "name": "Hana",
+      "lastname": "Lipschutz",
       "isAdmin": "true",
-      "username": "hanalif619",
       "password": "1234",
       "email": "hanalif619@gmail.com",
       "phone": "0544345666",
@@ -11,15 +11,13 @@
   },
   {
     "_id": "QcHdg2o088",
-    "fullname": "Bina Lipschutz",
+    "name": "Bina",
+    "lastname":"Lipschutz",
     "isAdmin": "false",
-    "username": "bina1234",
     "password": "1234",
     "email": "bina@gmail.com",
     "phone": "0543223334",
-    "ordersId": []
+    "ordersId": ["12334455"]
 }
-
-
 ]
 

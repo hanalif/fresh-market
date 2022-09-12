@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { ItemService } from 'src/app/modules/items/services/item.service';
 import { UIService } from 'src/app/services/UI.service';
 import { Animations } from '../../../app/animations'
+import { LoggedInUserTitleMode } from '../user-menu-btn/logged-in-user-title-mode.enum';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,7 @@ import { Animations } from '../../../app/animations'
 export class HeaderComponent implements OnInit, OnDestroy {
    isSearchBoxOpen: boolean = false;
    searchResultItemsSub?: Subscription;
+   loggedInUserTitleMode = LoggedInUserTitleMode;
 
   constructor(
       private uIService:UIService,

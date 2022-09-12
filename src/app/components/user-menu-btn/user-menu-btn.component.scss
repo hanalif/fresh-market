@@ -1,6 +1,29 @@
+@import '../../../assets/styles/setup/mixins';
+@import '../../../assets/styles/setup/variables';
+
 .main-header_user-info{
   position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+
+    &.main{
+
+      @include for-bpoint-tablet-landscape{
+        @include for-bpoint-tablet-landscape{
+        flex-direction: column;
+      }
+      }
+    }
+
+    &.sideNav{
+      padding-right: 13px;
+    }
+
     .user-img {
       background-image: url("../../../assets/icons/user-edited.png");
       height: 40px;
@@ -9,8 +32,21 @@
       background-repeat: no-repeat;
       background-size: contain;
       position: relative;
+    }
 
+    .logged-in-user-name-title{
+      &.main{
+        font-size: 16px;
 
+        @include for-bpoint-mobile{
+          font-size: 14px;
+        }
+
+      }
+
+      &.sideNav{
+        font-size: 20px;
+      }
     }
 
 }

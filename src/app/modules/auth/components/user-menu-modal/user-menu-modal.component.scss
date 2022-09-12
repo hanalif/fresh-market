@@ -1,0 +1,22 @@
+mat-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  cursor: pointer;
+ }
+
+.user-menu-modal-container{
+ overflow: hidden;
+ margin: 20px;
+
+  .btn-container{
+    margin-block-end: 25px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+  }
+}
+
+
+

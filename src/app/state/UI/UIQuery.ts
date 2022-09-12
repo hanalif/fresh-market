@@ -25,6 +25,11 @@ export class UIQuery extends Query<UIState>{
     return this.select<boolean>(state=> state.isSearchBoxOpen);
   }
 
+  getNumOfOrdersBadge(): Observable<number>{
+    return this.select<number>(state=> state.numOfNewOrders);
+  }
+
+
   getItemsCategories(): Observable<ItemCategory[]>{
     return this.select<ItemCategory[]>(state=> state.itemsCategories);
   }

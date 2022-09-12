@@ -1,13 +1,22 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { map, Observable, Subscription } from 'rxjs';
-import { ItemCardMode } from 'src/app/modules/items-shared.module.ts/components/item-card/item-card-mode.enum';
-import { Item } from 'src/app/modules/items-shared.module.ts/models/item.model';
-import { ItemUnitsValue } from 'src/app/modules/items-shared.module.ts/models/itemUnitsValue.model';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { tap, Observable, ReplaySubject, Subscription, switchMap, takeUntil } from 'rxjs';
+import { User } from 'src/app/modules/auth/models/user.model';
+import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
+import { UserQuery } from 'src/app/modules/auth/state/user-state/userQuery';
+import { ItemCardMode } from 'src/app/modules/items-shared-module/components/item-card/item-card-mode.enum';
+import { Item } from 'src/app/modules/items-shared-module/models/item.model';
+import { ItemUnitsValue } from 'src/app/modules/items-shared-module/models/itemUnitsValue.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
+import { OrderService } from 'src/app/modules/personal-area/services/order.service';
 import { CartService } from 'src/app/services/cart.service';
 import { UIService } from 'src/app/services/UI.service';
-import { ItemOrderInfo } from 'src/app/shared/models/itemOrderInfo.model';
+import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
+
 import { CartQuery } from 'src/app/state/cart/cartQuery';
+import { OrderConfirmationComponent } from '../../order-confirmation/order-confirmation.component';
+import { OrderConfirmationDialogData } from '../../order-confirmation/orderConfirmationDialogData.model';
 
 
 @Component({
@@ -23,20 +32,35 @@ export class CartComponent implements OnInit, OnDestroy {
       private uIService:UIService,
       private itemQuery: ItemQuery,
       private cartQuery:CartQuery,
-      private cartService: CartService) { }
+      private authQuery: AuthQuery,
+      private orderService: OrderService,
+      private cartService: CartService,
+      private _snackBar: MatSnackBar,
+      public dialog: MatDialog) { }
+
+  itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
 
   cartItemsToShow$! :Observable<Item[]>
-  itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
-  cartTotalPrice$! :Observable<number>
-  itemOrderInfoSubscription!: Subscription;
+  cartTotalPrice!: number;
   ItemCardMode = ItemCardMode;
-  emptyCartSubscription!: Subscription;
+  loggedInUser: User | undefined;
+  cartItemsToShow!: Item[];
+
+  private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
 
   ngOnInit(): void {
-    this.cartItemsToShow$ = this.itemQuery.getItemsToShowInCart();
+    this.itemQuery.getItemsToShowInCart().pipe(takeUntil(this.destroyed$)).subscribe(items=>{
+      this.cartItemsToShow = items;
+    });
     this.itemUnitsMap$ = this.cartQuery.getCartItemUnitsMap();
-    this.cartTotalPrice$ = this.cartQuery.getTotalPrice();
+    this.cartQuery.getTotalPrice().pipe(takeUntil(this.destroyed$)).subscribe(totalPrice=>{
+      this.cartTotalPrice = totalPrice;
+    });
+    this.authQuery.getLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe(user=>{
+        this.loggedInUser = user;
+    })
+
   }
 
   onCloseCart(val: boolean){
@@ -44,16 +68,33 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   onEmptyCart(){
-    this.emptyCartSubscription = this.cartService.emptyCart().subscribe()
+     this.cartService.emptyCart().pipe(takeUntil(this.destroyed$)).subscribe()
   }
 
   saveItemUnitsValue(itemOrderInfo: ItemOrderInfo){
-    this.itemOrderInfoSubscription = this.cartService.saveItemOrderInfo(itemOrderInfo).subscribe()
+     this.cartService.saveItemOrderInfo(itemOrderInfo).pipe(takeUntil(this.destroyed$)).subscribe()
+  }
+
+  onCeckOut(){
+    if(this.cartItemsToShow.length == 0 || this.cartItemsToShow.length == -1){
+      this._snackBar.open('No Items In Cart', 'OK' ,{panelClass: ['snackbar-style']} )
+      return;
+    }
+    if(this.loggedInUser){
+      let orderConfirmationData: OrderConfirmationDialogData = {
+        itemsOrderInfo: this.cartQuery.getAll(),
+        totalPrice: this.cartTotalPrice,
+        user: this.loggedInUser
+      }
+      this.dialog.open(OrderConfirmationComponent, { data: orderConfirmationData});
+    }else{
+      this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
+    }
   }
 
   ngOnDestroy(): void {
-    this.itemOrderInfoSubscription?.unsubscribe();
-    this.emptyCartSubscription?.unsubscribe();
+    this.destroyed$.next(true);
+    this.destroyed$.unsubscribe();
   }
 
 }

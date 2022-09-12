@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { ActiveState, EntityState, EntityStore, StoreConfig } from "@datorama/akita";
-import { ItemOrderInfo } from "src/app/shared/models/itemOrderInfo.model";
+import { ItemOrderInfo } from "src/app/shared/models/order/itemOrderInfo.model";
+
+
 
 export interface CartState extends EntityState<ItemOrderInfo, string>, ActiveState  {}
 

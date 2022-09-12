@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { ActivatedRouteSnapshot, Resolve } from "@angular/router";
 import { Observable } from "rxjs";
-import { Item } from "../../items-shared.module.ts/models/item.model";
+import { Item } from "../../items-shared-module/models/item.model";
 import { ItemService } from "../services/item.service";
 
 
@@ -13,7 +13,7 @@ export class ItemsListResolver implements Resolve<Item[]>{
     const mainCtegoryId = route.params['mainCategoryId']
     const subcategoryId = route.params['subcategoryId'] ? route.params['subcategoryId'] : null;
     if(mainCtegoryId == null){
-      return this.itemService.gerRandItems();
+      return this.itemService.getRandItems();
 
     }
 
