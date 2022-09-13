@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { tap, Observable, ReplaySubject, Subscription, switchMap, takeUntil } from 'rxjs';
+import { UserMenuModalComponent } from 'src/app/modules/auth/components/user-menu-modal/user-menu-modal.component';
 import { User } from 'src/app/modules/auth/models/user.model';
 import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
 import { UserQuery } from 'src/app/modules/auth/state/user-state/userQuery';
@@ -9,7 +10,6 @@ import { ItemCardMode } from 'src/app/modules/items-shared-module/components/ite
 import { Item } from 'src/app/modules/items-shared-module/models/item.model';
 import { ItemUnitsValue } from 'src/app/modules/items-shared-module/models/itemUnitsValue.model';
 import { ItemQuery } from 'src/app/modules/items/state/itemQuery';
-import { OrderService } from 'src/app/modules/personal-area/services/order.service';
 import { CartService } from 'src/app/services/cart.service';
 import { UIService } from 'src/app/services/UI.service';
 import { ItemOrderInfo } from 'src/app/shared/models/order/itemOrderInfo.model';
@@ -33,7 +33,6 @@ export class CartComponent implements OnInit, OnDestroy {
       private itemQuery: ItemQuery,
       private cartQuery:CartQuery,
       private authQuery: AuthQuery,
-      private orderService: OrderService,
       private cartService: CartService,
       private _snackBar: MatSnackBar,
       public dialog: MatDialog) { }
@@ -45,6 +44,7 @@ export class CartComponent implements OnInit, OnDestroy {
   ItemCardMode = ItemCardMode;
   loggedInUser: User | undefined;
   cartItemsToShow!: Item[];
+
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
@@ -88,13 +88,21 @@ export class CartComponent implements OnInit, OnDestroy {
       }
       this.dialog.open(OrderConfirmationComponent, { data: orderConfirmationData});
     }else{
-      this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
+      let snackBarRef = this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
+      snackBarRef.afterDismissed().subscribe(() => {
+        this.dialog.open(UserMenuModalComponent)
+      });
+
     }
   }
+
+
 
   ngOnDestroy(): void {
     this.destroyed$.next(true);
     this.destroyed$.unsubscribe();
   }
+
+
 
 }
