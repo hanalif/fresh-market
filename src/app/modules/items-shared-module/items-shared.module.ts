@@ -6,20 +6,25 @@ import { AngularMaterialModule } from "../angular-material.module";
 import { ItemCardComponent } from "./components/item-card/item-card.component";
 import { ItemUnitsComponent } from "./components/item-units/item-units.component";
 import { ItemUnitNamePipe } from "./pipes/itemUnitName/item-unit-name.pipe";
+import { titleUppercaseLettersPipe } from "./pipes/titleUppecaseFirsLetter.pipe"
 
 
 @NgModule({
   declarations: [
     ItemUnitNamePipe,
     ItemCardComponent,
-    ItemUnitsComponent
+    ItemUnitsComponent,
+    titleUppercaseLettersPipe
+
+
 
 
   ],
   exports: [
     ItemUnitNamePipe,
     ItemCardComponent,
-    ItemUnitsComponent
+    ItemUnitsComponent,
+    titleUppercaseLettersPipe
 
   ],
   imports: [
@@ -30,7 +35,8 @@ import { ItemUnitNamePipe } from "./pipes/itemUnitName/item-unit-name.pipe";
     AngularMaterialModule
   ],
   providers: [
-    ItemUnitNamePipe
+    ItemUnitNamePipe,
+    titleUppercaseLettersPipe
   ],
 })
 export class ItemsSharedModule{

@@ -1,7 +1,7 @@
 [
     {
         "_id": "?LxxDEQtC3",
-        "name": "Avocado-galil",
+        "name": "Avocado Galil",
         "description": "The most fun in Avocado Galilee is the thin peel that also makes the craft of peeling easy and also illuminates us with more fruit (: an Israeli variety with an elongated appearance and a very smooth peel. The first variety to arrive this season. Normal.",
         "units": [{
                     "unitType": 1,
@@ -18,7 +18,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646811358/HolyVegiFruits/fruits/fresh-fruits/avocadoGalil_i3kfzx.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646811358/HolyVegiFruits/fruits/fresh-fruits/avocadoGalil-240x240_qxkoee.jpg"
-            }    
+            }
         ],
         "tip": "Also bought an unripe avocado and stored it wrapped in paper that speeds up its ripening process.",
         "properties": [2,4,3],
@@ -28,7 +28,7 @@
 
     {
         "_id": "jDc0PiUmg9",
-        "name": "Avocado noy",
+        "name": "Avocado Noy",
         "description": "A popular and beloved variety in Israel, with a thick and rough shell that makes peeling easy. Has a wonderful nutty taste and great texture. Suitable for sandwiches, salads and basically everything. The avocado is rich in unsaturated fats that help balance blood cholesterol levels.",
         "units": [{
                     "unitType": 1,
@@ -45,7 +45,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646812329/HolyVegiFruits/fruits/fresh-fruits/avocado_noy_r91hym.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646812328/HolyVegiFruits/fruits/fresh-fruits/avocado_noy-240x240_wvnujj.jpg"
-            }    
+            }
         ],
         "tip": "Want to empty the avocado easily? Cut into 2 and remove the filling with a spoon.",
         "properties": [2,4,3],
@@ -68,7 +68,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646812742/HolyVegiFruits/fruits/fresh-fruits/half_watermellon_lfuitz.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646812742/HolyVegiFruits/fruits/fresh-fruits/half_watermellon-240x240_xhycf3.jpg"
-            }    
+            }
         ],
         "tip": "Choose a watermelon with as large a yellow spot as possible, the sweetest ones.",
         "properties": [1,5,3],
@@ -78,7 +78,7 @@
 
     {
         "_id": "2P?ARKByQB",
-        "name": "Red pear",
+        "name": "Red Pear",
         "description": "Imported. The beautiful red pear has a delicate and sweet taste with a smooth texture and is insanely juicy when ripe. The pear is rich in dietary fiber and potassium and is highly recommended to include in our daily menu.",
         "units": [
                     {
@@ -96,7 +96,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646813168/HolyVegiFruits/fruits/fresh-fruits/red_pear_buov0f.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646813168/HolyVegiFruits/fruits/fresh-fruits/red_pear-240x240_w5hkuj.jpg"
-            }    
+            }
         ],
         "tip": "It is advisable to eat pears in their peel as the peel is rich in dietary fiber! In addition, they can be combined in the decoration of desserts due to their bright red color.",
         "properties": [2,3],
@@ -106,7 +106,7 @@
 
     {
         "_id": "4Rsvhc9MTP",
-        "name": "Spadona pear",
+        "name": "Spadona Pear",
         "description": "Take a ripe and juicy sapdona pear, bring it close to the nose, take a breath and feel like the whole field is reaching up to you. Safadona is the most popular pear variety in Israel and can be found on the shelves throughout the year. It is especially sweet, juicy and fragrant. Has a light green shell. The pear is rich in dietary fiber, easy to digest and although it is sweet it does not raise blood sugar levels (excellent for diabetics). It is rich in potassium, beta cortan and helps digestion, gastritis, allergies and more.",
         "units": [
                     {
@@ -119,7 +119,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646813664/HolyVegiFruits/fruits/fresh-fruits/green_pear_lwjnop.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646813664/HolyVegiFruits/fruits/fresh-fruits/green_pear-240x240_fih9ov.jpg"
-            }    
+            }
         ],
         "tip": "Looking for a pear for baking? This is the perfect pear for you!",
         "properties": [1,5],
@@ -142,7 +142,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646824437/HolyVegiFruits/fruits/fresh-fruits/blueberries_noy_yb2avf.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646824437/HolyVegiFruits/fruits/fresh-fruits/blueberries_noy-240x240_m5mlcu.jpg"
-            }    
+            }
         ],
         "tip": "So beautiful that they are a perfect decoration for a wide variety of desserts.",
         "properties": [1,3,5],
@@ -152,7 +152,7 @@
 
     {
         "_id": "py3K9px2eh",
-        "name": "Carribean pineapple",
+        "name": "Carribean Pineapple",
         "description": "The pineapple was 'discovered' to the west by Christopher Columbus on his second voyage to the mainland, brought to Spain and from there migrated to Southeast Asia, Ivory Coast and Hawaii. The fruit grows well in mainly tropical areas and has been identified as an exotic tropical countryside since time immemorial. Pineapple is the only fruit that in many languages ​​is similarly named, although in English its name is pineapple, due to its resemblance to a pinecone. Christopher Columbus and his team were among the first in Europe to discover the exotic fruit and were enthusiastic on its behalf. On their return to the mainland they displayed the pineapple, which was a symbol of wealth, and nobles used to use it for hospitality.",
         "units": [
                     {
@@ -165,7 +165,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646824724/HolyVegiFruits/fruits/fresh-fruits/Carribean-Pineapple_bpblef.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646824724/HolyVegiFruits/fruits/fresh-fruits/Carribean-Pineapple-240x240_psfq77.jpg"
-            }    
+            }
         ],
         "tip": "The pineapple should be left on the counter outside the refrigerator.",
         "properties": [1,3,5],
@@ -193,7 +193,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825275/HolyVegiFruits/fruits/fresh-fruits/persimon1_w98hu9.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825275/HolyVegiFruits/fruits/fresh-fruits/persimon1-240x240_ame8hp.jpg"
-            }    
+            }
         ],
         "tip": "Thin slices of persimmon are a great addition to salads, especially green salads.",
         "properties": [1,3,5],
@@ -203,7 +203,7 @@
 
     {
         "_id": "0AuwQPAWKU",
-        "name": "Red grapefruit",
+        "name": "Red Grapefruit",
         "description": "Grapefruit is low in calories and rich in nutrients that help our overall health. In addition, it helps smooth and healthy skin, reduces the risk of various diseases and contributes to weight loss.",
         "units": [
                     {
@@ -221,7 +221,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825513/HolyVegiFruits/fruits/fresh-fruits/red_grapefruit_nixneh.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825513/HolyVegiFruits/fruits/fresh-fruits/red_grapefruit-240x240_ccrgwe.jpg"
-            }    
+            }
         ],
         "tip": "A beautiful fruit inside and out and one serving of it will provide you with all your daily vitamin C intake.",
         "properties": [1,3,5],
@@ -231,7 +231,7 @@
 
     {
         "_id": "1xVodwP2N2",
-        "name": "Yellow grapefruit",
+        "name": "Yellow Grapefruit",
         "description": "Grapefruit is low in calories and rich in nutrients that help our overall health. In addition, it helps smooth and healthy skin, reducing the risk of various diseases and even weight loss.",
         "units": [
                     {
@@ -249,7 +249,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825678/HolyVegiFruits/fruits/fresh-fruits/yellow_grapefruit_jsrw5p.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825678/HolyVegiFruits/fruits/fresh-fruits/yellow_grapefruit-240x240_xp0a0c.jpg"
-            }    
+            }
         ],
         "tip": "Try to eat together with the white float - that is where all the health values ​​are.",
         "properties": [1,2,5,4],
@@ -259,7 +259,7 @@
 
     {
         "_id": "vCD3GoqK?R",
-        "name": "Banana cluster",
+        "name": "Banana Cluster",
         "description": "Banana is a yellow energy bomb! If you are looking for an easy, fast and tasty way to upgrade your health while continuing with your daily routine, a banana is the perfect solution! Bananas contain vitamins A, C and B6, potassium, magnesium, folic acid, antioxidants as well as iron, proteins, carbohydrates, fats and fiber. In short, you will find a little bit of everything you need nutritionally in one banana. Not for nothing are they especially loved by children.",
         "units": [
                     {
@@ -272,7 +272,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825948/HolyVegiFruits/fruits/fresh-fruits/banana_noy_xt4rqj.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646825948/HolyVegiFruits/fruits/fresh-fruits/banana_noy-240x240_onca5p.jpg"
-            }    
+            }
         ],
         "tip": "The banana can be eaten even after it is slightly blackened - so it is even healthier.",
         "properties": [2,3],
@@ -300,7 +300,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826299/HolyVegiFruits/fruits/fresh-fruits/lemon_ffed6f.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826299/HolyVegiFruits/fruits/fresh-fruits/lemon-240x240_rgdt84.jpg"
-            }    
+            }
         ],
         "tip": "Add lemon to your glass of water too! Drinking a glass of water with lemon once a day can only do your health good.",
         "properties": [1,2,3],
@@ -323,7 +323,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826543/HolyVegiFruits/fruits/fresh-fruits/frt-35_sksl0e.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826543/HolyVegiFruits/fruits/fresh-fruits/frt-35-240x240_ydofug.jpg"
-            }    
+            }
         ],
         "tip": "You can tell the hotel is ripe when its shell spreads a pleasant, sweet scent!",
         "properties": [1,5],
@@ -333,7 +333,7 @@
 
     {
         "_id": "IBT0GnBXtS",
-        "name": "Red grapes",
+        "name": "Red Grapes",
         "description": "A large and crispy grape with a juicy sweet taste without pits Country of origin - South Africa",
         "units": [
                 {
@@ -346,17 +346,17 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826754/HolyVegiFruits/fruits/fresh-fruits/red_grapes_jca37o.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826754/HolyVegiFruits/fruits/fresh-fruits/red_grapes-240x240_j2dwjs.jpg"
-            }    
+            }
         ],
         "tip": "Store the grapes in the fresh ornamental bags - this way they will keep for a long time in the refrigerator",
         "properties": [2,5],
         "mainCategoryId": "nW8Cuy1N",
         "subCategoryId": "L08R@VtW"
     },
-    
+
     {
         "_id": "2yK4ThMKRb",
-        "name": "Green grapes",
+        "name": "Green Grapes",
         "description": "A large and crispy grape with a juicy sweet taste without pits Country of origin - South Africa",
         "units": [
                 {
@@ -369,7 +369,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826998/HolyVegiFruits/fruits/fresh-fruits/AF659073-8F56-4C77-8A0D-FB6DA8C58C0B_uiegxj.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646826998/HolyVegiFruits/fruits/fresh-fruits/white-grapes-240x240_pqbbqh.jpg"
-            }    
+            }
         ],
         "tip": "Store the grapes in the fresh ornamental bags - this way they will keep for a long time in the refrigerator",
         "properties": [2,4,5],
@@ -377,10 +377,10 @@
         "subCategoryId": "L08R@VtW"
     },
 
-      
+
     {
         "_id": "KeWlT16gkr",
-        "name": "Black grapes",
+        "name": "Black Grapes",
         "description": "A large and crispy grape with a juicy sweet taste without pits Country of origin - South Africa",
         "units": [
                 {
@@ -393,7 +393,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827183/HolyVegiFruits/fruits/fresh-fruits/black_grapes_rbstnu.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827183/HolyVegiFruits/fruits/fresh-fruits/black_grapes-240x240_k9ktrw.jpg"
-            }    
+            }
         ],
         "tip": "Store the grapes in the fresh ornamental bags - this way they will keep for a long time in the refrigerator",
         "properties": [2,4,5],
@@ -403,7 +403,7 @@
 
     {
         "_id": "uFttsFwtBs",
-        "name": "Passion fruit",
+        "name": "Passion Fruit",
         "description": "Passionflower, the fruit of passion, and in Hebrew - wax is eaten, is one of the most delicious, healthy and special fruits that exist! Originally came to us from the jungles of the Amazon, and today has grown successfully in Israel.",
         "units": [
                 {
@@ -416,7 +416,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827385/HolyVegiFruits/fruits/fresh-fruits/frt-55_q63hfx.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827385/HolyVegiFruits/fruits/fresh-fruits/frt-55-240x240_tdevul.jpg"
-            }    
+            }
         ],
         "tip": "Try cutting it in half and savoring it with a spoon. In addition - great for combining desserts and drinks - and will upgrade them immediately without effort!",
         "properties": [1,5],
@@ -439,7 +439,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827640/HolyVegiFruits/fruits/fresh-fruits/coconut_noy_hzpieq.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827640/HolyVegiFruits/fruits/fresh-fruits/coconut_noy-240x240_ohslqk.jpg"
-            }    
+            }
         ],
         "tip": "How do you open a whole coconut? Hit him with a screwdriver and a hammer.",
         "properties": [1,2,4],
@@ -467,7 +467,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827830/HolyVegiFruits/fruits/fresh-fruits/green_kiwi_s5cv4z.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646827830/HolyVegiFruits/fruits/fresh-fruits/green_kiwi-240x240_rej6sq.jpg"
-            }    
+            }
         ],
         "tip": "A wonderful addition to salads, because of the delicate sourness and juicy sweetness.",
         "properties": [1,3],
@@ -477,7 +477,7 @@
 
     {
         "_id": "Cle70da5cf",
-        "name": "clementine",
+        "name": "Clementine",
         "description": "A light, organic, juicy and sweet tangerine. Peels easily, with almost no seeds at all. A strain that is an Israeli pride - developed in Israel and today successful all over the world.",
         "units": [
                 {
@@ -495,7 +495,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828021/HolyVegiFruits/fruits/fresh-fruits/132672242-huge1_cz8ugh.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828021/HolyVegiFruits/fruits/fresh-fruits/132672242-huge1-240x240_xzcj1b.jpg"
-            }    
+            }
         ],
         "tip": "Try eating the white crust that surrounds the tangerine. It contains lots of dietary fiber!",
         "properties": [4,3],
@@ -518,7 +518,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828219/HolyVegiFruits/fruits/fresh-fruits/pomegranate_pvpktn.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828219/HolyVegiFruits/fruits/fresh-fruits/pomegranate-240x240_kmrwg6.jpg"
-            }    
+            }
         ],
         "tip": "The most effective way to peel a pomegranate is to cut it in half and beat it lightly with a spoon into a bowl.",
         "properties": [4,5],
@@ -541,7 +541,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828432/HolyVegiFruits/fruits/fresh-fruits/strawberry_noy_mexufa.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828432/HolyVegiFruits/fruits/fresh-fruits/strawberry_noy-240x240_jc8six.jpg"
-            }    
+            }
         ],
         "tip": "Eating 7 strawberries provides the entire recommended daily intake of vitamin C, and is also an excellent source of folic acid!",
         "properties": [1,2],
@@ -564,7 +564,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828628/HolyVegiFruits/fruits/fresh-fruits/dates_noy1_oztdkk.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828629/HolyVegiFruits/fruits/fresh-fruits/dates_noy1-240x240_jeiyq3.jpg"
-            }    
+            }
         ],
         "tip": "Combine with nuts such as walnuts or almonds for a perfect combination of sweet and salty.",
         "properties": [2,4],
@@ -592,7 +592,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828804/HolyVegiFruits/fruits/fresh-fruits/orangenoy-240x240_tpwgti.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646828804/HolyVegiFruits/fruits/fresh-fruits/orangenoy-240x240_tpwgti.jpg"
-            }    
+            }
         ],
         "tip": "open orchards, winter, rain, moist soil and clean air…. Try cutting your children sweet slices of orange to strengthen your immune system!",
         "properties": [1,3,5],
@@ -620,7 +620,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829020/HolyVegiFruits/fruits/fresh-fruits/green_apple_nwnnnv.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829020/HolyVegiFruits/fruits/fresh-fruits/green_apple-240x240_e4ccuw.jpg"
-            }    
+            }
         ],
         "tip": "Because of the sour twist to the natural sweetness of this apple this variety is perfect for use in salads.",
         "properties": [2,3],
@@ -648,7 +648,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829222/HolyVegiFruits/fruits/fresh-fruits/pink_lady_noy_ps8kov.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829222/HolyVegiFruits/fruits/fresh-fruits/pink_lady_noy-240x240_qfu09u.jpg"
-            }    
+            }
         ],
         "tip": "Pink Lady retains its color and shape even after cutting (relative to other apple varieties) and children really like to eat it at school or kindergarten.",
         "properties": [2,3],
@@ -658,7 +658,7 @@
 
     {
         "_id": "TwHhQ@kWx2",
-        "name": "Dried pineapple",
+        "name": "Dried Pineapple",
         "description": "The special tropical fruit has a concentrated and sweet taste. It is rich in vitamin C and dietary fiber that helps protect the immune system and balances acidity in the body.",
         "units": [
                 {
@@ -671,7 +671,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829487/HolyVegiFruits/fruits/dried-fruits/AnanasTivi_ykf5sx.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829487/HolyVegiFruits/fruits/dried-fruits/AnanasTivi-240x240_vvhvtk.jpg"
-            }    
+            }
         ],
         "tip": "Despite the wonderful taste, they did not overdo the consumption of the dried pineapple because of its high sugar levels.",
         "properties": [1,5],
@@ -681,7 +681,7 @@
 
     {
         "_id": "P2Ny79yv5N",
-        "name": "Banana chips",
+        "name": "Banana Chips",
         "description": "You can not stop! Sweet and natural banana chips, no toppings, no preservatives and food coloring. Ideal as a sweet and healthy snack between meals and also goes well with granola and salads when you need a sweet and healthy twist. Dried bananas contain high amounts of potassium and dietary fiber.",
         "units": [
                 {
@@ -694,7 +694,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829643/HolyVegiFruits/fruits/dried-fruits/dried_banana_tihier.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829643/HolyVegiFruits/fruits/dried-fruits/dried_banana-240x240_graicy.jpg"
-            }    
+            }
         ],
         "tip": "About 15 units are considered a serving of fruit.",
         "properties": [1,2,4],
@@ -704,7 +704,7 @@
 
     {
         "_id": "jwlCf1nsBj",
-        "name": "Dried mangoes",
+        "name": "Dried Mangoes",
         "description": "The beloved tropical fruit, completely naturally dried, with no additives and no preservatives. Great as a sweet addition to granola and of course as a sweet and healthy snack, between meals or in the evening in front of the TV. Mango is rich in powerful antioxidants, especially vitamin C.",
         "units": [
                 {
@@ -717,7 +717,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829824/HolyVegiFruits/fruits/dried-fruits/dried_mango-1_k6wkvg.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646829824/HolyVegiFruits/fruits/dried-fruits/dried_mango-1-240x240_vdkvza.jpg"
-            }    
+            }
         ],
         "tip": "Sweet mango tea can be made easily: add a few slices of dried mango to hot water.",
         "properties": [1,3,4],
@@ -727,7 +727,7 @@
 
     {
         "_id": "BK0YrN95JH",
-        "name": "Dried apricot",
+        "name": "Dried Apricot",
         "description": "Who said apricots are only eaten in season? Dried apricots allow us to enjoy the unique taste of the lovely fruit that emerges in early summer for a short time. The apricot is dried without additives and without preservatives and food coloring. It is rich in potassium, antioxidants and beta carotene.",
         "units": [
                 {
@@ -740,7 +740,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830028/HolyVegiFruits/fruits/dried-fruits/dried-apricots_js2toi.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830028/HolyVegiFruits/fruits/dried-fruits/dried-apricots-240x240_yrwcip.jpg"
-            }    
+            }
         ],
         "tip": "The apricots can be used as a wonderful addition to meat dishes.",
         "properties": [3,5],
@@ -750,7 +750,7 @@
 
     {
         "_id": "zUrtG@IN0m",
-        "name": "White raisins",
+        "name": "White Raisins",
         "description": "Rich in potassium vitamins and dietary fiber, white raisins are not only sweet and wonderful but also healthy for you. Upgrade your own pot of rice or a unique stew or just add them to a salad or granola.",
         "units": [
                 {
@@ -763,7 +763,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830208/HolyVegiFruits/fruits/dried-fruits/yellow-raisins_q9gwpp.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830208/HolyVegiFruits/fruits/dried-fruits/yellow-raisins-240x240_zpnhqd.jpg"
-            }    
+            }
         ],
         "tip": "Kids really like raisins, this is a good opportunity to give them something sweet and healthy.",
         "properties": [4,5],
@@ -773,7 +773,7 @@
 
     {
         "_id": "kNYv5oGUy5",
-        "name": "Natural coconut strips",
+        "name": "Natural Coconut Strips",
         "description": "For a salad, as a snack between meals or as an energy boost when you are in the public garden with the child. The dried coconut has conquered Israel and the world because of its special tropical taste but not least because of its health benefits.",
         "units": [
                 {
@@ -786,7 +786,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830395/HolyVegiFruits/fruits/dried-fruits/cocusTivi_yiqr86.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830396/HolyVegiFruits/fruits/dried-fruits/cocusTivi-240x240_ojkfux.jpg"
-            }    
+            }
         ],
         "tip": "Grind the dried coconut and you will get excellent flour for diets and celiacs.",
         "properties": [3,4],
@@ -796,7 +796,7 @@
 
     {
         "_id": "k2VHonBN6D",
-        "name": "Pitted plum",
+        "name": "Pitted Plum",
         "description": "A miracle cure or a sweet and addictive delicacy? Why not both? Pitted and dried plums are not only particularly sweet but also facilitate digestive activity and help with constipation.",
         "units": [
                 {
@@ -809,7 +809,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830555/HolyVegiFruits/fruits/dried-fruits/driedprunes_htrc0r.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830555/HolyVegiFruits/fruits/dried-fruits/driedprunes-240x240_jmfklh.jpg"
-            }    
+            }
         ],
         "tip": "Dried fruits and nuts can serve as a wonderful addition to rice or other stews.",
         "properties": [1,5],
@@ -819,7 +819,7 @@
 
     {
         "_id": "AxpCgSHKzV",
-        "name": "Dried figs",
+        "name": "Dried Figs",
         "description": "Not only on Tu B'Shvat! Dried figs (or debalim) are a real delicacy. The unique and all-Israeli taste of figs becomes more concentrated in the natural drying process. Dried figs are known as a grandmother's remedy for digestive problems and it turns out that science recognizes this.",
         "units": [
                 {
@@ -832,7 +832,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830741/HolyVegiFruits/fruits/dried-fruits/dried-figs_xpsfxf.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830741/HolyVegiFruits/fruits/dried-fruits/dried-figs-240x240_i3dnmh.jpg"
-            }    
+            }
         ],
         "tip": "Figs are a feeling of satiety and are therefore wonderful for dieting.",
         "properties": [2,3,5],
@@ -842,7 +842,7 @@
 
     {
         "_id": "5dqSUhYPfF",
-        "name": "Dried strawberry",
+        "name": "Dried Strawberry",
         "description": "Dried in a completely natural process. All the sugar you taste is completely natural sugar, one of the most wonderful fruits in the field. Perfect as a sweet snack between meals for you and the kids. It can be added as a special addition to a green salad.",
         "units": [
                 {
@@ -855,7 +855,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830978/HolyVegiFruits/fruits/dried-fruits/tut_yavesh-300x300-1_fikxrb.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646830978/HolyVegiFruits/fruits/dried-fruits/tut_yavesh-300x300-1-240x240_iaqucd.jpg"
-            }    
+            }
         ],
         "tip": "We stored in the freezer to keep it fresh. Their nutritional values ​​are maintained as well.",
         "properties": [2,4],
@@ -865,7 +865,7 @@
 
     {
         "_id": "?gaol3YtVr",
-        "name": "Dried apple",
+        "name": "Dried Apple",
         "description": "You do not have to wait until Tu B'Shvat. Dried, sweet and pampering apple. Suitable as an addition to a salad but most fun as a crispy snack. A study conducted in the US found that dried apples lower the risk of heart attack mainly because it lowers cholesterol levels significantly.",
         "units": [
                 {
@@ -878,7 +878,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646831195/HolyVegiFruits/fruits/dried-fruits/400484_xzai1b.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646831195/HolyVegiFruits/fruits/dried-fruits/400484-240x240_bjmqbx.jpg"
-            }    
+            }
         ],
         "tip": "A healthy addition to granola or directly on the yogurt. A wonderful way to start the day.",
         "properties": [1,3,5],
@@ -888,7 +888,7 @@
 
     {
         "_id": "jEf5!R5neY",
-        "name": "Peeled pomelo",
+        "name": "Peeled Pomelo",
         "description": "Fresh and delicious peeled pomelo package. The pomelo symbolizes the Israeli winter - it is a wonderful citrus fruit, and especially healthy! Pomelo has a refreshing taste, full of antioxidants, vitamin C and lycopene.",
         "units": [
                 {
@@ -901,7 +901,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646831725/HolyVegiFruits/fruits/dried-fruits/peeled-pomela_svx0oy.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646831725/HolyVegiFruits/fruits/dried-fruits/peeled-pomela-240x240_yggroh.jpg"
-            }    
+            }
         ],
         "tip": "A wonderful option when you want to avoid peeling the pomelo that we all know can be exhausting at times.",
         "properties": [2,4],
@@ -911,7 +911,7 @@
 
     {
         "_id": "cxrqui!fr@",
-        "name": "Peeled pomelo",
+        "name": "Peeled Pomelo",
         "description": "Peeled pomegranate seeds are ready to eat",
         "units": [
                 {
@@ -924,7 +924,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646831959/HolyVegiFruits/fruits/dried-fruits/peeledpomegranate1-1_pv5l0m.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646831959/HolyVegiFruits/fruits/dried-fruits/peeledpomegranate1-1-240x240_o7beov.jpg"
-            }    
+            }
         ],
         "tip": "Ready to eat, recommended as an addition to salad and yogurt.",
         "properties": [1,3,5],
@@ -934,7 +934,7 @@
 
     {
         "_id": "TtBJ8WcnAo",
-        "name": "Fruit platter",
+        "name": "Fruit Platter",
         "description": "An invested tray with the best fruits of the field ornamental season. Perfect for hosting! A pampering variety of fresh and sliced ​​fruit. Your guests will not be able to resist. All the fruits were cut that day! Impressive round tray, ready to serve.",
         "units": [
                 {
@@ -947,7 +947,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646832171/HolyVegiFruits/fruits/dried-fruits/Amir-yakoby-19-scaled-1024x1024_1_sb40x0.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646832170/HolyVegiFruits/fruits/dried-fruits/Amir-yakoby-19-scaled-240x240_crv0ud.jpg"
-            }    
+            }
         ],
         "tip": "Great for any event",
         "properties": [2,5],
@@ -970,7 +970,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833028/HolyVegiFruits/vegtables/asparagos_a3z6nt.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833028/HolyVegiFruits/vegtables/asparagos-240x240_ffjral.jpg"
-            }    
+            }
         ],
         "tip": "After a short infusion, immediately remove to ice water to stop cooking.",
         "properties": [3,4],
@@ -980,7 +980,7 @@
 
     {
         "_id": "XMtpSiFu3V",
-        "name": "Fresh peas",
+        "name": "Fresh Peas",
         "description": "The green pearls of the kitchen. As with any raw material, here too freshness is the name of the game and there is a huge gap between frozen peas and fresh peas. You will feel the difference in taste. Fresh peas are a perfect green addition to a huge variety of dishes, stews and soups to salads.",
         "units": [
                 {
@@ -993,7 +993,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833218/HolyVegiFruits/vegtables/peas_noy-1_fp5j9q.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833218/HolyVegiFruits/vegtables/peas_noy-1_fp5j9q.jpg"
-            }    
+            }
         ],
         "tip": "Unlike most vegetables you are familiar with, peas hardly lose their nutritional value after cooking.",
         "properties": [5],
@@ -1001,7 +1001,7 @@
         "subCategoryId": "ddpcuBQX"
     },
 
-    
+
     {
         "_id": "VVvqc45YXW",
         "name": "Artichoke",
@@ -1022,7 +1022,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833401/HolyVegiFruits/vegtables/artichoke_noy-1_xeelbg.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833401/HolyVegiFruits/vegtables/artichoke_noy-1-240x240_ukjbud.jpg"
-            }    
+            }
         ],
         "tip": "Do not spill artichoke cooking water! They are so healthy for you: rich in antioxidants and help treat gallstones.",
         "properties": [1,2,3],
@@ -1032,7 +1032,7 @@
 
     {
         "_id": "DcMdXFlvgW",
-        "name": "Sweet potato",
+        "name": "Sweet Potato",
         "description": "Extra sweet and fresh sweet potatoes! Aside from sweetness and comforting softness, sweet potatoes also contain essential nutrients like beta carotene, B vitamins, potassium and antioxidants that are important for eye, heart and immune system health.",
         "units": [
                 {
@@ -1050,7 +1050,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833593/HolyVegiFruits/vegtables/sweet_potato_ejshr8.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833593/HolyVegiFruits/vegtables/sweet_potato-240x240_cthdpa.jpg"
-            }    
+            }
         ],
         "tip": "If the size of the sweet potato changes you, you can add a note to the product in the shopping cart!",
         "properties": [2,3],
@@ -1060,7 +1060,7 @@
 
     {
         "_id": "HyaQpz5SRx",
-        "name": "Dry onion",
+        "name": "Dry Onion",
         "description": "One of the stars of the kitchen, is that it is impossible to take a step in the kitchen without it. The secret of the onion's charm lies in the range of flavors it imparts: from its unique spiciness when fresh and in its natural state, through the wonderful sweetness when cooked to the addictive crispiness when fried.",
         "units": [
                 {
@@ -1078,7 +1078,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833953/HolyVegiFruits/vegtables/onion_z8eosj.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646833953/HolyVegiFruits/vegtables/onion-240x240_lxe9qh.jpg"
-            }    
+            }
         ],
         "tip": "Eating and chewing parsley - and especially parsley stalks - helps neutralize the smell of onions from the mouth.",
         "properties": [4,5],
@@ -1088,7 +1088,7 @@
 
     {
         "_id": "lb7pkc6QSb",
-        "name": "Red onion",
+        "name": "Red Onion",
         "description": "The delicate and purple version of the beloved vegetable. Its refined spiciness allows us to enjoy the taste and nutritional value of the onion in a salad or grilled. It is rich in antioxidants, which help with heart health, lowering cholesterol and strengthening the immune system.",
         "units": [
                 {
@@ -1106,7 +1106,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834130/HolyVegiFruits/vegtables/red_onion_edksjh.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834130/HolyVegiFruits/vegtables/red_onion-240x240_h56kxe.jpg"
-            }    
+            }
         ],
         "tip": "Purple onion less suitable for cooking, use plain onion for stews.",
         "properties": [1,2],
@@ -1129,7 +1129,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834294/HolyVegiFruits/vegtables/broccoli_ywimgo.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834294/HolyVegiFruits/vegtables/broccoli-240x240_rwqr2s.jpg"
-            }    
+            }
         ],
         "tip": "Try to eat it fresh and alive, so you can enjoy all the health in it.",
         "properties": [4,5],
@@ -1139,7 +1139,7 @@
 
     {
         "_id": "ktzZTn58Yj",
-        "name": "Butternut squash",
+        "name": "Butternut Squash",
         "description": "The little sister of the pumpkin, which has earned the obligatory and promising nickname Butter Pumpkin. Why butter pumpkin: because it tastes sweet and nutty, but also richer than that of its big sister. The shape of the dolorita is different from that of the pumpkin: it is longer and reminiscent of the shape of a pear.",
         "units": [
                 {
@@ -1157,7 +1157,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834488/HolyVegiFruits/vegtables/dalorit_ncwiik.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834488/HolyVegiFruits/vegtables/dalorit-240x240_cusgi2.jpg"
-            }    
+            }
         ],
         "tip": "Most delicious in late summer.",
         "properties": [1,3,5],
@@ -1180,7 +1180,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834704/HolyVegiFruits/vegtables/pumpkin_l3nuxk.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834704/HolyVegiFruits/vegtables/pumpkin-240x240_zzsrfc.jpg"
-            }    
+            }
         ],
         "tip": "Make pumpkin jam - the taste is amazing.",
         "properties": [2,4],
@@ -1208,7 +1208,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834880/HolyVegiFruits/vegtables/zucchini_azvggz.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646834880/HolyVegiFruits/vegtables/zucchini-240x240_lfrjrc.jpg"
-            }    
+            }
         ],
         "tip": "Scrape the zucchini and add to the salad - so enjoy all its nutritional values.",
         "properties": [2,4],
@@ -1236,7 +1236,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835059/HolyVegiFruits/vegtables/eggplant_noy_col015.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835059/HolyVegiFruits/vegtables/eggplant_noy-240x240_gvjz8h.jpg"
-            }    
+            }
         ],
         "tip": "Choose a male eggplant, the ones that have a more rounded 'navel' at the opposite end of the stem.",
         "properties": [3,5],
@@ -1246,7 +1246,7 @@
 
     {
         "_id": "fx8wHw!7Dx",
-        "name": "Red cabbage",
+        "name": "Red Cabbage",
         "description": "A beautiful vegetable, with a mesmerizing purple color. Purple cabbage is healthier than its familiar sibling, white cabbage, and is rich in many vitamins from families A, B, C, E and K. It is also rich in calcium, potassium and other minerals.",
         "units": [
                 {
@@ -1259,7 +1259,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835252/HolyVegiFruits/vegtables/red_cabbage_awtxlk.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835252/HolyVegiFruits/vegtables/red_cabbage-240x240_zdxdpi.jpg"
-            }    
+            }
         ],
         "tip": "Choose cabbage with dense and tight leaves, they are usually fresher.",
         "properties": [2,5],
@@ -1269,7 +1269,7 @@
 
     {
         "_id": "YAxn!Oe6ph",
-        "name": "White cabbage",
+        "name": "White Cabbage",
         "description": "White cabbage, which is actually green cabbage if we are honest, is a very common vegetable, with a neutral taste and an addictive crispy texture. No wonder cabbage steak (cabbage cut lengthwise and roasted on the fire or in the oven) has become one of the trends in Israeli cuisine recently. Try, you will not be disappointed. Also ideal as an addition to salads and stir-fries. Cabbage is rich in nutritional values ​​that contribute to health: it is rich in vitamin C, vitamin K and minerals such as potassium, calcium and magnesium.",
         "units": [
                 {
@@ -1282,7 +1282,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835436/HolyVegiFruits/vegtables/white_cabbage_d5nue0.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835436/HolyVegiFruits/vegtables/white_cabbage-240x240_itfchw.jpg"
-            }    
+            }
         ],
         "tip": "Avoid a cabbage diet, you will lose weight but you will suffer from hunger, fatigue and more.",
         "properties": [1,2,4],
@@ -1305,7 +1305,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835630/HolyVegiFruits/vegtables/cabbage_es7mid.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835630/HolyVegiFruits/vegtables/cabbage-240x240_npvtzk.jpg"
-            }    
+            }
         ],
         "tip": "Chop the cauliflower in a food processor together with green and fragrant herbs and you will get a healthy and delicious cauliflower dipped salad.",
         "properties": [1,3],
@@ -1333,7 +1333,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835856/HolyVegiFruits/vegtables/beetroot_rzmzyb.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646835856/HolyVegiFruits/vegtables/beetroot-240x240_nxxb05.jpg"
-            }    
+            }
         ],
         "tip": "Choose beets with as smooth a skin as possible.",
         "properties": [2,5],
@@ -1361,7 +1361,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646836044/HolyVegiFruits/vegtables/tomato_noy_co8rlc.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646836044/HolyVegiFruits/vegtables/tomato_noy-240x240_zf8hhe.jpg"
-            }    
+            }
         ],
         "tip": "The green clusters of the tomato keep it fresh! It is recommended not to separate the tomatoes from the clusters so that their freshness is maintained.",
         "properties": [1,2,3],
@@ -1371,7 +1371,7 @@
 
     {
         "_id": "wCJ!eMroCT",
-        "name": "cherry tomato",
+        "name": "Cherry Tomato",
         "description": "Beautiful clusters of one of the most fun and delicious vegetables on the market. Combines perfectly with the sweetness of the tomato and delicate sourness. Perfect in a salad, sauce or grilled or oven roasted. Tomatoes are rich in lycopene which is one of the most powerful antioxidants in nature. Lycopene is known as a substance that reduces the chance of getting cancer.",
         "units": [
                 {
@@ -1384,7 +1384,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646836417/HolyVegiFruits/vegtables/cherry_a5i865.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646836417/HolyVegiFruits/vegtables/cherry1-240x240_ydfebc.jpg"
-            }    
+            }
         ],
         "tip": "Roast the tomatoes in the oven, put them in a blender and you have an insanely delicious tomato sauce.",
         "properties": [1,2,3],
@@ -1394,7 +1394,7 @@
 
     {
         "_id": "a6Xvpbxfj7",
-        "name": "Red pepper",
+        "name": "Red Pepper",
         "description": "Sweet, crunchy and fresh. Red pepper, which many of us call gamba, is a very healthy vegetable from the solanaceae family: one gamba has more vitamin than orange and twice as much as the recommended daily allowance. It is perfect in salads and is also suitable for stir-fries, stuffings, and other dishes. Red pepper is also rich in B and E vitamins and antioxidants and helps maintain vision and skin, helps the immune system function, and more.",
         "units": [
                 {
@@ -1412,7 +1412,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646839626/HolyVegiFruits/vegtables/veg-43-300x300-1_lvosiy.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646839626/HolyVegiFruits/vegtables/veg-43-300x300-1-240x240_i6lg7g.jpg"
-            }    
+            }
         ],
         "tip": "We stored the peppers in the fridge and he kept them well.",
         "properties": [2,5],
@@ -1421,7 +1421,7 @@
     },
     {
         "_id": "VL9kwwX5Tv",
-        "name": "Yellow pepper",
+        "name": "Yellow Pepper",
         "description": "Crispy, fresh yellow peppers, straight from Israeli farmers. Yellow pepper is rich like all peppers in dietary fiber, vitamins (especially vitamin C) and minerals like potassium. It greatly aids in the functioning of the digestive system as well as the functioning of the muscles and nerve cells in the body.",
         "units": [
                 {
@@ -1439,7 +1439,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646839795/HolyVegiFruits/vegtables/yellow_pepper_en4k1w.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646839795/HolyVegiFruits/vegtables/yellow_pepper-240x240_tbqmd9.jpg"
-            }    
+            }
         ],
         "tip": "Choose shiny and relatively heavy peppers, these are more meaty.",
         "properties": [2,5],
@@ -1449,7 +1449,7 @@
 
     {
         "_id": "xnzlz3vRbp",
-        "name": "Orange pepper",
+        "name": "Orange Pepper",
         "description": "With a sweet taste, a color that can not be ignored and a particularly high nutritional value, it is no wonder that orange pepper is an integral part of Israeli cuisine. It upgrades and adds a unique flavor to any salad or stir-fry. Orange pepper contains dietary fiber, vitamins and minerals like potassium. The many antioxidants it contains help strengthen the immune system and prevent more serious infections and diseases.",
         "units": [
                 {
@@ -1467,7 +1467,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840086/HolyVegiFruits/vegtables/orange_pepper-300x300-1_awp4ki.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840086/HolyVegiFruits/vegtables/orange_pepper-300x300-1-240x240_dq9trw.jpg"
-            }    
+            }
         ],
         "tip": "The pepper will color any antipasti tray in a gorgeous orange.",
         "properties": [2,5],
@@ -1477,7 +1477,7 @@
 
     {
         "_id": "zldcON8YIE",
-        "name": "Green pepper",
+        "name": "Green Pepper",
         "description": "Dark green peppers, fresh and crunchy, come to us directly from the beautiful fields of our country. With green pepper you can do so many things so what's the wonder of having it in almost every kitchen? It is rich in vitamins from families A, C and E, it helps in the absorption of iron, lowering the levels of acidity and toxins in the body, and it is the only pepper that also helps in healing tissues.",
         "units": [
                 {
@@ -1495,7 +1495,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840287/HolyVegiFruits/vegtables/green_pepper-300x300-1_m6if04.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840288/HolyVegiFruits/vegtables/green_pepper-300x300-1-240x240_wbciyb.jpg"
-            }    
+            }
         ],
         "tip": "Make this stuffed pepper this is a wonderful way to let the kids enjoy all the vitamins in it.",
         "properties": [2,5],
@@ -1523,7 +1523,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840472/HolyVegiFruits/vegtables/kolorabi_hckgpd.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840471/HolyVegiFruits/vegtables/kolorabi-240x240_vph7yr.jpg"
-            }    
+            }
         ],
         "tip": "Add the kohlrabi to your next fire super menu. Wrap it in foil and put it in the barbecue, just like a potato. You will not be sorry, it's a real treat.",
         "properties": [2,5],
@@ -1546,7 +1546,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840633/HolyVegiFruits/vegtables/garlic1_gyil5x.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840633/HolyVegiFruits/vegtables/garlic1-240x240_x2nekw.jpg"
-            }    
+            }
         ],
         "tip": "Chop any garlic as finely as possible and add to the salad - this way it will lose less nutritional value and upgrade your salad.",
         "properties": [1,2,4],
@@ -1574,7 +1574,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840823/HolyVegiFruits/vegtables/shumar_or7xw8.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646840823/HolyVegiFruits/vegtables/shumar-240x240_wqasdx.jpg"
-            }    
+            }
         ],
         "tip": "Eat fresh fennel with a little lemon, it's refreshing.",
         "properties": [1,2,4],
@@ -1584,7 +1584,7 @@
 
     {
         "_id": "HAdVyh5SQq",
-        "name": "Red potatoes",
+        "name": "Red Potatoes",
         "description": "Potato is one of the most common vegetables in the world if not the most common. The red potato variety is a variety with a relatively small amount of water and is therefore particularly suitable for frying and grilling. The root that grows in the wonderful soil of our country is low in fat and rich in complex carbohydrates and therefore digested slowly and considered dietary, especially in relation to other carbohydrates.",
         "units": [
                 {
@@ -1602,7 +1602,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646841042/HolyVegiFruits/vegtables/red_potato_gs2hsp.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646841042/HolyVegiFruits/vegtables/red_potato-240x240_vancxk.jpg"
-            }    
+            }
         ],
         "tip": "Want to make perfect chips? Soak the potatoes in water, dry and then fry in two beats.",
         "properties": [2,4,5],
@@ -1612,7 +1612,7 @@
 
     {
         "_id": "x039vDjazQ",
-        "name": "White potatoes",
+        "name": "White Potatoes",
         "description": "High quality white potatoes grown in the fields of our country. One of the most basic vegetables in any kitchen that is suitable for countless dishes in all styles: oven-roasted as an addition to a meat dish, cooked in soup or as a base for a steaming winter dish. A potato is rich in carbohydrates and vitamins and is therefore considered particularly healthy.",
         "units": [
                 {
@@ -1630,7 +1630,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646841241/HolyVegiFruits/vegtables/white_potato_hyxyim.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646841241/HolyVegiFruits/vegtables/white_potato-240x240_xpucct.jpg"
-            }    
+            }
         ],
         "tip": "Eat the potato in its peel - it is rich in nutritional values. Just do not forget to rinse well.",
         "properties": [2,4,5],
@@ -1640,7 +1640,7 @@
 
     {
         "_id": "c!YLlYELF4",
-        "name": "sprout mung bean",
+        "name": "Sprout Mung Bean",
         "description": "Mung beans are very suitable for people who adhere to a vegan diet, as they contain a high amount of protein. It is a rich source of dietary fiber, folic acid, vitamin K, and antioxidants. Nutritionally, the advantage of the mash already sprouting is that sprouting legumes makes the legume and especially its protein available and easier to digest and allows better absorption of the minerals in the legume.",
         "units": [
                 {
@@ -1653,7 +1653,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646841671/HolyVegiFruits/vegtables/119693988_s-300x300-1_bq966c.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646841671/HolyVegiFruits/vegtables/119693988_s-300x300-1-240x240_puhrg2.jpg"
-            }    
+            }
         ],
         "tip": "Combine the mash in the recipes easily and gain available plant proteins! For example, try making vegan patties from sprouted fire beans.",
         "properties": [2,4,5],
@@ -1662,7 +1662,7 @@
     },
     {
         "_id": "4ppq2SWmWf",
-        "name": "Pea sprouts",
+        "name": "Pea Sprouts",
         "description": "Young pea leaves, delicate and curly, with a sweet and fresh taste like the taste of garden peas. Suitable as an addition to salads, sandwiches, health smoothies, stews and garnishing dishes and desserts. The young stalk is decorated with curly tufts and charming leaves, so micro peas are in the first place among the micro leaves used to decorate dishes by chefs in leading restaurants! An excellent source of vitamins C and A as well as folic acid.",
         "units": [
                 {
@@ -1675,7 +1675,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854345/HolyVegiFruits/vegtables/pea_sprouts_kwqjn1.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854345/HolyVegiFruits/vegtables/pea_sprouts-240x240_iopcco.jpg"
-            }    
+            }
         ],
         "tip": "Highly recommended for pregnant women.",
         "properties": [3,5],
@@ -1685,7 +1685,7 @@
 
     {
         "_id": "O272kNgWvV",
-        "name": "Mustard sprouts",
+        "name": "Mustard Sprouts",
         "description": "mustard leaves have an amazing mustard flavor! The taste is pungent and surprising in relation to the tiny size of the leaflets. Micro mustard is suitable for combination with cold beef dishes, salads and sandwiches, and is excellent for use as a substitute for industrial mustard. Micro mustard contains a huge concentration of vitamin A and K. A cup of micro mustard will provide the recommended daily dose of these vitamins. In addition mustard is an excellent source of calcium, potassium and magnesium.",
         "units": [
                 {
@@ -1698,7 +1698,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854521/HolyVegiFruits/vegtables/2-1_nec2gn.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854521/HolyVegiFruits/vegtables/2-1-240x240_gvs1ns.jpg"
-            }    
+            }
         ],
         "tip": "Try replacing industrial mustard with micro mustard - and you will gain great taste, tremendous nutritional values ​​and breathtaking beauty for each dish - in a radish salad combined with a mixture of lettuce and sprouts, and a corned beef sandwich with pickles and fresh tomatoes.",
         "properties": [3,4],
@@ -1708,7 +1708,7 @@
 
     {
         "_id": "KJ!1Vt8o2v",
-        "name": "Broccoli sprouts",
+        "name": "Broccoli Sprouts",
         "description": "The healthiest and most nutritious of all micro leaves !! Micro broccoli has a delicate and pleasant taste. A wonderful addition to fresh salads. Broccoli sprouts are at the top of the list of recommended foods for cancer patients thanks to the sulphorphane substance found in them. Sulforaphane has been found to cause cancer cell death. Consumption of broccoli sprouts is also associated with lowering cholesterol (LDL) and improving calcium absorption in the bones. Broccoli sprouts contain high concentrations of vitamin C and vitamin A as well as calcium and iron.",
         "units": [
                 {
@@ -1721,17 +1721,17 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854688/HolyVegiFruits/vegtables/broccoli_sprouts_ttq6al.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854688/HolyVegiFruits/vegtables/broccoli_sprouts-240x240_onwjzb.jpg"
-            }    
+            }
         ],
         "tip": "Don't like lettuce in a sandwich? Use micro broccoli sprouts.",
         "properties": [2,3,5],
         "mainCategoryId": "krRrPYCL",
         "subCategoryId": "ouSXZbaN"
     },
-    
+
     {
         "_id": "zHb5bP6tzH",
-        "name": "small radish sprouts",
+        "name": "Small Radish Sprouts",
         "description": "radish sprouts have beautiful pink-red stems bearing a pair of heart-shaped green leaves. Micro radish is perfect for decorating dishes because of its special varieties. The taste of micro-radish leaves is pungent, and their texture is meaty. The leaves are excellent as an addition to salads, sandwiches, alongside sushi, sashimi and soup dishes.",
         "units": [
                 {
@@ -1744,17 +1744,17 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854872/HolyVegiFruits/vegtables/raddish_sprouts_lkybdx.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646854872/HolyVegiFruits/vegtables/raddish_sprouts-240x240_c77xq4.jpg"
-            }    
+            }
         ],
         "tip": "Perfect decoration for a variety of dishes.",
         "properties": [1,4],
         "mainCategoryId": "krRrPYCL",
         "subCategoryId": "ouSXZbaN"
     },
-    
+
     {
         "_id": "5ZMfe8Mbur",
-        "name": "small leafless sprouts",
+        "name": "Small Leafless Sprouts",
         "description": "A pampering package of winning health! Each of the legumes has tremendous health benefits, and all of them together make up a satisfying dish full of plenty of vitamins. The mixture of sprouted legumes contains lentils, mash beans, red beans, chickpeas, sprouted and leafless.",
         "units": [
                 {
@@ -1767,7 +1767,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855029/HolyVegiFruits/vegtables/navtutim_oc8n6m.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855029/HolyVegiFruits/vegtables/navtutim-240x240_lnxp0x.jpg"
-            }    
+            }
         ],
         "tip": "Gastrointestinal problems? The sprouts will help you a lot.",
         "properties": [1,3,5],
@@ -1777,7 +1777,7 @@
 
     {
         "_id": "d!LohyTrD3",
-        "name": "alfalfa sprouts",
+        "name": "Alfalfa Sprouts",
         "description": "A pampering package of winning health! Each of the legumes has tremendous health benefits, and all of them together make up a satisfying dish full of plenty of vitamins. The mixture of sprouted legumes contains lentils, mash beans, red beans, chickpeas, sprouted and leafless.",
         "units": [
                 {
@@ -1790,7 +1790,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855198/HolyVegiFruits/vegtables/alfalfa_h4radj.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855198/HolyVegiFruits/vegtables/alfalfa-240x240_jxupgc.jpg"
-            }    
+            }
         ],
         "tip": "Alfalfa sprouts have a relatively neutral taste and therefore blend wonderfully with a variety of dishes.",
         "properties": [2,3,4],
@@ -1800,7 +1800,7 @@
 
     {
         "_id": "eUiSQDplL7",
-        "name": "sunflower sprouts",
+        "name": "Sunflower Sprouts",
         "description": "Sunflower sprouts are one of the richest and highest quality sources of vitamins, minerals and essential amino acids. Have a nutty taste. Sprouted from the sunflower seeds. Recommended as an addition to a salad or sandwich and go great with avocados or cheeses. They can be added to stews at the end of cooking.",
         "units": [
                 {
@@ -1813,7 +1813,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855359/HolyVegiFruits/vegtables/sunflower_sprouts_ehckqk.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855359/HolyVegiFruits/vegtables/sunflower_sprouts-240x240_y5wtv3.jpg"
-            }    
+            }
         ],
         "tip": "Less attached to sprouts in food? Combine them with a fruity and delicious smoothie - so you can enjoy their wonderful health values.",
         "properties": [1,4],
@@ -1823,7 +1823,7 @@
 
     {
         "_id": "Kqk6mugq0p",
-        "name": "chinese sprouts",
+        "name": "Chinese Sprouts",
         "description": "Also known as 'bean sprouts', relatively long and thick, with a white stem and yellowish leaves. Their taste is neutral and juicy. Chinese sprouts add flavor, juiciness and freshness to a salad, and are also rich in vitamins, minerals, proteins and many nutritional values.",
         "units": [
                 {
@@ -1836,7 +1836,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855550/HolyVegiFruits/vegtables/chinese_sprouts_ps4jdn.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855550/HolyVegiFruits/vegtables/chinese_sprouts-240x240_xvdo43.jpg"
-            }    
+            }
         ],
         "tip": "We stored in a tightly closed box lined with a paper towel.",
         "properties": [1,3,5],
@@ -1859,7 +1859,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855909/HolyVegiFruits/vegtables/champanion_hfyfns.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646855909/HolyVegiFruits/vegtables/champanion-240x240_hjd540.jpg"
-            }    
+            }
         ],
         "tip": "The mushrooms lose a lot of volume while cooking, take that into account.",
         "properties": [2,4,5],
@@ -1881,7 +1881,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856070/HolyVegiFruits/vegtables/gre-73-300x300-1_idndxk.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856070/HolyVegiFruits/vegtables/gre-73-300x300-1-240x240_klzbxj.jpg"
-            }    
+            }
         ],
         "tip": "Try it as a meat substitute in bolognese sauce.",
         "properties": [1,3],
@@ -1903,7 +1903,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856252/HolyVegiFruits/vegtables/oyster_mushrooms_risxea.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856252/HolyVegiFruits/vegtables/oyster_mushrooms-240x240_tynuev.jpg"
-            }    
+            }
         ],
         "tip": "Roast the mushroom on the barbecue, just like a steak. It can even be used as a substitute for a hamburger.",
         "properties": [1,3],
@@ -1925,7 +1925,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856420/HolyVegiFruits/vegtables/king_oyster_gqxlwa.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856420/HolyVegiFruits/vegtables/king_oyster-240x240_zcyngw.jpg"
-            }    
+            }
         ],
         "tip": "Cut the leg lengthwise and roast on a pan or grill and you have a perfect mushroom stick.",
         "properties": [2,5],
@@ -1947,7 +1947,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856567/HolyVegiFruits/vegtables/Shimeji_Mushroom_brown_niq2bx.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856567/HolyVegiFruits/vegtables/Shimeji_Mushroom_brown-240x240_kjcdfq.jpg"
-            }    
+            }
         ],
         "tip": "mushrooms go wonderfully with stir-fries, risotto, soups and more.",
         "properties": [2,5],
@@ -1957,7 +1957,7 @@
 
     {
         "_id": "I1JSEbvtMB",
-        "name": "shinuki mushroom",
+        "name": "Shinuki Mushroom",
         "description": "A special and wonderful mushroom. Her leg is long and her head is small. Its taste is slightly sweet and it retains its crunchy texture even after cooking. It is rich in antioxidants and strengthens the immune system. Helps balance blood pressure and cholesterol.",
         "units": [
                 {
@@ -1970,7 +1970,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856721/HolyVegiFruits/vegtables/shinuki_md55lk.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646856721/HolyVegiFruits/vegtables/shinuki-240x240_ckxvme.jpg"
-            }    
+            }
         ],
         "tip": "Try not to cook them for a long time so that they do not lose the great texture.",
         "properties": [1,3,2,5],
@@ -1980,7 +1980,7 @@
 
     {
         "_id": "q5!K826tHF",
-        "name": "red endive",
+        "name": "Red Endive",
         "description": "The red endive is a new development that originated in Belgium. It gets its special color from a hybrid made between white endive and radicio (a red vegetable from the chicory family). The endive is considered a delicacy in the kitchen - its taste is sweet and slightly bitter and it goes well with sweet fruit flavors as well as spicy cheeses.",
         "units": [
                 {
@@ -1993,7 +1993,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858128/HolyVegiFruits/leaves/red_endive-1_1_wfnxrr.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858128/HolyVegiFruits/leaves/red_endive-1-240x240_kottei.jpg"
-            }    
+            }
         ],
         "tip": "It is recommended to use endive leaves to fill 'small boats' - fill them with egg salad, tuna salad, avocado salad, or whatever you feel like.",
         "properties": [1,5],
@@ -2002,7 +2002,7 @@
     },
     {
         "_id": "Sit8SLmRwi",
-        "name": "green endive",
+        "name": "Green Endive",
         "description": "The endive (chicory) is considered a delicacy in the kitchen - its taste is sweet and slightly bitter and it blends well with sweet fruit flavors as well as with spicy cheeses. It is mainly used for cooking or infusion, and is suitable for use in cold and hot salads in its fresh form or after roasting / baking as a starter or as a side dish.",
         "units": [
                 {
@@ -2015,7 +2015,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858312/HolyVegiFruits/leaves/endive_k4wnp4.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858312/HolyVegiFruits/leaves/endive-240x240_icxqjw.jpg"
-            }    
+            }
         ],
         "tip": "Cross lengthwise, sprinkle olive oil and coarse salt over and roast in the oven. Just a delicacy!",
         "properties": [2,5],
@@ -2025,7 +2025,7 @@
 
     {
         "_id": "S87K618n!V",
-        "name": "Caesar hearts",
+        "name": "Caesar Hearts",
         "description": "Caesar hearts are the core of the lettuce we know so it is the highest quality, crunchy and delicious part of the lettuce. Comes in a box that keeps freshness.",
         "units": [
                 {
@@ -2038,7 +2038,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858545/HolyVegiFruits/leaves/ceasar_hearts_zjic37.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858545/HolyVegiFruits/leaves/ceasar_hearts-240x240_w60rec.jpg"
-            }    
+            }
         ],
         "tip": "Caesar lettuce is rich in vitamins, juicy and tasty, and can also be eaten as a snack. And if so, maybe you should try making a Caesar salad at home? Some lettuce, parmesan and a delicious sauce, or chicken strips - and you have an amazing and easily healthy dish!",
         "properties": [4,5],
@@ -2047,7 +2047,7 @@
     },
     {
         "_id": "1yVIhaW3Wk",
-        "name": "lalique lettuce",
+        "name": "Lalique Lettuce",
         "description": "Lettuce Kistel lettuce is grown in hydroponic cultivation without spraying. Is an amazing combination of curly lettuce and selenova. Particularly crunchy with a gorgeous look. Available all year round, contains no sand, and is much cleaner than regular shelter. Great to combine with any dish in which you put lettuce.",
         "units": [
                 {
@@ -2060,7 +2060,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858787/HolyVegiFruits/leaves/gre-30-300x300333-1_n6i6wj.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858787/HolyVegiFruits/leaves/gre-30-300x300333-1-240x240_urj0xd.jpg"
-            }    
+            }
         ],
         "tip": "Try making a Caesar salad from it - you haven't eaten one yet! All its leaves are crispy and great - one small cut to release the leaves and it is ready to use.",
         "properties": [1,3,4],
@@ -2069,7 +2069,7 @@
     },
     {
         "_id": "9cYPAS9E6k",
-        "name": "salanova lettuce",
+        "name": "Salanova Lettuce",
         "description": "Salanova lettuce, or silk lettuce, is one of the most delicious, wonderful and healthy lettuce - soft, delicate, crispy and beautiful, it can upgrade a huge variety of dishes and add great variety to any salad or sandwich. Selenova is grown in hydroponic greenhouses (growing plants on water), in a clean and controlled environment, and without the use of pesticides.",
         "units": [
                 {
@@ -2082,7 +2082,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858948/HolyVegiFruits/leaves/gre-30-300x300333323232323-1_buk26j.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646858948/HolyVegiFruits/leaves/gre-30-300x300333323232323-1-240x240_qktf24.jpg"
-            }    
+            }
         ],
         "tip": "Want a quick and great salad? Half a pack of selenova leaves with a little sweet cherry cherry tomatoes, olive oil, lemon and salt and you have an amazing and healthy salad in seconds!",
         "properties": [2,4,5],
@@ -2092,7 +2092,7 @@
 
     {
         "_id": "Hj7oxCesvJ",
-        "name": "round lettuce",
+        "name": "Round Lettuce",
         "description": "Round and green lettuce, with a delicate taste and crispy and crunchy texture. In Israel it is also called American lettuce. Rich in dietary fiber.",
         "units": [
                 {
@@ -2105,7 +2105,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859145/HolyVegiFruits/leaves/iceberg_lettuce_yihqpw.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859145/HolyVegiFruits/leaves/iceberg_lettuce-240x240_lwnwsp.jpg"
-            }    
+            }
         ],
         "tip": "Delicious with any salad, or as a classic addition to a hamburger dish.",
         "properties": [1,2],
@@ -2114,7 +2114,7 @@
     },
     {
         "_id": "?Bo4@oTXHv",
-        "name": "arabic  lettuce",
+        "name": "Arabic Lettuce",
         "description": "Large, green lettuce, with crisp and fresh leaves. Lettuce is one of the common sources in the diet for the antioxidant lutein and folic acid.",
         "units": [
                 {
@@ -2127,7 +2127,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859290/HolyVegiFruits/leaves/arabic_lettuce_b7fyzv.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859290/HolyVegiFruits/leaves/arabic_lettuce-240x240_whcsyq.jpg"
-            }    
+            }
         ],
         "tip": "Instead of using a knife, 'tear' the lettuce leaves with your hands. This is how you will maintain its high nutritional value.",
         "properties": [1,2],
@@ -2149,7 +2149,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859542/HolyVegiFruits/leaves/oregano_vdh5ve.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859542/HolyVegiFruits/leaves/oregano-240x240_fkxd9l.jpg"
-            }    
+            }
         ],
         "tip": "Oregano oil is an amazing medicine that will strengthen your immune system.",
         "properties": [1,2,3,4],
@@ -2171,7 +2171,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859709/HolyVegiFruits/leaves/basil_noy_sj6oic.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646859709/HolyVegiFruits/leaves/basil_noy-240x240_ohftbw.jpg"
-            }    
+            }
         ],
         "tip": "Make homemade pesto from it, it is so much tastier than the ones bought.",
         "properties": [2,3,4],
@@ -2193,7 +2193,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860047/HolyVegiFruits/leaves/ginger_phg6v0.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860047/HolyVegiFruits/leaves/ginger-240x240_piuqp8.jpg"
-            }    
+            }
         ],
         "tip": "Peel a squash, grate it and squeeze the juice.",
         "properties": [2,3,4],
@@ -2215,7 +2215,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860289/HolyVegiFruits/leaves/hamtzitz_egoe2a.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860289/HolyVegiFruits/leaves/hamtzitz-240x240_eicj8g.jpg"
-            }    
+            }
         ],
         "tip": "Match it with spinach is a wonderful combination.",
         "properties": [1,5],
@@ -2237,7 +2237,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860450/HolyVegiFruits/leaves/thyme_phfgfi.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860450/HolyVegiFruits/leaves/thyme-240x240_srdmj8.jpg"
-            }    
+            }
         ],
         "tip": "Want to emphasize the taste of thyme? Match it with other herbs like basil or oregano.",
         "properties": [1,2,5],
@@ -2260,7 +2260,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860630/HolyVegiFruits/leaves/cosbara_dkd6jz.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860630/HolyVegiFruits/leaves/cosbara-240x240_vn4bi1.jpg"
-            }    
+            }
         ],
         "tip": "Trim as close as possible to use to prevent blackening.",
         "properties": [1,2,3],
@@ -2282,7 +2282,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860805/HolyVegiFruits/leaves/gre-16-300x300-1_ikoyxa.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646860805/HolyVegiFruits/leaves/gre-16-300x300-1-240x240_zufoja.jpg"
-            }    
+            }
         ],
         "tip": "Remove the leaves that are starting to turn black to keep the rest of the leaves in the package.",
         "properties": [4,5],
@@ -2304,7 +2304,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861030/HolyVegiFruits/leaves/gre-81-300x300-1_bevy0l.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861030/HolyVegiFruits/leaves/gre-81-300x300-1-240x240_mbdov4.jpg"
-            }    
+            }
         ],
         "tip": "Preserve the parsley together with absorbent paper so that moisture does not form on it.",
         "properties": [1,3],
@@ -2327,7 +2327,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861173/HolyVegiFruits/leaves/gre-52-300x300-1_mdh9eb.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861173/HolyVegiFruits/leaves/gre-52-300x300-1-240x240_j4c7fp.jpg"
-            }    
+            }
         ],
         "tip": "The dill is very dominant, use it sparingly.",
         "properties": [2,4,5],
@@ -2350,7 +2350,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861339/HolyVegiFruits/leaves/marva_kygpo9.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861339/HolyVegiFruits/leaves/marva-240x240_rtkvdc.jpg"
-            }    
+            }
         ],
         "tip": "Add the sage to the pan already together with the oil - so the oil will get the sage flavors and give the whole dish its great taste.",
         "properties": [2,4,5],
@@ -2360,7 +2360,7 @@
 
     {
         "_id": "1@U9NS@Ng9",
-        "name": "American celery",
+        "name": "American Celery",
         "description": "A winter vegetable with a deep and earthy taste. Slightly bitter, crunchy and refreshing. Celery is used as a root vegetable that enriches stews or soups but also as a crunchy and fun addition to a live salad, pastries, pies, pancakes and the like. It is rich in beta carotene and many B vitamins, as well as potassium, folic acid, iron, sodium, phosphorus and more.",
         "units": [
                 {
@@ -2373,7 +2373,7 @@
             {
                 "imgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861579/HolyVegiFruits/leaves/celery_hvjqro.jpg",
                 "thumbnailImgUrl": "https://res.cloudinary.com/sprint4/image/upload/v1646861579/HolyVegiFruits/leaves/celery-240x240_x4ugdh.jpg"
-            }    
+            }
         ],
         "tip": "Celery is very fond of lemon but sweetened fruit will perfectly balance its bitter sourness. Combine with apple celery, cranberry or similar fruit salad.",
         "properties": [1,4],
@@ -2385,11 +2385,6 @@
 
 
 
-    
-    
-    
-    
-    
 
 
 
@@ -2401,7 +2396,12 @@
 
 
 
-    
+
+
+
+
+
+
 
 
 
