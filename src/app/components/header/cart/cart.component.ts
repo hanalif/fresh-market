@@ -1,8 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { tap, Observable, ReplaySubject, Subscription, switchMap, takeUntil } from 'rxjs';
 import { UserMenuModalComponent } from 'src/app/modules/auth/components/user-menu-modal/user-menu-modal.component';
+
+
 import { User } from 'src/app/modules/auth/models/user.model';
 import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
 import { UserQuery } from 'src/app/modules/auth/state/user-state/userQuery';
@@ -35,7 +37,8 @@ export class CartComponent implements OnInit, OnDestroy {
       private authQuery: AuthQuery,
       private cartService: CartService,
       private _snackBar: MatSnackBar,
-      public dialog: MatDialog) { }
+      public dialog: MatDialog,
+      private cd: ChangeDetectorRef) { }
 
   itemUnitsMap$! : Observable<{ [id: string] : ItemUnitsValue }>
 
@@ -90,7 +93,8 @@ export class CartComponent implements OnInit, OnDestroy {
     }else{
       let snackBarRef = this._snackBar.open('Please Log In Or Sign Up First!', 'OK' ,{panelClass: ['snackbar-style']} );
       snackBarRef.afterDismissed().subscribe(() => {
-        this.dialog.open(UserMenuModalComponent)
+        const res = this.dialog.open(UserMenuModalComponent);
+        this.cd.detectChanges();
       });
 
     }

@@ -16,6 +16,7 @@ export class UserMenuModalComponent implements OnInit, OnDestroy {
 
   loggedInUser!: User | undefined;
 
+
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
 
   constructor(
@@ -31,6 +32,7 @@ export class UserMenuModalComponent implements OnInit, OnDestroy {
           this.loggedInUser = loggedInUser;
           this.cd.detectChanges()
       });
+
 
   }
 

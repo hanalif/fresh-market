@@ -4,7 +4,6 @@ import { map, Subscription, switchMap, tap } from 'rxjs';
 import { AuthService } from '../../../auth/services/auth.service';
 import { User } from 'src/app/modules/auth/models/user.model';
 import { UserMenuModalComponent } from 'src/app/modules/auth/components/user-menu-modal/user-menu-modal.component';
-import { UIQuery } from 'src/app/state/UI/UIQuery';
 import { OrderQuery } from 'src/app/modules/personal-area/state/order-state/orderQuery';
 import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
 
@@ -14,7 +13,6 @@ import { AuthQuery } from 'src/app/modules/auth/state/auth-state/authQuery';
   styleUrls: ['./logged-in-user-menu.component.scss']
 })
 export class LoggedInUserMenuComponent implements OnInit, OnDestroy {
-  // @Input() loggedInUser!: User;
   loggedInUser!: User;
   logOutSubscription!: Subscription;
   badgenum!: number;
