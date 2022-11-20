@@ -32,3 +32,9 @@ ng build --prod --base-href "https://hanalif.github.io/fresh-market/"
 ## Deploy
 npx angular-cli-ghpages --dir=dist/fresh-market-fronend
 
+## Contact Me
+LinkedIn: https://www.linkedin.com/in/hana-lipschutz
+Email address:   hanalif619@gmail.com 	
+GitHub: https://github.com/hanalif
+
+
