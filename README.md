@@ -1,6 +1,17 @@
 # FreshMarketFronend
+Development of an online ecommerce application for selling agricultural products.
+Angular • Typescript • Akita • RxJS • Reactive Forms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
+## Link
+https://pandao.github.io/editor.md/en.html
+User for demo:
+bina@gmail.com
+pass: 1234 
+
+## Contact Me
+LinkedIn: https://www.linkedin.com/in/hana-lipschutz
+Email address:   hanalif619@gmail.com 	
+GitHub: https://github.com/hanalif
 
 ## Development server
 
@@ -32,9 +43,6 @@ ng build --prod --base-href "https://hanalif.github.io/fresh-market/"
 ## Deploy
 npx angular-cli-ghpages --dir=dist/fresh-market-fronend
 
-## Contact Me
-LinkedIn: https://www.linkedin.com/in/hana-lipschutz
-Email address:   hanalif619@gmail.com 	
-GitHub: https://github.com/hanalif
+
 
 
