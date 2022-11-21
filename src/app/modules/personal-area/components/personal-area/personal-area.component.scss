@@ -18,7 +18,7 @@
   &-container{
     display: flex;
     width: 100%;
-    margin-block-start: calc(100vh - 563px);
+    margin-block-start: calc(100vh - 497px);
 
 
     @include for-bpoint-mobile{
@@ -26,7 +26,7 @@
     }
 
     @include for-bpoint-mobile{
-      margin-block-start: calc(100vh - 441px);
+      margin-block-start: calc(100vh - 365px);
     }
   }
 

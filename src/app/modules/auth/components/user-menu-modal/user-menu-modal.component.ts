@@ -30,7 +30,7 @@ export class UserMenuModalComponent implements OnInit, OnDestroy {
 
       this.authQuery.getLoggedInUser().pipe(takeUntil(this.destroyed$)).subscribe(loggedInUser=>{
           this.loggedInUser = loggedInUser;
-          this.cd.detectChanges()
+          this.cd.detectChanges();
       });
 
 

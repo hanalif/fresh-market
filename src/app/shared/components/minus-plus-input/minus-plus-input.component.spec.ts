@@ -22,4 +22,10 @@ describe('MinusPlusInputComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should add 1 to counter when plus is clicked', () => {
+    component.registerOnChange(() => {});
+    component.onPlus();
+    expect(component.counter).toBe(1);
+  });
 });
