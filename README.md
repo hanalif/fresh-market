@@ -8,23 +8,9 @@ best practices such as lazy loading of modules, advanced usage of RxJS, OnPush c
 
 [Fresh-Market](https://hanalif.github.io/fresh-market/ "Fresh-Market")
 
-------------
-
-
-
 user for demo:
 bina@gmail.com
 pass: 1234 
-
-## Contact Me
-
-[Linkedin](httphttps://www.linkedin.com/in/hana-lipschutz:// "Linkedin")
-Email:   hanalif619@gmail.com 	
-
-------------
-
-------------
-
 
 
 ###### ## Build for deployment
@@ -33,6 +19,10 @@ ng build --prod --base-href "https://hanalif.github.io/fresh-market/"
 ###### ## Deploy
 npx angular-cli-ghpages --dir=dist/fresh-market-fronend
 
+## Contact Me
+
+[Linkedin](httphttps://www.linkedin.com/in/hana-lipschutz:// "Linkedin")
+Email:   hanalif619@gmail.com 	
 
 
 
