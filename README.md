@@ -13,10 +13,10 @@ bina@gmail.com
 pass: 1234 
 
 
-######## Build for deployment
+## Build for deployment
 ng build --prod --base-href "https://hanalif.github.io/fresh-market/"
 
-######## Deploy
+## Deploy
 npx angular-cli-ghpages --dir=dist/fresh-market-fronend
 
 ## Contact Me
