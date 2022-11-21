@@ -12,6 +12,8 @@ user for demo:
 bina@gmail.com
 pass: 1234 
 
+![](https://res.cloudinary.com/sprint4/image/upload/v1669049177/fresh-market1_zrqxs9.png)
+
 
 ## Build for deployment
 ng build --prod --base-href "https://hanalif.github.io/fresh-market/"
