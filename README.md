@@ -9,8 +9,8 @@ best practices such as lazy loading of modules, advanced usage of RxJS, OnPush c
 
 [Fresh-Market](https://hanalif.github.io/fresh-market/ "Fresh-Market")
 
-user for demo:
-bina@gmail.com
+user for demo: bina@gmail.com
+<br />
 pass: 1234 
 
 [![](https://res.cloudinary.com/sprint4/image/upload/v1669049177/fresh-market1_zrqxs9.png)](https://hanalif.github.io/fresh-market/)
