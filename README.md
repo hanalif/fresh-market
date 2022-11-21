@@ -22,6 +22,7 @@ npx angular-cli-ghpages --dir=dist/fresh-market-fronend
 ## Contact Me
 
 [Linkedin](httphttps://www.linkedin.com/in/hana-lipschutz:// "Linkedin")
+
 Email:   hanalif619@gmail.com 	
 
 
