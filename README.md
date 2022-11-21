@@ -1,8 +1,9 @@
 # Fresh Market
 Development of an online ecommerce application for selling agricultural products.
-	This application was built using Angular 13 with Typescript and Akita state management library.
-	The app was optimized for performance utilizing advanced features and
+[]()
+This application was built using Angular 13 with Typescript and Akita state management library. The app was optimized for performance utilizing advanced features and
 best practices such as lazy loading of modules, advanced usage of RxJS, OnPush change detection strategy, separation of modules to feature modules and shared modules, reactive forms and custom form controls using ControlValueAccessor.
+
 
 
 
