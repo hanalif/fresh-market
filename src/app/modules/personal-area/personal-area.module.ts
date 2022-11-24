@@ -13,6 +13,7 @@ import { PersonalAreaComponent } from './components/personal-area/personal-area.
 import { AuthSharedModule } from "../auth-shared-module/auth-shared.module";
 import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
+import { DisplayNoneDirective } from "src/app/directives/display-none.directive";
 
 
 
@@ -25,7 +26,8 @@ import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
        EditPersonalDetailsComponent,
        ShippingInfoComponent,
        PersonalAreaComponent,
-       OrderDetailComponent
+       OrderDetailComponent,
+       DisplayNoneDirective,
   ],
   exports: [
     AngularMaterialModule
@@ -40,7 +42,8 @@ import { ItemsSharedModule } from "../items-shared-module/items-shared.module";
     RouterModule,
     PersonalAreaRoutingModule,
     AuthSharedModule,
-    ItemsSharedModule
+    ItemsSharedModule,
+
   ],
   providers: [
   ],

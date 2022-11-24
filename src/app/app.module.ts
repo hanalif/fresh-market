@@ -27,6 +27,7 @@ import { OrderConfirmationComponent } from './components/order-confirmation/orde
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,9 @@ import { OrderConfirmationComponent } from './components/order-confirmation/orde
     CartComponent,
     CartBtnComponent,
     OrderConfirmationComponent,
+
+
+
   ],
   imports: [
     BrowserModule,

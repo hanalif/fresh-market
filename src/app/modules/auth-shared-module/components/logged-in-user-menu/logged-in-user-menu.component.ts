@@ -20,6 +20,7 @@ export class LoggedInUserMenuComponent implements OnInit, OnDestroy {
   hidden: boolean = true;
 
 
+
   constructor(
     private authService: AuthService,
     private dialogRef: MatDialogRef<UserMenuModalComponent>,
@@ -45,6 +46,8 @@ export class LoggedInUserMenuComponent implements OnInit, OnDestroy {
       }
       this.cd.detectChanges();
     })
+
+
   }
 
   logOut(){
